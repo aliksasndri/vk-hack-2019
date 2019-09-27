@@ -4,6 +4,9 @@ inhibit_all_warnings!
 
 target 'SunCity' do
     use_frameworks!
+
+    pod 'SkyFloatingLabelTextField'
+    pod 'NodeKit'
 end
 
 target 'SunCityTests' do

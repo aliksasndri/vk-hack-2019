@@ -22,14 +22,18 @@ final class RequestViewController: UIViewController, RequestModuleOutput {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        for _ in 0...0 {
-            let view = ExpandableView()
-            view.fill()
-            stackView.addArrangedSubview(view)
-        }
+        addDropdowns()
     }
 
     // MARK: - Internal helpers
 
+}
+
+// MARK: - Private helpers
+
+private extension RequestViewController {
+    func addDropdowns() {
+        let userInfo = ExpandableView()
+        
+    }
 }

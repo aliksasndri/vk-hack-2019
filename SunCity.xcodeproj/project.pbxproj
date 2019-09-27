@@ -19,6 +19,7 @@
 		8907BBC3233E8B5A005CC565 /* ExpandableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BBC2233E8B5A005CC565 /* ExpandableView.swift */; };
 		8907BBC5233E8B66005CC565 /* ExpandableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8907BBC4233E8B66005CC565 /* ExpandableView.xib */; };
 		8907BBC8233E8BA0005CC565 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BBC7233E8BA0005CC565 /* UIView.swift */; };
+		89B4B332233EB8EC0001F767 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B4B331233EB8EC0001F767 /* TextField.swift */; };
 		CC4F69687C963F58D98D45CC /* Pods_SunCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5240B12F5C57343FF096AB89 /* Pods_SunCity.framework */; };
 		E32CFB8675C7E8FAB638C4DF /* RequestModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D6EDF760889DD312554C77 /* RequestModuleConfiguratorTests.swift */; };
 		FACEFD8C86AA0C0CF700D179 /* Pods_SunCityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7127838F78AE645DA65C05 /* Pods_SunCityTests.framework */; };
@@ -55,6 +56,7 @@
 		8907BBC2233E8B5A005CC565 /* ExpandableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableView.swift; sourceTree = "<group>"; };
 		8907BBC4233E8B66005CC565 /* ExpandableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandableView.xib; sourceTree = "<group>"; };
 		8907BBC7233E8BA0005CC565 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		89B4B331233EB8EC0001F767 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		B820A189FB13E84C464FCF6F /* RequestViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = RequestViewController.storyboard; sourceTree = "<group>"; };
 		E7C8014EEAB74C06825ACE54 /* RequestModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RequestModuleOutput.swift; sourceTree = "<group>"; };
 		E817C265D990C6C44ECCF89B /* RequestViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		8907BBC6233E8B6C005CC565 /* Subview */ = {
 			isa = PBXGroup;
 			children = (
+				89B4B331233EB8EC0001F767 /* TextField.swift */,
 				8907BBC2233E8B5A005CC565 /* ExpandableView.swift */,
 				8907BBC4233E8B66005CC565 /* ExpandableView.xib */,
 			);
@@ -248,6 +251,7 @@
 				0298DD99233E3340008D2D27 /* Sources */,
 				0298DD9A233E3340008D2D27 /* Frameworks */,
 				0298DD9B233E3340008D2D27 /* Resources */,
+				622BA8F13ED0A0E12119D88B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -381,6 +385,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		622BA8F13ED0A0E12119D88B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SunCity/Pods-SunCity-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SunCity/Pods-SunCity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -391,6 +417,7 @@
 				0298DDA1233E3340008D2D27 /* AppDelegate.swift in Sources */,
 				0298DDC9233E3884008D2D27 /* UIViewController.swift in Sources */,
 				034FADFC9D5332BE90649329 /* RequestModuleOutput.swift in Sources */,
+				89B4B332233EB8EC0001F767 /* TextField.swift in Sources */,
 				8907BBC8233E8BA0005CC565 /* UIView.swift in Sources */,
 				5BE031DA905025AEA6A07CEC /* RequestModuleConfigurator.swift in Sources */,
 				8907BBC3233E8B5A005CC565 /* ExpandableView.swift in Sources */,

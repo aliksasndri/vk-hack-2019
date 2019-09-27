@@ -82,9 +82,11 @@ final class ExpandableView: UIView {
             }
         case .expanded:
             arrowImageView.image = UIImage(named: "arrowUp")
-            for _ in 0...10 {
-                let button = UIButton()
-                stackView.addArrangedSubview(button)
+            for _ in 0...4 {
+                let textField = TextField()
+                textField.placeholder = "Имя"
+                textField.title = "Не имя"
+                stackView.addArrangedSubview(textField)
             }
         }
     }
