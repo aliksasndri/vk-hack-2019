@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0298DDA1233E3340008D2D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDA0233E3340008D2D27 /* AppDelegate.swift */; };
-		0298DDA5233E3340008D2D27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDA4233E3340008D2D27 /* ViewController.swift */; };
-		0298DDA8233E3340008D2D27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0298DDA6233E3340008D2D27 /* Main.storyboard */; };
 		0298DDAA233E3341008D2D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0298DDA9233E3341008D2D27 /* Assets.xcassets */; };
 		0298DDAD233E3341008D2D27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0298DDAB233E3341008D2D27 /* LaunchScreen.storyboard */; };
-		0298DDB8233E3341008D2D27 /* SunCityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDB7233E3341008D2D27 /* SunCityTests.swift */; };
+		0298DDC3233E37D9008D2D27 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDC2233E37D9008D2D27 /* XCTestCase.swift */; };
+		0298DDC9233E3884008D2D27 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDC8233E3884008D2D27 /* UIViewController.swift */; };
 		CC4F69687C963F58D98D45CC /* Pods_SunCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5240B12F5C57343FF096AB89 /* Pods_SunCity.framework */; };
 		FACEFD8C86AA0C0CF700D179 /* Pods_SunCityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7127838F78AE645DA65C05 /* Pods_SunCityTests.framework */; };
 /* End PBXBuildFile section */
@@ -30,14 +29,13 @@
 /* Begin PBXFileReference section */
 		0298DD9D233E3340008D2D27 /* SunCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0298DDA0233E3340008D2D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0298DDA4233E3340008D2D27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0298DDA7233E3340008D2D27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0298DDA9233E3341008D2D27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0298DDAC233E3341008D2D27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0298DDAE233E3341008D2D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0298DDB3233E3341008D2D27 /* SunCityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunCityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0298DDB7233E3341008D2D27 /* SunCityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunCityTests.swift; sourceTree = "<group>"; };
 		0298DDB9233E3341008D2D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0298DDC2233E37D9008D2D27 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		0298DDC8233E3884008D2D27 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		0A7127838F78AE645DA65C05 /* Pods_SunCityTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunCityTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A77275BF6EEF4090D0B5AF9 /* Pods-SunCityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCityTests.debug.xcconfig"; path = "Target Support Files/Pods-SunCityTests/Pods-SunCityTests.debug.xcconfig"; sourceTree = "<group>"; };
 		30819672FFF66D37899EE0F2 /* Pods-SunCityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCityTests.release.xcconfig"; path = "Target Support Files/Pods-SunCityTests/Pods-SunCityTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,12 +87,11 @@
 		0298DD9F233E3340008D2D27 /* SunCity */ = {
 			isa = PBXGroup;
 			children = (
-				0298DDA0233E3340008D2D27 /* AppDelegate.swift */,
-				0298DDA4233E3340008D2D27 /* ViewController.swift */,
-				0298DDA6233E3340008D2D27 /* Main.storyboard */,
-				0298DDA9233E3341008D2D27 /* Assets.xcassets */,
-				0298DDAB233E3341008D2D27 /* LaunchScreen.storyboard */,
-				0298DDAE233E3341008D2D27 /* Info.plist */,
+				0298DDC7233E384D008D2D27 /* Application */,
+				0298DDC4233E382B008D2D27 /* Extensions */,
+				0298DDC6233E382B008D2D27 /* Resources */,
+				5DF62612672F093597C8272B /* User Stories */,
+				0298DDC5233E382B008D2D27 /* Services */,
 			);
 			path = SunCity;
 			sourceTree = "<group>";
@@ -102,10 +99,58 @@
 		0298DDB6233E3341008D2D27 /* SunCityTests */ = {
 			isa = PBXGroup;
 			children = (
-				0298DDB7233E3341008D2D27 /* SunCityTests.swift */,
 				0298DDB9233E3341008D2D27 /* Info.plist */,
+				0298DDC2233E37D9008D2D27 /* XCTestCase.swift */,
+				7655824167A6DE2F4F79B1AB /* User Stories */,
 			);
 			path = SunCityTests;
+			sourceTree = "<group>";
+		};
+		0298DDC4233E382B008D2D27 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0298DDC8233E3884008D2D27 /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0298DDC5233E382B008D2D27 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0298DDC6233E382B008D2D27 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0298DDA9233E3341008D2D27 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0298DDC7233E384D008D2D27 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0298DDAE233E3341008D2D27 /* Info.plist */,
+				0298DDAB233E3341008D2D27 /* LaunchScreen.storyboard */,
+				0298DDA0233E3340008D2D27 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5DF62612672F093597C8272B /* User Stories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "User Stories";
+			sourceTree = "<group>";
+		};
+		7655824167A6DE2F4F79B1AB /* User Stories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "User Stories";
 			sourceTree = "<group>";
 		};
 		9061FF98CFC0B2BA254EF2D0 /* Frameworks */ = {
@@ -125,7 +170,6 @@
 				1A77275BF6EEF4090D0B5AF9 /* Pods-SunCityTests.debug.xcconfig */,
 				30819672FFF66D37899EE0F2 /* Pods-SunCityTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -214,7 +258,6 @@
 			files = (
 				0298DDAD233E3341008D2D27 /* LaunchScreen.storyboard in Resources */,
 				0298DDAA233E3341008D2D27 /* Assets.xcassets in Resources */,
-				0298DDA8233E3340008D2D27 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,8 +322,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0298DDA5233E3340008D2D27 /* ViewController.swift in Sources */,
 				0298DDA1233E3340008D2D27 /* AppDelegate.swift in Sources */,
+				0298DDC9233E3884008D2D27 /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0298DDB8233E3341008D2D27 /* SunCityTests.swift in Sources */,
+				0298DDC3233E37D9008D2D27 /* XCTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,14 +346,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0298DDA6233E3340008D2D27 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0298DDA7233E3340008D2D27 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0298DDAB233E3341008D2D27 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SunCity/Info.plist;
+				INFOPLIST_FILE = SunCity/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -460,7 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SunCity/Info.plist;
+				INFOPLIST_FILE = SunCity/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
