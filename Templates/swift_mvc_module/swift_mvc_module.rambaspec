@@ -1,0 +1,17 @@
+# Template information section
+name: "surf_mvc_module"
+summary: ""
+author: "Ivan Smetanin"
+version: "1.0.0"
+license: "MIT"
+
+# The declarations for code files
+code_files:
+- {name: Module/ModuleOutput.swift, path: Code/module_output.swift.liquid}
+- {name: Module/ModuleConfigurator.swift, path: Code/module_configurator.swift.liquid}
+- {name: View/ViewController.swift, path: Code/view_controller.swift.liquid}
+- {name: View/ViewController.storyboard, path: Code/view_controller.storyboard.liquid}
+
+test_files:
+# Configurators tests
+- {name: ModuleConfiguratorTests.swift, path: Tests/module_configurator_tests.swift.liquid}

@@ -1,0 +1,37 @@
+### Headers settings
+company: Ivan Smetanin
+
+### Xcode project settings
+project_name: SunCity
+xcodeproj_path: SunCity.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: SunCity
+
+# The file path for new modules
+project_file_path: SunCity/User Stories
+
+# The Xcode group path to new modules
+project_group_path: SunCity/User Stories
+
+### Tests generation settings section
+# The tests target name
+test_target: SunCityTests
+
+# The file path for new tests
+test_file_path: SunCityTests/Tests/User Stories
+
+# The Xcode group path to new tests
+test_group_path: SunCityTests/Tests/User Stories
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Catalogs
+catalogs:
+- 'https://github.com/ismetanin/generamba-modules'
+
+### Templates
+templates:
+- {name: swift_mvc_module}
