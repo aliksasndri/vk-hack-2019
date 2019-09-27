@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func makeRootViewController() -> UIViewController {
-        let controller = UIViewController()
+        let (controller, _) = ChatModuleConfigurator().configure()
         return controller
     }
 
