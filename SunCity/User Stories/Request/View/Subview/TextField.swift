@@ -42,6 +42,13 @@ final class TextField: SkyFloatingLabelTextField {
         let superRect = super.textRect(forBounds: bounds)
         return CGRect(x: 16.0, y: 19.0, width: superRect.width - 32.0, height: superRect.size.height - 20.0)
     }
+
+    // MARK: - Internal helpers
+
+    func fill(placeholder: String) {
+        self.placeholder = placeholder
+        self.title = placeholder
+    }
 }
 
 // MARK: - Private helpers

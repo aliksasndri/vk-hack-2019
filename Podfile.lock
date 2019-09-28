@@ -1,16 +1,37 @@
 PODS:
+  - Alamofire (5.0.0-beta.4)
+  - CoreEvents (1.3.0)
+  - NodeKit (2.2.0):
+    - Alamofire (= 5.0.0-beta.4)
+    - CoreEvents (~> 1.3.0)
   - SkyFloatingLabelTextField (3.7.0)
 
 DEPENDENCIES:
+  - NodeKit (from `https://github.com/surfstudio/NodeKit`, commit `b5c30f2a30ab3d047f19e5049d858cdd5c524c55`)
   - SkyFloatingLabelTextField
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - CoreEvents
     - SkyFloatingLabelTextField
 
+EXTERNAL SOURCES:
+  NodeKit:
+    :commit: b5c30f2a30ab3d047f19e5049d858cdd5c524c55
+    :git: https://github.com/surfstudio/NodeKit
+
+CHECKOUT OPTIONS:
+  NodeKit:
+    :commit: b5c30f2a30ab3d047f19e5049d858cdd5c524c55
+    :git: https://github.com/surfstudio/NodeKit
+
 SPEC CHECKSUMS:
+  Alamofire: 6458d95477bc40adf10129f22c67cfb014162dc8
+  CoreEvents: 4a63e862e73719738cb4d646ccac78e01bf9a95d
+  NodeKit: 2b77646682073be4d246a1975f12139279e688f6
   SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
 
-PODFILE CHECKSUM: ec75515e012fc43fa4bbe137cf0941bc3af2fade
+PODFILE CHECKSUM: d66914a67e839ebef63e1e0cbb1e259994eac137
 
 COCOAPODS: 1.6.1

@@ -45,6 +45,7 @@ final class ExpandableView: UIView {
     // MARK: - Properties
 
     private var state: State = .collapsed
+    private var fields: [TextField] = []
 
     // MARK: - Initialization and deinitialization
 
@@ -76,24 +77,22 @@ final class ExpandableView: UIView {
         switch state {
         case .collapsed:
             arrowImageView.image = UIImage(named: "arrowDown")
-            stackView.arrangedSubviews.forEach { [weak self] view in
-                guard self?.topView != view else { return }
-                view.removeFromSuperview()
-            }
+            fields.forEach { $0.isHidden = true }
         case .expanded:
             arrowImageView.image = UIImage(named: "arrowUp")
-            for _ in 0...4 {
-                let textField = TextField()
-                textField.placeholder = "Имя"
-                textField.title = "Не имя"
-                stackView.addArrangedSubview(textField)
-            }
+            fields.forEach { $0.isHidden = false }
         }
     }
 
-    func fill() {
-        nameLabel.text = "Общие сведения"
-        percentLabel.text = "13%"
+    func fill(title: String, textFields: [TextField]) {
+        self.nameLabel.text = title
+        self.fields = textFields
+
+        textFields.forEach { [weak self] textField in
+            self?.stackView.addArrangedSubview(textField)
+        }
+
+        configure(for: .collapsed)
     }
 }
 
@@ -103,5 +102,6 @@ private extension ExpandableView {
         containerView.backgroundColor = .white
         percentView.cornerRadius = 8.0
         percentView.clipsToBounds = true
+        percentLabel.text = "0%"
     }
 }

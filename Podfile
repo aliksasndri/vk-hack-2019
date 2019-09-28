@@ -6,8 +6,8 @@ target 'SunCity' do
     use_frameworks!
 
     pod 'SkyFloatingLabelTextField'
-    pod 'NodeKit'
-end
+    pod 'NodeKit', :git => 'https://github.com/surfstudio/NodeKit', :commit => 'b5c30f2a30ab3d047f19e5049d858cdd5c524c55'
+  end
 
 target 'SunCityTests' do
   use_frameworks!
