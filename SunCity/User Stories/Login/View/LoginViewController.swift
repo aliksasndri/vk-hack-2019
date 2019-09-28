@@ -71,7 +71,7 @@ final class LoginViewController: UIViewController, LoginModuleOutput {
             email: emailTextField.text ?? "",
             password: passwordTextField.text ?? "",
             onSuccess: {
-                UIApplication.shared.delegate?.window??.rootViewController = UIViewController()
+                UIApplication.shared.delegate?.window??.rootViewController = MainTabBarConfigurator().configure()
             },
             onError: {
                 let alert = UIAlertController(
