@@ -16,7 +16,7 @@ final class LoginService {
         request.httpMethod = "POST"
         let parameters: [String: Any] = [
             "email": email,
-            "password": password
+            "password": password,
             "apns": UserDefaults.standard.apns ?? ""
         ]
         request.httpBody = try! JSONSerialization.data(
