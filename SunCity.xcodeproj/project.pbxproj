@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0214F5EE233F5F0F00A4B2B2 /* AudioRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214F5ED233F5F0F00A4B2B2 /* AudioRecorderViewController.swift */; };
+		0214F5F0233F745000A4B2B2 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214F5EF233F745000A4B2B2 /* AudioRecorder.swift */; };
+		0214F5F2233F745800A4B2B2 /* AudioRecorderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214F5F1233F745800A4B2B2 /* AudioRecorderError.swift */; };
+		0214F5F4233F746900A4B2B2 /* AudioRecorderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214F5F3233F746900A4B2B2 /* AudioRecorderDelegate.swift */; };
 		0270CC51233E9F7C003B6741 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0270CC50233E9F7C003B6741 /* DateFormatter.swift */; };
 		0270CC53233EA2CD003B6741 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0270CC52233EA2CD003B6741 /* Date.swift */; };
 		0270CC55233EA37C003B6741 /* TimeSeparatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0270CC54233EA37C003B6741 /* TimeSeparatorCollectionViewCell.swift */; };
@@ -31,7 +35,6 @@
 		0298DDAA233E3341008D2D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0298DDA9233E3341008D2D27 /* Assets.xcassets */; };
 		0298DDAD233E3341008D2D27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0298DDAB233E3341008D2D27 /* LaunchScreen.storyboard */; };
 		0298DDC3233E37D9008D2D27 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDC2233E37D9008D2D27 /* XCTestCase.swift */; };
-		0298DDC9233E3884008D2D27 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDC8233E3884008D2D27 /* UIViewController.swift */; };
 		0365F60B265464BAC1A7169D /* ChatModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16D84D4AC7D6CA1D55E6A0B /* ChatModuleOutput.swift */; };
 		28B964282AE00C3FA4CEC755 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A275BA8FA212991D4D94BD /* ChatViewController.swift */; };
 		78A544422B47C7938951F812 /* ChatModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567C4758CC5259675DB251D /* ChatModuleConfiguratorTests.swift */; };
@@ -51,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0214F5ED233F5F0F00A4B2B2 /* AudioRecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderViewController.swift; sourceTree = "<group>"; };
+		0214F5EF233F745000A4B2B2 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		0214F5F1233F745800A4B2B2 /* AudioRecorderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderError.swift; sourceTree = "<group>"; };
+		0214F5F3233F746900A4B2B2 /* AudioRecorderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderDelegate.swift; sourceTree = "<group>"; };
 		0270CC50233E9F7C003B6741 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		0270CC52233EA2CD003B6741 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		0270CC54233EA37C003B6741 /* TimeSeparatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeparatorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -222,6 +229,10 @@
 		0298DDC5233E382B008D2D27 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0214F5ED233F5F0F00A4B2B2 /* AudioRecorderViewController.swift */,
+				0214F5EF233F745000A4B2B2 /* AudioRecorder.swift */,
+				0214F5F3233F746900A4B2B2 /* AudioRecorderDelegate.swift */,
+				0214F5F1233F745800A4B2B2 /* AudioRecorderError.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -499,7 +510,6 @@
 				0270CC53233EA2CD003B6741 /* Date.swift in Sources */,
 				0270CC76233EBACF003B6741 /* MessageViewModel.swift in Sources */,
 				0270CC74233EB89F003B6741 /* TextMessageViewModelBuilder.swift in Sources */,
-				0298DDC9233E3884008D2D27 /* UIViewController.swift in Sources */,
 				0270CC5B233EA3FF003B6741 /* TimeSeparatorModel.swift in Sources */,
 				0270CC78233EBB1A003B6741 /* ChatItemsDecorator.swift in Sources */,
 				0365F60B265464BAC1A7169D /* ChatModuleOutput.swift in Sources */,
@@ -516,6 +526,10 @@
 				0270CC60233EA5BE003B6741 /* SendingStatusPresenter.swift in Sources */,
 				0270CC61233EA5BE003B6741 /* SendingStatusCollectionViewCell.swift in Sources */,
 				0270CC7A233EBB3A003B6741 /* ChatDataSource.swift in Sources */,
+				0214F5EE233F5F0F00A4B2B2 /* AudioRecorderViewController.swift in Sources */,
+				0214F5F0233F745000A4B2B2 /* AudioRecorder.swift in Sources */,
+				0214F5F2233F745800A4B2B2 /* AudioRecorderError.swift in Sources */,
+				0214F5F4233F746900A4B2B2 /* AudioRecorderDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
