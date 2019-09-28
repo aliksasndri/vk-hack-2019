@@ -1,21 +1,46 @@
 PODS:
+  - Alamofire (5.0.0-beta.4)
   - Chatto (3.5.0)
   - ChattoAdditions (3.5.0):
     - Chatto
+  - CoreEvents (1.3.0)
+  - NodeKit (2.2.0):
+    - Alamofire (= 5.0.0-beta.4)
+    - CoreEvents (~> 1.3.0)
+  - SkyFloatingLabelTextField (3.7.0)
 
 DEPENDENCIES:
   - Chatto (= 3.5.0)
   - ChattoAdditions (= 3.5.0)
+  - NodeKit (from `https://github.com/surfstudio/NodeKit`, commit `b5c30f2a30ab3d047f19e5049d858cdd5c524c55`)
+  - SkyFloatingLabelTextField
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Chatto
     - ChattoAdditions
+    - CoreEvents
+    - SkyFloatingLabelTextField
+
+EXTERNAL SOURCES:
+  NodeKit:
+    :commit: b5c30f2a30ab3d047f19e5049d858cdd5c524c55
+    :git: https://github.com/surfstudio/NodeKit
+
+CHECKOUT OPTIONS:
+  NodeKit:
+    :commit: b5c30f2a30ab3d047f19e5049d858cdd5c524c55
+    :git: https://github.com/surfstudio/NodeKit
 
 SPEC CHECKSUMS:
+  Alamofire: 6458d95477bc40adf10129f22c67cfb014162dc8
   Chatto: 3b4d5b8c56156dfa94caafc2bd4b3b42efb809a0
   ChattoAdditions: abd81bf223d15b4cdd82e23d675a2a286c150d56
+  CoreEvents: 4a63e862e73719738cb4d646ccac78e01bf9a95d
+  NodeKit: 2b77646682073be4d246a1975f12139279e688f6
+  SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
 
-PODFILE CHECKSUM: 02a27126d90bd1bed5d10463fc978e216832c65c
+PODFILE CHECKSUM: d60816bc8bfa1112bbd9cb1ea913d70086cd90d8
 
 COCOAPODS: 1.6.1

@@ -74,6 +74,7 @@
                     </view>
                     <connections>
                         <outlet property="enterButtonBottomConstraint" destination="v0B-DE-J1c" id="F8W-R4-u2p"/>
+                        <outlet property="titleLabel" destination="Yup-fv-jYc" id="mhM-LT-M9N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -83,6 +84,6 @@
     </scenes>
     <resources>
         <image name="bg_gradient_green" width="375" height="819"/>
-        <image name="ic_close" width="24" height="24"/>
+        <image name="ic_close" width="24" height="24.333333969116211"/>
     </resources>
 </document>
