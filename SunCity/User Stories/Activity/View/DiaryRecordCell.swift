@@ -8,17 +8,32 @@
 
 import UIKit
 
-class DiaryRecordCell: UITableViewCell {
+final class DiaryRecordCell: UITableViewCell {
+
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var textContentLabel: UILabel!
+
+    @IBOutlet weak var commentsCountLabel: UILabel!
+    @IBOutlet weak var commentsContainer: UIView!
+
+    @IBOutlet weak var photosCountLabel: UILabel!
+    @IBOutlet weak var photosContainer: UIView!
+
+    @IBOutlet weak var audioContainer: UIView!
+    @IBOutlet weak var minutesAudioLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configure(minutesAudio: String?, commentsCount: String?, photosCount: String?, text: String, date: String) {
+        minutesAudioLabel.text = minutesAudio
+        commentsCountLabel.text = commentsCount
+        photosCountLabel.text = photosCount
+        textContentLabel.text = text
+        dateLabel.text = date
+        photosContainer.isHidden = photosCount == nil
+        audioContainer.isHidden = minutesAudio == nil
     }
     
 }

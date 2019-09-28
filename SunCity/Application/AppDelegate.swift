@@ -41,14 +41,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 
     private func makeRootViewController() -> UIViewController {
-        let controller = MainTabBarConfigurator().configure()
-//        let (controller, _) = RequestModuleConfigurator().configure()
+        let controller: UIViewController
+        if UserDefaults.standard.token == nil {
+            controller = StartModuleConfigurator().configure().0
+        } else {
+            controller = MainTabBarConfigurator().configure()
+        }
         return controller
     }
 
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        print(deviceToken.base64EncodedString())
-        print(deviceToken.hexEncodedString())
         UserDefaults.standard.apns = deviceToken.hexEncodedString()
     }
 

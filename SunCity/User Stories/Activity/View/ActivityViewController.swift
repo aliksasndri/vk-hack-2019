@@ -54,6 +54,8 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
         tableView.dataSource = self
         tableView.reloadData()
         tableView.tableFooterView = UIView()
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
     }
 
     // MARK: - Actions
@@ -94,11 +96,22 @@ extension ActivityViewController: UITableViewDelegate {
 extension ActivityViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 2
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: String(describing: DiaryRecordCell.self),
+            for: indexPath
+        ) as? DiaryRecordCell
+        cell?.configure(
+            minutesAudio: "4:11",
+            commentsCount: "2",
+            photosCount: "3",
+            text: "Что сказать о моём друге? Иногда я вижу в ней себя. Бывает, я её не понимаю. Часто мне хочется дать ей больше. Регулярно думаю: \"А как это, видеть мир ее глазами?\" Она заставляет меня размышлять и смеяться, грустить и даже злиться на секунду.",
+            date: "Сегодня"
+        )
+        return cell ?? UITableViewCell()
     }
 
 
