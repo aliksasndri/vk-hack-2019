@@ -14,15 +14,6 @@ final class ChatModuleConfiguratorTests: XCTestCase {
 
     // MARK: - Main tests
 
-    func testThatViewControllerLoadsCorrectly() {
-        if UIStoryboard(
-            name: String(describing: ChatViewController.self),
-            bundle: Bundle.main
-        ).instantiateInitialViewController() == nil {
-            XCTFail("Can't load ChatViewController from storyboard")
-        }
-    }
-
     func testDeallocation() {
         assertDeallocation(of: {
             let (view, _) = ChatModuleConfigurator().configure()
