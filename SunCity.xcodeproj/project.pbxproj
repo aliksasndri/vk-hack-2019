@@ -265,8 +265,8 @@
 			children = (
 				0270CC7D233ED8D3003B6741 /* Components */,
 				17A275BA8FA212991D4D94BD /* ChatViewController.swift */,
-				0270CC77233EBB1A003B6741 /* ChatItemsDecorator.swift */,
 				0270CC79233EBB3A003B6741 /* ChatDataSource.swift */,
+				0270CC77233EBB1A003B6741 /* ChatItemsDecorator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -669,14 +669,17 @@
 			baseConfigurationReference = 8507EC426224F023CAFB27CD /* Pods-SunCity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = B9639RHZFT;
 				INFOPLIST_FILE = SunCity/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ismetanin.github.io.SunCity;
+				PRODUCT_BUNDLE_IDENTIFIER = surf.vk.hackathon.sun.city;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = VKHackaton2019;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -687,14 +690,17 @@
 			baseConfigurationReference = 7656003AF7C82CB3A943D463 /* Pods-SunCity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = B9639RHZFT;
 				INFOPLIST_FILE = SunCity/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ismetanin.github.io.SunCity;
+				PRODUCT_BUNDLE_IDENTIFIER = surf.vk.hackathon.sun.city;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = VKHackaton2019;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

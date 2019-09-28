@@ -20,7 +20,7 @@ final class ChatInputView: UIView {
     
     // MARK: - Properties
 
-    var onSend: (() -> Void)?
+    var onSend: ((String) -> Void)?
 
     var inputText: String {
         get {
@@ -60,6 +60,7 @@ final class ChatInputView: UIView {
         textView.scrollsToTop = false
         textView.delegate = self
         sendButton.isEnabled = false
+        sendButton.addTarget(self, action: #selector(sendAction), for: .touchUpInside)
         addSubview(sendButton)
         sendButton.translatesAutoresizingMaskIntoConstraints = false
 
@@ -115,7 +116,8 @@ final class ChatInputView: UIView {
 
     @objc
     private func sendAction() {
-        onSend?()
+        onSend?(inputText)
+        textView.text = nil
     }
 
     // MARK: - Private methods

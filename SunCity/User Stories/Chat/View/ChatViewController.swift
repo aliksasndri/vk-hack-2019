@@ -17,6 +17,9 @@ final class ChatViewController: BaseChatViewController, ChatModuleOutput {
     // MARK: - Properties
 
     var chatInputPresenter: BasicChatInputBarPresenter!
+    private var dataSource: ChatDataSource? {
+        return chatDataSource as? ChatDataSource
+    }
 
     // MARK: - BaseChatViewController
 
@@ -36,6 +39,9 @@ final class ChatViewController: BaseChatViewController, ChatModuleOutput {
         appearance.textInputAppearance.textInsets = UIEdgeInsets(top: 16, left: 8, bottom: 16, right: 4)
         chatInputView.maxCharactersCount = 1000
         chatInputView.setAppearance(appearance)
+        chatInputView.onSend = { [weak self] text in
+            self?.dataSource?.add(message: text)
+        }
         return chatInputView
     }
 

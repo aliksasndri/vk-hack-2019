@@ -51,8 +51,10 @@ final class MessagePresenter: TextMessagePresenter<TextMessageViewModelBuilder, 
             animated: animated,
             additionalConfiguration: additionalConfiguration
         )
-        cell.avatarView.layer.cornerRadius = cell.avatarView.frame.size.width / 2
-        cell.avatarView.clipsToBounds = true
+        DispatchQueue.main.async {
+            cell.avatarView.layer.cornerRadius = cell.avatarView.frame.size.width / 2
+            cell.avatarView.clipsToBounds = true
+        }
     }
 
 }
