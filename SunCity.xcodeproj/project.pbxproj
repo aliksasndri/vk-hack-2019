@@ -41,10 +41,15 @@
 		3F15BB14D84FC4E46741D197 /* StartModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E2FEBF60B31D60922D4B22 /* StartModuleOutput.swift */; };
 		54DCA634373D3BC4EF4C3677 /* StartModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F48AAC64868AC046EFDFB2E /* StartModuleConfiguratorTests.swift */; };
 		78A544422B47C7938951F812 /* ChatModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567C4758CC5259675DB251D /* ChatModuleConfiguratorTests.swift */; };
+		7BD4CEBB6DE2D39868BA5D1E /* LoginModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2305AA51ECB707E0DA306 /* LoginModuleConfiguratorTests.swift */; };
 		80BDFECFF7AE4FEC6E9E28F7 /* StartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9D8C37707FFD20D817F7175 /* StartViewController.storyboard */; };
 		999365F50E5E48EED372EDD5 /* StartModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80147B65BBB89E4ABB3873 /* StartModuleConfigurator.swift */; };
+		A870D6E738A92838C8D39D6D /* LoginModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6809E3CAB17D8A92FCCE8E24 /* LoginModuleConfigurator.swift */; };
 		C05FFDF4ED3D3D71B880C70C /* ChatModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3480F693F69D9C6C16F04DC /* ChatModuleConfigurator.swift */; };
 		CC4F69687C963F58D98D45CC /* Pods_SunCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5240B12F5C57343FF096AB89 /* Pods_SunCity.framework */; };
+		E1AF65386EB4CE0158534A92 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58542BB26FC41CD07CE3A1F0 /* LoginViewController.storyboard */; };
+		F178C0DD3DB6C22784B6FDE8 /* LoginModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A585A9E5D66D51CF1989C /* LoginModuleOutput.swift */; };
+		F9206321633BC72950D12EEF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2834A5AD09840D875D12C9 /* LoginViewController.swift */; };
 		F9DA3EBD8BD85C834EA6091E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5C2449148714CCED3EFC76 /* StartViewController.swift */; };
 		FACEFD8C86AA0C0CF700D179 /* Pods_SunCityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7127838F78AE645DA65C05 /* Pods_SunCityTests.framework */; };
 /* End PBXBuildFile section */
@@ -94,10 +99,15 @@
 		0298DDC2233E37D9008D2D27 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		0298DDC8233E3884008D2D27 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		0A7127838F78AE645DA65C05 /* Pods_SunCityTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunCityTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AF2305AA51ECB707E0DA306 /* LoginModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		17A275BA8FA212991D4D94BD /* ChatViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		1A77275BF6EEF4090D0B5AF9 /* Pods-SunCityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCityTests.debug.xcconfig"; path = "Target Support Files/Pods-SunCityTests/Pods-SunCityTests.debug.xcconfig"; sourceTree = "<group>"; };
 		30819672FFF66D37899EE0F2 /* Pods-SunCityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCityTests.release.xcconfig"; path = "Target Support Files/Pods-SunCityTests/Pods-SunCityTests.release.xcconfig"; sourceTree = "<group>"; };
 		5240B12F5C57343FF096AB89 /* Pods_SunCity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunCity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		526A585A9E5D66D51CF1989C /* LoginModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginModuleOutput.swift; sourceTree = "<group>"; };
+		58542BB26FC41CD07CE3A1F0 /* LoginViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		6809E3CAB17D8A92FCCE8E24 /* LoginModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginModuleConfigurator.swift; sourceTree = "<group>"; };
+		6E2834A5AD09840D875D12C9 /* LoginViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6F48AAC64868AC046EFDFB2E /* StartModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		7656003AF7C82CB3A943D463 /* Pods-SunCity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCity.release.xcconfig"; path = "Target Support Files/Pods-SunCity/Pods-SunCity.release.xcconfig"; sourceTree = "<group>"; };
 		8507EC426224F023CAFB27CD /* Pods-SunCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCity.debug.xcconfig"; path = "Target Support Files/Pods-SunCity/Pods-SunCity.debug.xcconfig"; sourceTree = "<group>"; };
@@ -266,6 +276,25 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		0BE3B086AEEA96664D14D371 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0AF2305AA51ECB707E0DA306 /* LoginModuleConfiguratorTests.swift */,
+			);
+			name = Login;
+			path = Login;
+			sourceTree = "<group>";
+		};
+		47F83C30A5F5C92D9B1E940F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6E2834A5AD09840D875D12C9 /* LoginViewController.swift */,
+				58542BB26FC41CD07CE3A1F0 /* LoginViewController.storyboard */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
 		484EF7FE5A3832ED31B0723A /* Start */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,8 +308,19 @@
 			children = (
 				D3E1C2BE54F759E4BDB0395E /* Chat */,
 				BDF25FEFB899FE499BC997EE /* Start */,
+				F748B3264F2EB21D187E841D /* Login */,
 			);
 			path = "User Stories";
+			sourceTree = "<group>";
+		};
+		660463A7E6C8007AEB0D9763 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				526A585A9E5D66D51CF1989C /* LoginModuleOutput.swift */,
+				6809E3CAB17D8A92FCCE8E24 /* LoginModuleConfigurator.swift */,
+			);
+			name = Module;
+			path = Module;
 			sourceTree = "<group>";
 		};
 		7655824167A6DE2F4F79B1AB /* User Stories */ = {
@@ -288,6 +328,7 @@
 			children = (
 				FFFFFD3BDCA3DB185F6B2090 /* Chat */,
 				484EF7FE5A3832ED31B0723A /* Start */,
+				0BE3B086AEEA96664D14D371 /* Login */,
 			);
 			path = "User Stories";
 			sourceTree = "<group>";
@@ -366,6 +407,16 @@
 				77B0168A1596559F01736638 /* View */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		F748B3264F2EB21D187E841D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				660463A7E6C8007AEB0D9763 /* Module */,
+				47F83C30A5F5C92D9B1E940F /* View */,
+			);
+			name = Login;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		FFFFFD3BDCA3DB185F6B2090 /* Chat */ = {
@@ -464,6 +515,7 @@
 				0298DDAD233E3341008D2D27 /* LaunchScreen.storyboard in Resources */,
 				0298DDAA233E3341008D2D27 /* Assets.xcassets in Resources */,
 				80BDFECFF7AE4FEC6E9E28F7 /* StartViewController.storyboard in Resources */,
+				E1AF65386EB4CE0158534A92 /* LoginViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +635,9 @@
 				3F15BB14D84FC4E46741D197 /* StartModuleOutput.swift in Sources */,
 				999365F50E5E48EED372EDD5 /* StartModuleConfigurator.swift in Sources */,
 				F9DA3EBD8BD85C834EA6091E /* StartViewController.swift in Sources */,
+				F178C0DD3DB6C22784B6FDE8 /* LoginModuleOutput.swift in Sources */,
+				A870D6E738A92838C8D39D6D /* LoginModuleConfigurator.swift in Sources */,
+				F9206321633BC72950D12EEF /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +648,7 @@
 				0298DDC3233E37D9008D2D27 /* XCTestCase.swift in Sources */,
 				78A544422B47C7938951F812 /* ChatModuleConfiguratorTests.swift in Sources */,
 				54DCA634373D3BC4EF4C3677 /* StartModuleConfiguratorTests.swift in Sources */,
+				7BD4CEBB6DE2D39868BA5D1E /* LoginModuleConfiguratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
