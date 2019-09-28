@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 
 final class ActivityViewController: UIViewController, ActivityModuleOutput {
 
@@ -17,6 +18,9 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var workLabel: UILabel!
+    @IBOutlet weak var createEventButton: TouchableControl!
+
+    @IBOutlet var eventsStubs: [UIView]!
 
     @IBOutlet var titleContainerViews: [UIView]!
     @IBOutlet var subtitleContainerViews: [UIView]!
@@ -31,10 +35,12 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
 
     @IBOutlet weak var scrollViewLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollViewTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var subtitleContainerHeight: NSLayoutConstraint!
 
     // MARK: - Properties
 
     var isShowingEvents: Bool = true
+    var feedbacks: [Feedback] = []
 
     // MARK: - UIViewController
 
@@ -102,16 +108,37 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
         titleContainerIndicator.startAnimating()
         titleContainerViews.forEach { $0.isHidden = true }
         subtitleContainerViews.forEach { $0.isHidden = true }
+        diaryButton.isHidden = true
         let service = FeedbackService()
         service.getAll(
             onSuccess: { response in
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                    self.eventsStubs.forEach { $0.isHidden = true }
                     self.titleContainerViews.forEach { $0.isHidden = false }
                     self.subtitleContainerViews.forEach { $0.isHidden = false }
                     self.titleContainerIndicator.stopAnimating()
                     self.usernameLabel.text = response.user.name
                     self.cityLabel.text = String(response.user.description.split(separator: "*").first ?? "")
                     self.workLabel.text = String(response.user.description.split(separator: "*").last ?? "")
+                    self.avatarImageView.loadImage(
+                        with: "http://demo6.alpha.vkhackathon.com:8844" + response.user.image,
+                        placeholderImage: UIImage(named: "avatar_placeholder")
+                    )
+                    self.feedbacks = response.payload
+                    self.tableView.reloadData()
+                    switch response.user.userType {
+                    case .mentor:
+                        self.diaryButton.isHidden = false
+                        UIView.animate(withDuration: 0.3) {
+                            self.subtitleContainerHeight.constant = 191
+                            self.view.layoutSubviews()
+                        }
+                    case .psychologist:
+                        self.diaryButton.isHidden = true
+                        self.createEventButton.isHidden = false
+                        break
+                    }
+
                 }
             },
             onError: {
@@ -138,7 +165,7 @@ extension ActivityViewController: UITableViewDelegate {
 extension ActivityViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return self.feedbacks.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -146,12 +173,13 @@ extension ActivityViewController: UITableViewDataSource {
             withIdentifier: String(describing: DiaryRecordCell.self),
             for: indexPath
         ) as? DiaryRecordCell
+        let feedback = feedbacks[indexPath.row]
         cell?.configure(
-            minutesAudio: "4:11",
-            commentsCount: "2",
-            photosCount: "3",
-            text: "Что сказать о моём друге? Иногда я вижу в ней себя. Бывает, я её не понимаю. Часто мне хочется дать ей больше. Регулярно думаю: \"А как это, видеть мир ее глазами?\" Она заставляет меня размышлять и смеяться, грустить и даже злиться на секунду.",
-            date: "Сегодня"
+            minutesAudio: feedback.audio == "" ? nil : "1",
+            commentsCount: String(feedback.comments.count),
+            photosCount: String(feedback.images.count),
+            text: feedback.text,
+            date: feedback.date.toWeekDayAndDateString()
         )
         return cell ?? UITableViewCell()
     }

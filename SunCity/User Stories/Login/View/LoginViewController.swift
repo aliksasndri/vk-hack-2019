@@ -38,6 +38,9 @@ final class LoginViewController: UIViewController, LoginModuleOutput {
             emailTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16)
         ])
 
+        emailTextField.autocapitalizationType = .none
+        emailTextField.keyboardType = .emailAddress
+        emailTextField.textContentType = .emailAddress
         emailTextField.backgroundColor = .white
         emailTextField.fill(placeholder: "Ваш email")
 

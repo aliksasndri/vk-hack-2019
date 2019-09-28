@@ -35,8 +35,8 @@ final class DiaryRecordCell: UITableViewCell {
         photosCountLabel.text = photosCount
         textContentLabel.text = text
         dateLabel.text = date
-        photosContainer.isHidden = photosCount == nil
-        audioContainer.isHidden = minutesAudio == nil
+        photosContainer.isHidden = (photosCount == nil) || (photosCount == "0")
+        audioContainer.isHidden = minutesAudio == nil  || minutesAudio == "0"
     }
 
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {

@@ -54,18 +54,26 @@ struct Comment: Codable {
 }
 
 struct Feedback: Codable {
+    let audio: String
     let comments: [Comment]
     let id: String
     let images: [String]
     let text: String
     let userId: String
+    let dateString: String
+
+    var date: Date {
+        return Formatter.iso8601.date(from: dateString) ?? Date()
+    }
 
     enum CodingKeys: String, CodingKey {
+        case audio = "Audio"
         case comments = "Comments"
         case id = "ID"
         case images = "Images"
         case text = "Text"
         case userId = "UserID"
+        case dateString = "Date"
     }
 }
 
