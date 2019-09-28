@@ -31,15 +31,21 @@
 		0270CC78233EBB1A003B6741 /* ChatItemsDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0270CC77233EBB1A003B6741 /* ChatItemsDecorator.swift */; };
 		0270CC7A233EBB3A003B6741 /* ChatDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0270CC79233EBB3A003B6741 /* ChatDataSource.swift */; };
 		0270CC7C233EC4AC003B6741 /* ChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0270CC7B233EC4AC003B6741 /* ChatInputView.swift */; };
+		028262C0233F7A6800B2B14E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDC8233E3884008D2D27 /* UIViewController.swift */; };
 		0298DDA1233E3340008D2D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDA0233E3340008D2D27 /* AppDelegate.swift */; };
 		0298DDAA233E3341008D2D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0298DDA9233E3341008D2D27 /* Assets.xcassets */; };
 		0298DDAD233E3341008D2D27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0298DDAB233E3341008D2D27 /* LaunchScreen.storyboard */; };
 		0298DDC3233E37D9008D2D27 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDC2233E37D9008D2D27 /* XCTestCase.swift */; };
 		0365F60B265464BAC1A7169D /* ChatModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16D84D4AC7D6CA1D55E6A0B /* ChatModuleOutput.swift */; };
 		28B964282AE00C3FA4CEC755 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A275BA8FA212991D4D94BD /* ChatViewController.swift */; };
+		3F15BB14D84FC4E46741D197 /* StartModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E2FEBF60B31D60922D4B22 /* StartModuleOutput.swift */; };
+		54DCA634373D3BC4EF4C3677 /* StartModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F48AAC64868AC046EFDFB2E /* StartModuleConfiguratorTests.swift */; };
 		78A544422B47C7938951F812 /* ChatModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567C4758CC5259675DB251D /* ChatModuleConfiguratorTests.swift */; };
+		80BDFECFF7AE4FEC6E9E28F7 /* StartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9D8C37707FFD20D817F7175 /* StartViewController.storyboard */; };
+		999365F50E5E48EED372EDD5 /* StartModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF80147B65BBB89E4ABB3873 /* StartModuleConfigurator.swift */; };
 		C05FFDF4ED3D3D71B880C70C /* ChatModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3480F693F69D9C6C16F04DC /* ChatModuleConfigurator.swift */; };
 		CC4F69687C963F58D98D45CC /* Pods_SunCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5240B12F5C57343FF096AB89 /* Pods_SunCity.framework */; };
+		F9DA3EBD8BD85C834EA6091E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5C2449148714CCED3EFC76 /* StartViewController.swift */; };
 		FACEFD8C86AA0C0CF700D179 /* Pods_SunCityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7127838F78AE645DA65C05 /* Pods_SunCityTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,11 +98,16 @@
 		1A77275BF6EEF4090D0B5AF9 /* Pods-SunCityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCityTests.debug.xcconfig"; path = "Target Support Files/Pods-SunCityTests/Pods-SunCityTests.debug.xcconfig"; sourceTree = "<group>"; };
 		30819672FFF66D37899EE0F2 /* Pods-SunCityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCityTests.release.xcconfig"; path = "Target Support Files/Pods-SunCityTests/Pods-SunCityTests.release.xcconfig"; sourceTree = "<group>"; };
 		5240B12F5C57343FF096AB89 /* Pods_SunCity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunCity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F48AAC64868AC046EFDFB2E /* StartModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		7656003AF7C82CB3A943D463 /* Pods-SunCity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCity.release.xcconfig"; path = "Target Support Files/Pods-SunCity/Pods-SunCity.release.xcconfig"; sourceTree = "<group>"; };
 		8507EC426224F023CAFB27CD /* Pods-SunCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCity.debug.xcconfig"; path = "Target Support Files/Pods-SunCity/Pods-SunCity.debug.xcconfig"; sourceTree = "<group>"; };
+		AF80147B65BBB89E4ABB3873 /* StartModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartModuleConfigurator.swift; sourceTree = "<group>"; };
 		B567C4758CC5259675DB251D /* ChatModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatModuleConfiguratorTests.swift; sourceTree = "<group>"; };
+		B9D8C37707FFD20D817F7175 /* StartViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = StartViewController.storyboard; sourceTree = "<group>"; };
 		C3480F693F69D9C6C16F04DC /* ChatModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatModuleConfigurator.swift; sourceTree = "<group>"; };
 		D16D84D4AC7D6CA1D55E6A0B /* ChatModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatModuleOutput.swift; sourceTree = "<group>"; };
+		E3E2FEBF60B31D60922D4B22 /* StartModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartModuleOutput.swift; sourceTree = "<group>"; };
+		EB5C2449148714CCED3EFC76 /* StartViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,10 +266,19 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		484EF7FE5A3832ED31B0723A /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				6F48AAC64868AC046EFDFB2E /* StartModuleConfiguratorTests.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
 		5DF62612672F093597C8272B /* User Stories */ = {
 			isa = PBXGroup;
 			children = (
 				D3E1C2BE54F759E4BDB0395E /* Chat */,
+				BDF25FEFB899FE499BC997EE /* Start */,
 			);
 			path = "User Stories";
 			sourceTree = "<group>";
@@ -267,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				FFFFFD3BDCA3DB185F6B2090 /* Chat */,
+				484EF7FE5A3832ED31B0723A /* Start */,
 			);
 			path = "User Stories";
 			sourceTree = "<group>";
@@ -280,6 +301,15 @@
 				0270CC77233EBB1A003B6741 /* ChatItemsDecorator.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		86E3F18B1152302760BD8FC1 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				E3E2FEBF60B31D60922D4B22 /* StartModuleOutput.swift */,
+				AF80147B65BBB89E4ABB3873 /* StartModuleConfigurator.swift */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 		9061FF98CFC0B2BA254EF2D0 /* Frameworks */ = {
@@ -300,6 +330,24 @@
 				30819672FFF66D37899EE0F2 /* Pods-SunCityTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		BABA45777D3CE3418945385D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB5C2449148714CCED3EFC76 /* StartViewController.swift */,
+				B9D8C37707FFD20D817F7175 /* StartViewController.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDF25FEFB899FE499BC997EE /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				86E3F18B1152302760BD8FC1 /* Module */,
+				BABA45777D3CE3418945385D /* View */,
+			);
+			path = Start;
 			sourceTree = "<group>";
 		};
 		C57AB66BA0B256EDFE39EF85 /* Module */ = {
@@ -415,6 +463,7 @@
 				0270CC62233EA5BE003B6741 /* SendingStatusCollectionViewCell.xib in Resources */,
 				0298DDAD233E3341008D2D27 /* LaunchScreen.storyboard in Resources */,
 				0298DDAA233E3341008D2D27 /* Assets.xcassets in Resources */,
+				80BDFECFF7AE4FEC6E9E28F7 /* StartViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +579,10 @@
 				0214F5F0233F745000A4B2B2 /* AudioRecorder.swift in Sources */,
 				0214F5F2233F745800A4B2B2 /* AudioRecorderError.swift in Sources */,
 				0214F5F4233F746900A4B2B2 /* AudioRecorderDelegate.swift in Sources */,
+				028262C0233F7A6800B2B14E /* UIViewController.swift in Sources */,
+				3F15BB14D84FC4E46741D197 /* StartModuleOutput.swift in Sources */,
+				999365F50E5E48EED372EDD5 /* StartModuleConfigurator.swift in Sources */,
+				F9DA3EBD8BD85C834EA6091E /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +592,7 @@
 			files = (
 				0298DDC3233E37D9008D2D27 /* XCTestCase.swift in Sources */,
 				78A544422B47C7938951F812 /* ChatModuleConfiguratorTests.swift in Sources */,
+				54DCA634373D3BC4EF4C3677 /* StartModuleConfiguratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
