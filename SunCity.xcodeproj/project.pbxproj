@@ -44,6 +44,9 @@
 		0260177C233FB11F007F6B15 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260177B233FB11F007F6B15 /* UserDefaults.swift */; };
 		0260177E233FB672007F6B15 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260177D233FB672007F6B15 /* MainTabBarController.swift */; };
 		02601780233FB956007F6B15 /* MainTabBarConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0260177F233FB956007F6B15 /* MainTabBarConfigurator.swift */; };
+		02601782233FD487007F6B15 /* TouchableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02601781233FD487007F6B15 /* TouchableControl.swift */; };
+		02601785233FEF03007F6B15 /* DiaryRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02601783233FEF03007F6B15 /* DiaryRecordCell.swift */; };
+		02601786233FEF03007F6B15 /* DiaryRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02601784233FEF03007F6B15 /* DiaryRecordCell.xib */; };
 		0270CC51233E9F7C003B6741 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0270CC50233E9F7C003B6741 /* DateFormatter.swift */; };
 		0270CC53233EA2CD003B6741 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0270CC52233EA2CD003B6741 /* Date.swift */; };
 		028262C0233F7A6800B2B14E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDC8233E3884008D2D27 /* UIViewController.swift */; };
@@ -120,6 +123,9 @@
 		0260177B233FB11F007F6B15 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		0260177D233FB672007F6B15 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		0260177F233FB956007F6B15 /* MainTabBarConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarConfigurator.swift; sourceTree = "<group>"; };
+		02601781233FD487007F6B15 /* TouchableControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchableControl.swift; sourceTree = "<group>"; };
+		02601783233FEF03007F6B15 /* DiaryRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryRecordCell.swift; sourceTree = "<group>"; };
+		02601784233FEF03007F6B15 /* DiaryRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryRecordCell.xib; sourceTree = "<group>"; };
 		0270CC50233E9F7C003B6741 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		0270CC52233EA2CD003B6741 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		0270CC54233EA37C003B6741 /* TimeSeparatorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeparatorCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -458,6 +464,7 @@
 				0270CC52233EA2CD003B6741 /* Date.swift */,
 				8907BBC7233E8BA0005CC565 /* UIView.swift */,
 				0260177B233FB11F007F6B15 /* UserDefaults.swift */,
+				02601781233FD487007F6B15 /* TouchableControl.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -510,6 +517,8 @@
 		223613C70544242B1ADEE7D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				02601783233FEF03007F6B15 /* DiaryRecordCell.swift */,
+				02601784233FEF03007F6B15 /* DiaryRecordCell.xib */,
 				D8FBD66A0DFBA4E91E4D87E3 /* ActivityViewController.swift */,
 				0E4996215418B21F8DE22A0E /* ActivityViewController.storyboard */,
 			);
@@ -716,6 +725,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				021282BD233F9C3300160E1F /* StartViewController.storyboard in Resources */,
+				02601786233FEF03007F6B15 /* DiaryRecordCell.xib in Resources */,
 				021282B9233F9C3300160E1F /* LoginViewController.storyboard in Resources */,
 				0298DDAD233E3341008D2D27 /* LaunchScreen.storyboard in Resources */,
 				0298DDAA233E3341008D2D27 /* Assets.xcassets in Resources */,
@@ -822,6 +832,7 @@
 				021282BC233F9C3300160E1F /* StartViewController.swift in Sources */,
 				021282A1233F9C3300160E1F /* ChatModuleConfigurator.swift in Sources */,
 				021282B4233F9C3300160E1F /* ChatInputView.swift in Sources */,
+				02601785233FEF03007F6B15 /* DiaryRecordCell.swift in Sources */,
 				0270CC51233E9F7C003B6741 /* DateFormatter.swift in Sources */,
 				021282AC233F9C3300160E1F /* MessagePresenter.swift in Sources */,
 				021282B0233F9C3300160E1F /* TextMessageViewModelBuilder.swift in Sources */,
@@ -844,6 +855,7 @@
 				0214F5EE233F5F0F00A4B2B2 /* AudioRecorderViewController.swift in Sources */,
 				021282A5233F9C3300160E1F /* SendingStatusModel.swift in Sources */,
 				02601780233FB956007F6B15 /* MainTabBarConfigurator.swift in Sources */,
+				02601782233FD487007F6B15 /* TouchableControl.swift in Sources */,
 				0214F5F0233F745000A4B2B2 /* AudioRecorder.swift in Sources */,
 				0214F5F2233F745800A4B2B2 /* AudioRecorderError.swift in Sources */,
 				021282BA233F9C3300160E1F /* StartModuleConfigurator.swift in Sources */,
