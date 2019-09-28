@@ -33,7 +33,7 @@ final class MainTabBarConfigurator {
         var viewControllers = [UIViewController]()
 
         for tab in allTabs {
-            let navigationController = UINavigationController()
+            let navigationController = UINavigationController(rootViewController: tab.controller)
             let tabBarItem = UITabBarItem(
                 title: tab.title,
                 image: tab.image,

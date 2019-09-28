@@ -42,6 +42,17 @@ final class MainTabBarController: UITabBarController {
         var selectedImage: UIImage {
             return image
         }
+
+        var controller: UIViewController {
+            switch self {
+            case .activity:
+                return ActivityModuleConfigurator().configure().0
+            case .school:
+                return UIViewController()
+            case .chats:
+                return UIViewController()
+            }
+        }
     }
 
     // MARK: - UIViewController
