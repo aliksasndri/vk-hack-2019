@@ -174,6 +174,7 @@
 		AF80147B65BBB89E4ABB3873 /* StartModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartModuleConfigurator.swift; sourceTree = "<group>"; };
 		B567C4758CC5259675DB251D /* ChatModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		B820A189FB13E84C464FCF6F /* RequestViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = RequestViewController.storyboard; sourceTree = "<group>"; };
+		B9095D8F233FB4A1006906EE /* SunCityDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SunCityDebug.entitlements; sourceTree = "<group>"; };
 		B9D8C37707FFD20D817F7175 /* StartViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = StartViewController.storyboard; sourceTree = "<group>"; };
 		C3480F693F69D9C6C16F04DC /* ChatModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatModuleConfigurator.swift; sourceTree = "<group>"; };
 		CF7652AD821C089E763E6E82 /* ActivityModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActivityModuleConfiguratorTests.swift; sourceTree = "<group>"; };
@@ -431,6 +432,7 @@
 		0298DD9F233E3340008D2D27 /* SunCity */ = {
 			isa = PBXGroup;
 			children = (
+				B9095D8F233FB4A1006906EE /* SunCityDebug.entitlements */,
 				0298DDC7233E384D008D2D27 /* Application */,
 				0298DDC4233E382B008D2D27 /* Extensions */,
 				0298DDC6233E382B008D2D27 /* Resources */,
@@ -1023,6 +1025,7 @@
 			baseConfigurationReference = 8507EC426224F023CAFB27CD /* Pods-SunCity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SunCity/SunCityDebug.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = B9639RHZFT;
