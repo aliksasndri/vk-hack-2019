@@ -4,6 +4,8 @@ inhibit_all_warnings!
 
 target 'SunCity' do
     use_frameworks!
+    pod 'Chatto', '= 3.5.0'
+	pod 'ChattoAdditions', '= 3.5.0'
 end
 
 target 'SunCityTests' do
