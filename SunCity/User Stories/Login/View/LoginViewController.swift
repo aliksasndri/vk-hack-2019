@@ -57,12 +57,35 @@ final class LoginViewController: UIViewController, LoginModuleOutput {
 
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tap))
         view.addGestureRecognizer(gestureRecognizer)
-    }
 
-    // MARK: - Internal helpers
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            self.emailTextField.becomeFirstResponder()
+        }
+    }
 
     // MARK: - Actions
 
+    @IBAction private func login(_ sender: Any) {
+        let service = LoginService()
+        service.login(
+            email: emailTextField.text ?? "",
+            password: passwordTextField.text ?? "",
+            onSuccess: {
+                UIApplication.shared.delegate?.window??.rootViewController = UIViewController()
+            },
+            onError: {
+                let alert = UIAlertController(
+                    title: "Ошибка",
+                    message: "Что-то пошло не так",
+                    preferredStyle: .alert
+                )
+                let cancelAction = UIAlertAction(title: "Закрыть", style: .cancel, handler: nil)
+                alert.addAction(cancelAction)
+                self.present(alert, animated: true, completion: nil)
+            }
+        )
+    }
+    
     @objc
     private func tap() {
         view.endEditing(true)

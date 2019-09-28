@@ -42,6 +42,9 @@
                                         <integer key="value" value="27"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="login:" destination="h3k-bK-TNO" eventType="touchUpInside" id="Tin-vC-ne5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUw-Tm-ZQr">
                                 <rect key="frame" x="5" y="43" width="44" height="44"/>
