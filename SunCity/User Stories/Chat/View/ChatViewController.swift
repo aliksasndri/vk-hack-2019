@@ -22,8 +22,9 @@ final class ChatViewController: BaseChatViewController, ChatModuleOutput {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.chatDataSource = ChatDataSource()
-        self.chatItemsDecorator = ChatItemsDecorator()
+        chatDataSource = ChatDataSource()
+        chatItemsDecorator = ChatItemsDecorator()
+        view.backgroundColor = UIColor(red: 0.95, green: 0.96, blue: 0.93, alpha: 1)
     }
 
     override func createChatInputView() -> UIView {
@@ -47,40 +48,20 @@ final class ChatViewController: BaseChatViewController, ChatModuleOutput {
             interactionHandler: interactionHandler,
             menuPresenter: menuPresenter
         )
-        textMessagePresenter.baseMessageStyle = BaseMessageCollectionViewCellAvatarStyle()
+
+        let colors = BaseMessageCollectionViewCellDefaultStyle.Colors(
+            incoming: .white,
+            outgoing: UIColor(red: 0.31, green: 0.55, blue: 0.16, alpha: 1)
+        )
+        let style = BaseMessageCollectionViewCellAvatarStyle(colors: colors)
+        textMessagePresenter.baseMessageStyle = style
+        textMessagePresenter.textCellStyle = TextMessageCollectionViewCellDefaultStyle(baseStyle: style)
 
         return [
             MessageModel.chatItemType: [textMessagePresenter],
             TimeSeparatorModel.chatItemType: [TimeSeparatorPresenterBuilder()],
             SendingStatusModel.chatItemType: [SendingStatusPresenterBuilder()]
         ]
-    }
-
-    // MARK: - Private methods
-
-    private func createChatInputItems() -> [ChatInputItemProtocol] {
-        var items = [ChatInputItemProtocol]()
-        items.append(self.createTextInputItem())
-//        items.append(self.createPhotoInputItem())
-        return items
-    }
-
-    private func createTextInputItem() -> TextChatInputItem {
-        let item = TextChatInputItem()
-        item.textInputHandler = { text in
-            // Your handling logic
-            print("Input text: \(text)")
-        }
-        return item
-    }
-
-    private func createPhotoInputItem() -> PhotosChatInputItem {
-        let item = PhotosChatInputItem(presentingController: self)
-        item.photoInputHandler = { image, source in
-            // Your handling logic
-            print("Photo input handler. Image: \(image), source: \(source)")
-        }
-        return item
     }
 
 }
