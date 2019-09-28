@@ -12,6 +12,9 @@
 		0298DDAD233E3341008D2D27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0298DDAB233E3341008D2D27 /* LaunchScreen.storyboard */; };
 		0298DDC3233E37D9008D2D27 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDC2233E37D9008D2D27 /* XCTestCase.swift */; };
 		0298DDC9233E3884008D2D27 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDC8233E3884008D2D27 /* UIViewController.swift */; };
+		1B387BB5551563402BCBF2C5 /* SpeechModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432AF702C081A6FDA6F2C32D /* SpeechModuleConfiguratorTests.swift */; };
+		89AC1A2A233F6812002BFD0E /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AC1A29233F6812002BFD0E /* SpeechRecognitionService.swift */; };
+		89AC1A2E233F6F61002BFD0E /* nur.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 89AC1A2D233F6F61002BFD0E /* nur.mp3 */; };
 		CC4F69687C963F58D98D45CC /* Pods_SunCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5240B12F5C57343FF096AB89 /* Pods_SunCity.framework */; };
 		FACEFD8C86AA0C0CF700D179 /* Pods_SunCityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7127838F78AE645DA65C05 /* Pods_SunCityTests.framework */; };
 /* End PBXBuildFile section */
@@ -39,9 +42,12 @@
 		0A7127838F78AE645DA65C05 /* Pods_SunCityTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunCityTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A77275BF6EEF4090D0B5AF9 /* Pods-SunCityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCityTests.debug.xcconfig"; path = "Target Support Files/Pods-SunCityTests/Pods-SunCityTests.debug.xcconfig"; sourceTree = "<group>"; };
 		30819672FFF66D37899EE0F2 /* Pods-SunCityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCityTests.release.xcconfig"; path = "Target Support Files/Pods-SunCityTests/Pods-SunCityTests.release.xcconfig"; sourceTree = "<group>"; };
+		432AF702C081A6FDA6F2C32D /* SpeechModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpeechModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		5240B12F5C57343FF096AB89 /* Pods_SunCity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunCity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7656003AF7C82CB3A943D463 /* Pods-SunCity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCity.release.xcconfig"; path = "Target Support Files/Pods-SunCity/Pods-SunCity.release.xcconfig"; sourceTree = "<group>"; };
 		8507EC426224F023CAFB27CD /* Pods-SunCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCity.debug.xcconfig"; path = "Target Support Files/Pods-SunCity/Pods-SunCity.debug.xcconfig"; sourceTree = "<group>"; };
+		89AC1A29233F6812002BFD0E /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
+		89AC1A2D233F6F61002BFD0E /* nur.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nur.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 		0298DDC5233E382B008D2D27 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				89AC1A29233F6812002BFD0E /* SpeechRecognitionService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -135,8 +142,17 @@
 				0298DDAE233E3341008D2D27 /* Info.plist */,
 				0298DDAB233E3341008D2D27 /* LaunchScreen.storyboard */,
 				0298DDA0233E3340008D2D27 /* AppDelegate.swift */,
+				89AC1A2D233F6F61002BFD0E /* nur.mp3 */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		40C601A71C4DA60E869C6043 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				432AF702C081A6FDA6F2C32D /* SpeechModuleConfiguratorTests.swift */,
+			);
+			path = Speech;
 			sourceTree = "<group>";
 		};
 		5DF62612672F093597C8272B /* User Stories */ = {
@@ -149,6 +165,7 @@
 		7655824167A6DE2F4F79B1AB /* User Stories */ = {
 			isa = PBXGroup;
 			children = (
+				40C601A71C4DA60E869C6043 /* Speech */,
 			);
 			path = "User Stories";
 			sourceTree = "<group>";
@@ -258,6 +275,7 @@
 			files = (
 				0298DDAD233E3341008D2D27 /* LaunchScreen.storyboard in Resources */,
 				0298DDAA233E3341008D2D27 /* Assets.xcassets in Resources */,
+				89AC1A2E233F6F61002BFD0E /* nur.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0298DDA1233E3340008D2D27 /* AppDelegate.swift in Sources */,
+				89AC1A2A233F6812002BFD0E /* SpeechRecognitionService.swift in Sources */,
 				0298DDC9233E3884008D2D27 /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0298DDC3233E37D9008D2D27 /* XCTestCase.swift in Sources */,
+				1B387BB5551563402BCBF2C5 /* SpeechModuleConfiguratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
