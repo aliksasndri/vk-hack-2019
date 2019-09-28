@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0214F5EE233F5F0F00A4B2B2 /* AudioRecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214F5ED233F5F0F00A4B2B2 /* AudioRecorderViewController.swift */; };
+		0214F5F0233F745000A4B2B2 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214F5EF233F745000A4B2B2 /* AudioRecorder.swift */; };
+		0214F5F2233F745800A4B2B2 /* AudioRecorderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214F5F1233F745800A4B2B2 /* AudioRecorderError.swift */; };
+		0214F5F4233F746900A4B2B2 /* AudioRecorderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214F5F3233F746900A4B2B2 /* AudioRecorderDelegate.swift */; };
 		0298DDA1233E3340008D2D27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDA0233E3340008D2D27 /* AppDelegate.swift */; };
 		0298DDAA233E3341008D2D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0298DDA9233E3341008D2D27 /* Assets.xcassets */; };
 		0298DDAD233E3341008D2D27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0298DDAB233E3341008D2D27 /* LaunchScreen.storyboard */; };
@@ -27,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0214F5ED233F5F0F00A4B2B2 /* AudioRecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderViewController.swift; sourceTree = "<group>"; };
+		0214F5EF233F745000A4B2B2 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		0214F5F1233F745800A4B2B2 /* AudioRecorderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderError.swift; sourceTree = "<group>"; };
+		0214F5F3233F746900A4B2B2 /* AudioRecorderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderDelegate.swift; sourceTree = "<group>"; };
 		0298DD9D233E3340008D2D27 /* SunCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0298DDA0233E3340008D2D27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0298DDA9233E3341008D2D27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +125,10 @@
 		0298DDC5233E382B008D2D27 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0214F5ED233F5F0F00A4B2B2 /* AudioRecorderViewController.swift */,
+				0214F5EF233F745000A4B2B2 /* AudioRecorder.swift */,
+				0214F5F3233F746900A4B2B2 /* AudioRecorderDelegate.swift */,
+				0214F5F1233F745800A4B2B2 /* AudioRecorderError.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -323,7 +335,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0298DDA1233E3340008D2D27 /* AppDelegate.swift in Sources */,
+				0214F5EE233F5F0F00A4B2B2 /* AudioRecorderViewController.swift in Sources */,
+				0214F5F0233F745000A4B2B2 /* AudioRecorder.swift in Sources */,
+				0214F5F2233F745800A4B2B2 /* AudioRecorderError.swift in Sources */,
 				0298DDC9233E3884008D2D27 /* UIViewController.swift in Sources */,
+				0214F5F4233F746900A4B2B2 /* AudioRecorderDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
