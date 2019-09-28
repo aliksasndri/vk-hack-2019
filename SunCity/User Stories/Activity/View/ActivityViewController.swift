@@ -12,6 +12,15 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
 
     // MARK: - Subviews
 
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var titleContainerIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var workLabel: UILabel!
+
+    @IBOutlet var titleContainerViews: [UIView]!
+    @IBOutlet var subtitleContainerViews: [UIView]!
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet private weak var titleContainer: UIView!
@@ -56,6 +65,13 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
+
+        titleContainerIndicator.hidesWhenStopped = true
+
+        diaryButton.applyDropShadow()
+        eventsButton.applyDropShadow()
+
+        loadFeedback()
     }
 
     // MARK: - Actions
@@ -82,6 +98,28 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
 
     // MARK: - Private methods
 
+    private func loadFeedback() {
+        titleContainerIndicator.startAnimating()
+        titleContainerViews.forEach { $0.isHidden = true }
+        subtitleContainerViews.forEach { $0.isHidden = true }
+        let service = FeedbackService()
+        service.getAll(
+            onSuccess: { response in
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                    self.titleContainerViews.forEach { $0.isHidden = false }
+                    self.subtitleContainerViews.forEach { $0.isHidden = false }
+                    self.titleContainerIndicator.stopAnimating()
+                    self.usernameLabel.text = response.user.name
+                    self.cityLabel.text = String(response.user.description.split(separator: "*").first ?? "")
+                    self.workLabel.text = String(response.user.description.split(separator: "*").last ?? "")
+                }
+            },
+            onError: {
+                self.titleContainerIndicator.stopAnimating()
+            }
+        )
+    }
+
     private func updateButtons() {
         diaryButton.alpha = isShowingEvents ? 0.3 : 1.0
         eventsButton.alpha = isShowingEvents ? 1.0 : 0.3
@@ -90,6 +128,10 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
 }
 
 extension ActivityViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
 }
 

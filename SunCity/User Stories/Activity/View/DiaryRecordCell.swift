@@ -10,6 +10,8 @@ import UIKit
 
 final class DiaryRecordCell: UITableViewCell {
 
+    @IBOutlet weak var contentContainerView: UIView!
+
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var textContentLabel: UILabel!
 
@@ -24,6 +26,7 @@ final class DiaryRecordCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
     }
 
     func configure(minutesAudio: String?, commentsCount: String?, photosCount: String?, text: String, date: String) {
@@ -35,5 +38,37 @@ final class DiaryRecordCell: UITableViewCell {
         photosContainer.isHidden = photosCount == nil
         audioContainer.isHidden = minutesAudio == nil
     }
+
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        set(highlighted: highlighted,
+            containerView: contentContainerView,
+            highlightedColor: UIColor.white.withAlphaComponent(0.3),
+            baseColor: .white)
+    }
     
+}
+
+extension UITableViewCell {
+
+    func set(highlighted: Bool,
+             highlightedColor: UIColor,
+             baseColor: UIColor) {
+
+        set(highlighted: highlighted,
+            containerView: contentView,
+            highlightedColor: highlightedColor,
+            baseColor: baseColor)
+    }
+
+    func set(highlighted: Bool,
+             containerView: UIView,
+             highlightedColor: UIColor,
+             baseColor: UIColor) {
+
+        let color = highlighted ? highlightedColor : baseColor
+
+        UIView.animate(withDuration: 0.33) {
+            containerView.backgroundColor = color
+        }
+    }
 }

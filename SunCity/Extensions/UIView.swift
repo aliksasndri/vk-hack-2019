@@ -12,6 +12,31 @@ import UIKit
 
 extension UIView {
 
+    /// Applies drop shadow effect to the view
+    ///
+    /// - Parameters:
+    ///   - color: Shadow color
+    ///   - opacity: Shadow opacity
+    ///   - offset: Shadow offset
+    ///   - radius: Shadow radius
+    ///   - scale: Pass **true** to apply `UIScreen.main.scale` to the layer
+    func applyDropShadow(
+        color: UIColor = .black,
+        opacity: Float = 0.1,
+        offset: CGSize = CGSize(width: 0, height: 5),
+        radius: CGFloat = 10,
+        scale: Bool = true
+    ) {
+        layer.masksToBounds = false
+        layer.shadowColor = color.cgColor
+        layer.shadowOpacity = opacity
+        layer.shadowOffset = offset
+        layer.shadowRadius = radius
+
+        layer.shouldRasterize = true
+        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+    }
+
     /// Helper method to init and setup the view from the Nib.
     func xibSetup() {
         let view = loadFromNib()

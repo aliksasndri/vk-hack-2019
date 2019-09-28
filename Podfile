@@ -4,6 +4,7 @@ inhibit_all_warnings!
 
 target 'SunCity' do
     use_frameworks!
+    pod 'Nuke'
     pod 'Chatto', '= 3.5.0'
 	pod 'ChattoAdditions', '= 3.5.0'
     pod 'SkyFloatingLabelTextField'

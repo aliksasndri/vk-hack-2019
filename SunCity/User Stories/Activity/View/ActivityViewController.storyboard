@@ -107,28 +107,28 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Анна Семенова" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXi-m6-bbH">
-                                        <rect key="frame" x="95" y="58" width="141" height="21.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="------------- ------------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXi-m6-bbH">
+                                        <rect key="frame" x="95" y="58" width="211.5" height="21.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="г. Санкт-Петербург" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQW-pV-pRx">
-                                        <rect key="frame" x="95" y="84.5" width="114.5" height="14.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--------------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQW-pV-pRx">
+                                        <rect key="frame" x="95" y="84.5" width="79.5" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DP7-NA-K4l">
-                                        <rect key="frame" x="214" y="90.5" width="3" height="3"/>
+                                        <rect key="frame" x="179" y="90.5" width="3" height="3"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="3" id="9tc-Ec-3qS"/>
                                             <constraint firstAttribute="height" constant="3" id="hzY-ul-orM"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Центр «Теплый дом»" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epU-es-WlC">
-                                        <rect key="frame" x="224" y="84.5" width="126.5" height="14.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-------------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epU-es-WlC">
+                                        <rect key="frame" x="189" y="84.5" width="74" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -153,6 +153,10 @@
                                             <constraint firstAttribute="width" constant="20" id="cah-kY-O9W"/>
                                         </constraints>
                                     </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Kws-Ps-Xdr">
+                                        <rect key="frame" x="188.5" y="72" width="37" height="37"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.3411764705882353" green="0.59215686274509804" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -169,7 +173,9 @@
                                     <constraint firstAttribute="height" constant="129" id="eyB-LJ-RoH"/>
                                     <constraint firstItem="OQW-pV-pRx" firstAttribute="leading" secondItem="vTr-tg-ff2" secondAttribute="trailing" constant="25" id="gdg-hE-Aia"/>
                                     <constraint firstItem="DP7-NA-K4l" firstAttribute="centerY" secondItem="OQW-pV-pRx" secondAttribute="centerY" id="nMM-rJ-rdn"/>
+                                    <constraint firstItem="Kws-Ps-Xdr" firstAttribute="centerX" secondItem="2Bg-77-v84" secondAttribute="centerX" id="nU3-iq-Jkg"/>
                                     <constraint firstItem="epU-es-WlC" firstAttribute="top" secondItem="OQW-pV-pRx" secondAttribute="top" id="p9R-P3-Lmp"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kws-Ps-Xdr" secondAttribute="bottom" constant="20" id="r2A-Xz-9cF"/>
                                     <constraint firstItem="vTr-tg-ff2" firstAttribute="top" secondItem="zJ5-Jp-Irl" secondAttribute="bottom" constant="-22" id="xaM-E0-QRD"/>
                                 </constraints>
                             </view>
@@ -415,6 +421,8 @@
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
                     </view>
                     <connections>
+                        <outlet property="avatarImageView" destination="vTr-tg-ff2" id="adl-jT-EhG"/>
+                        <outlet property="cityLabel" destination="OQW-pV-pRx" id="uYx-4e-RAe"/>
                         <outlet property="diaryButton" destination="hgQ-Jo-aXe" id="9CQ-sD-fso"/>
                         <outlet property="eventsButton" destination="xSW-Cq-b3W" id="2Oo-QG-Ih2"/>
                         <outlet property="scrollView" destination="8cS-C9-5bm" id="npY-i5-uqM"/>
@@ -423,6 +431,22 @@
                         <outlet property="subtitleContainer" destination="Rk1-88-5dD" id="Px2-52-JAS"/>
                         <outlet property="tableView" destination="zWz-QJ-bk9" id="Vme-Ik-er8"/>
                         <outlet property="titleContainer" destination="2Bg-77-v84" id="mh0-Gs-6Jf"/>
+                        <outlet property="titleContainerIndicator" destination="Kws-Ps-Xdr" id="XRZ-Q9-4uL"/>
+                        <outlet property="usernameLabel" destination="eXi-m6-bbH" id="ZfT-uu-IVZ"/>
+                        <outlet property="workLabel" destination="epU-es-WlC" id="uGS-yE-KE4"/>
+                        <outletCollection property="titleContainerViews" destination="vTr-tg-ff2" collectionClass="NSMutableArray" id="QKf-nk-Q7P"/>
+                        <outletCollection property="titleContainerViews" destination="zJ5-Jp-Irl" collectionClass="NSMutableArray" id="kaV-hP-5iq"/>
+                        <outletCollection property="titleContainerViews" destination="eXi-m6-bbH" collectionClass="NSMutableArray" id="gvz-It-hse"/>
+                        <outletCollection property="titleContainerViews" destination="OQW-pV-pRx" collectionClass="NSMutableArray" id="2dm-Mh-MpK"/>
+                        <outletCollection property="titleContainerViews" destination="DP7-NA-K4l" collectionClass="NSMutableArray" id="7gK-Ga-7DQ"/>
+                        <outletCollection property="titleContainerViews" destination="epU-es-WlC" collectionClass="NSMutableArray" id="KfW-j5-hsi"/>
+                        <outletCollection property="subtitleContainerViews" destination="aAH-hC-lPL" collectionClass="NSMutableArray" id="JFU-3j-bqD"/>
+                        <outletCollection property="subtitleContainerViews" destination="z1I-Sd-Z8d" collectionClass="NSMutableArray" id="9TS-ou-bBp"/>
+                        <outletCollection property="subtitleContainerViews" destination="9nQ-7U-Yo7" collectionClass="NSMutableArray" id="J8i-1p-voD"/>
+                        <outletCollection property="subtitleContainerViews" destination="Shg-f7-fOj" collectionClass="NSMutableArray" id="48S-m1-0G8"/>
+                        <outletCollection property="subtitleContainerViews" destination="7Hx-Od-dsg" collectionClass="NSMutableArray" id="rLH-CB-CE1"/>
+                        <outletCollection property="subtitleContainerViews" destination="U1x-ju-BZg" collectionClass="NSMutableArray" id="oCl-Mn-53I"/>
+                        <outletCollection property="subtitleContainerViews" destination="W3h-ZF-mIO" collectionClass="NSMutableArray" id="ZaO-2o-yG4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>

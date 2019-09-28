@@ -54,6 +54,7 @@
 		0298DDAA233E3341008D2D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0298DDA9233E3341008D2D27 /* Assets.xcassets */; };
 		0298DDAD233E3341008D2D27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0298DDAB233E3341008D2D27 /* LaunchScreen.storyboard */; };
 		0298DDC3233E37D9008D2D27 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDC2233E37D9008D2D27 /* XCTestCase.swift */; };
+		02FD1403234005CB00B5C55C /* FeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FD1402234005CB00B5C55C /* FeedbackService.swift */; };
 		034FADFC9D5332BE90649329 /* RequestModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C8014EEAB74C06825ACE54 /* RequestModuleOutput.swift */; };
 		0E93F1B3628962A2E256911D /* ActivityModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07183D57568A1125EEAFF600 /* ActivityModuleOutput.swift */; };
 		3412C5C92C8C401820800681 /* RequestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B820A189FB13E84C464FCF6F /* RequestViewController.storyboard */; };
@@ -155,6 +156,7 @@
 		0298DDB9233E3341008D2D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0298DDC2233E37D9008D2D27 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		0298DDC8233E3884008D2D27 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		02FD1402234005CB00B5C55C /* FeedbackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackService.swift; sourceTree = "<group>"; };
 		07183D57568A1125EEAFF600 /* ActivityModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActivityModuleOutput.swift; sourceTree = "<group>"; };
 		0A7127838F78AE645DA65C05 /* Pods_SunCityTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunCityTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF2305AA51ECB707E0DA306 /* LoginModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginModuleConfiguratorTests.swift; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 			children = (
 				02601775233FA979007F6B15 /* AudioRecorder */,
 				0260177A233FA98D007F6B15 /* Login */,
+				02FD1404234005CE00B5C55C /* Feedback */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -496,6 +499,14 @@
 				0298DDA0233E3340008D2D27 /* AppDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		02FD1404234005CE00B5C55C /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				02FD1402234005CB00B5C55C /* FeedbackService.swift */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 		03DEA103346ABD513B7EE4CF /* View */ = {
@@ -784,6 +795,7 @@
 				"${BUILT_PRODUCTS_DIR}/ChattoAdditions/ChattoAdditions.framework",
 				"${BUILT_PRODUCTS_DIR}/CoreEvents/CoreEvents.framework",
 				"${BUILT_PRODUCTS_DIR}/NodeKit/NodeKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -795,6 +807,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChattoAdditions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreEvents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NodeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -867,6 +880,7 @@
 				028262C0233F7A6800B2B14E /* UIViewController.swift in Sources */,
 				021282A7233F9C3300160E1F /* SendingStatusCollectionViewCell.swift in Sources */,
 				021282AD233F9C3300160E1F /* MessageViewModel.swift in Sources */,
+				02FD1403234005CB00B5C55C /* FeedbackService.swift in Sources */,
 				021282A9233F9C3300160E1F /* MessageModel.swift in Sources */,
 				021282BB233F9C3300160E1F /* StartModuleOutput.swift in Sources */,
 				034FADFC9D5332BE90649329 /* RequestModuleOutput.swift in Sources */,

@@ -173,6 +173,7 @@
                 <outlet property="audioContainer" destination="eKn-wa-qrq" id="kGt-Ma-c3T"/>
                 <outlet property="commentsContainer" destination="HH6-g1-S5p" id="IFm-jG-Bwn"/>
                 <outlet property="commentsCountLabel" destination="YeA-kp-Lio" id="IQA-SV-NK2"/>
+                <outlet property="contentContainerView" destination="yiN-X9-PhD" id="mai-Kp-8ZL"/>
                 <outlet property="dateLabel" destination="q0q-8O-jc0" id="jXF-1D-LtR"/>
                 <outlet property="minutesAudioLabel" destination="Qe9-ev-EaT" id="bh5-gO-eVw"/>
                 <outlet property="photosContainer" destination="N63-NA-vRL" id="pEn-vA-uNQ"/>
