@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func makeRootViewController() -> UIViewController {
-        let (controller, _) = StartModuleConfigurator().configure()
+        let (controller, _) = FeedbackModuleConfigurator().configure()
         return controller
     }
 

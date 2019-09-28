@@ -76,14 +76,6 @@ extension UIView {
     func roundAllCorners(radius: CGFloat) {
         round(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], with: radius)
     }
-
-    var cornerRadius: CGFloat {
-        get {
-            return layer.cornerRadius
-        } set(value) {
-            layer.cornerRadius = value
-        }
-    }
 }
 
 extension UIView {
