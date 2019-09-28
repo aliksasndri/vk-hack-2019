@@ -15,4 +15,9 @@ extension UserDefaults {
         set { set(newValue, forKey: #function) }
     }
 
+    var apns: String? {
+        get { return object(forKey: #function) as? String }
+        set { set(newValue, forKey: #function) }
+    }
+
 }
