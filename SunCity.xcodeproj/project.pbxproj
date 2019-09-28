@@ -12,6 +12,9 @@
 		0298DDAD233E3341008D2D27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0298DDAB233E3341008D2D27 /* LaunchScreen.storyboard */; };
 		0298DDC3233E37D9008D2D27 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDC2233E37D9008D2D27 /* XCTestCase.swift */; };
 		0298DDC9233E3884008D2D27 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0298DDC8233E3884008D2D27 /* UIViewController.swift */; };
+		8924AE1B233FA415004A039A /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8924AE1A233FA415004A039A /* Intents.framework */; };
+		8924AE23233FAECB004A039A /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924AE22233FAECB004A039A /* IntentHandler.swift */; };
+		8924AE27233FAECB004A039A /* note.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8924AE20233FAECB004A039A /* note.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CC4F69687C963F58D98D45CC /* Pods_SunCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5240B12F5C57343FF096AB89 /* Pods_SunCity.framework */; };
 		FACEFD8C86AA0C0CF700D179 /* Pods_SunCityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7127838F78AE645DA65C05 /* Pods_SunCityTests.framework */; };
 /* End PBXBuildFile section */
@@ -24,7 +27,28 @@
 			remoteGlobalIDString = 0298DD9C233E3340008D2D27;
 			remoteInfo = SunCity;
 		};
+		8924AE25233FAECB004A039A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0298DD95233E3340008D2D27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8924AE1F233FAECB004A039A;
+			remoteInfo = note;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8924AE2B233FAECB004A039A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8924AE27233FAECB004A039A /* note.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0298DD9D233E3340008D2D27 /* SunCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +66,11 @@
 		5240B12F5C57343FF096AB89 /* Pods_SunCity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunCity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7656003AF7C82CB3A943D463 /* Pods-SunCity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCity.release.xcconfig"; path = "Target Support Files/Pods-SunCity/Pods-SunCity.release.xcconfig"; sourceTree = "<group>"; };
 		8507EC426224F023CAFB27CD /* Pods-SunCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCity.debug.xcconfig"; path = "Target Support Files/Pods-SunCity/Pods-SunCity.debug.xcconfig"; sourceTree = "<group>"; };
+		8924AE19233FA3E9004A039A /* SunCity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SunCity.entitlements; sourceTree = "<group>"; };
+		8924AE1A233FA415004A039A /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		8924AE20233FAECB004A039A /* note.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = note.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8924AE22233FAECB004A039A /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		8924AE24233FAECB004A039A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8924AE1B233FA415004A039A /* Intents.framework in Frameworks */,
 				CC4F69687C963F58D98D45CC /* Pods_SunCity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +91,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8924AE1D233FAECB004A039A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,6 +106,7 @@
 			children = (
 				0298DD9F233E3340008D2D27 /* SunCity */,
 				0298DDB6233E3341008D2D27 /* SunCityTests */,
+				8924AE21233FAECB004A039A /* note */,
 				0298DD9E233E3340008D2D27 /* Products */,
 				A62A8B63BC0BCD1515743573 /* Pods */,
 				9061FF98CFC0B2BA254EF2D0 /* Frameworks */,
@@ -80,6 +118,7 @@
 			children = (
 				0298DD9D233E3340008D2D27 /* SunCity.app */,
 				0298DDB3233E3341008D2D27 /* SunCityTests.xctest */,
+				8924AE20233FAECB004A039A /* note.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +126,7 @@
 		0298DD9F233E3340008D2D27 /* SunCity */ = {
 			isa = PBXGroup;
 			children = (
+				8924AE19233FA3E9004A039A /* SunCity.entitlements */,
 				0298DDC7233E384D008D2D27 /* Application */,
 				0298DDC4233E382B008D2D27 /* Extensions */,
 				0298DDC6233E382B008D2D27 /* Resources */,
@@ -153,9 +193,19 @@
 			path = "User Stories";
 			sourceTree = "<group>";
 		};
+		8924AE21233FAECB004A039A /* note */ = {
+			isa = PBXGroup;
+			children = (
+				8924AE22233FAECB004A039A /* IntentHandler.swift */,
+				8924AE24233FAECB004A039A /* Info.plist */,
+			);
+			path = note;
+			sourceTree = "<group>";
+		};
 		9061FF98CFC0B2BA254EF2D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8924AE1A233FA415004A039A /* Intents.framework */,
 				5240B12F5C57343FF096AB89 /* Pods_SunCity.framework */,
 				0A7127838F78AE645DA65C05 /* Pods_SunCityTests.framework */,
 			);
@@ -184,10 +234,12 @@
 				0298DD99233E3340008D2D27 /* Sources */,
 				0298DD9A233E3340008D2D27 /* Frameworks */,
 				0298DD9B233E3340008D2D27 /* Resources */,
+				8924AE2B233FAECB004A039A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8924AE26233FAECB004A039A /* PBXTargetDependency */,
 			);
 			name = SunCity;
 			productName = SunCity;
@@ -213,6 +265,23 @@
 			productReference = 0298DDB3233E3341008D2D27 /* SunCityTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8924AE1F233FAECB004A039A /* note */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8924AE28233FAECB004A039A /* Build configuration list for PBXNativeTarget "note" */;
+			buildPhases = (
+				8924AE1C233FAECB004A039A /* Sources */,
+				8924AE1D233FAECB004A039A /* Frameworks */,
+				8924AE1E233FAECB004A039A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = note;
+			productName = note;
+			productReference = 8924AE20233FAECB004A039A /* note.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -229,6 +298,9 @@
 					0298DDB2233E3341008D2D27 = {
 						CreatedOnToolsVersion = 11.0;
 						TestTargetID = 0298DD9C233E3340008D2D27;
+					};
+					8924AE1F233FAECB004A039A = {
+						CreatedOnToolsVersion = 11.0;
 					};
 				};
 			};
@@ -247,6 +319,7 @@
 			targets = (
 				0298DD9C233E3340008D2D27 /* SunCity */,
 				0298DDB2233E3341008D2D27 /* SunCityTests */,
+				8924AE1F233FAECB004A039A /* note */,
 			);
 		};
 /* End PBXProject section */
@@ -262,6 +335,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0298DDB1233E3341008D2D27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8924AE1E233FAECB004A039A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -335,6 +415,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8924AE1C233FAECB004A039A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8924AE23233FAECB004A039A /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -342,6 +430,11 @@
 			isa = PBXTargetDependency;
 			target = 0298DD9C233E3340008D2D27 /* SunCity */;
 			targetProxy = 0298DDB4233E3341008D2D27 /* PBXContainerItemProxy */;
+		};
+		8924AE26233FAECB004A039A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8924AE1F233FAECB004A039A /* note */;
+			targetProxy = 8924AE25233FAECB004A039A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -475,7 +568,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8507EC426224F023CAFB27CD /* Pods-SunCity.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SunCity/SunCity.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = B9639RHZFT;
@@ -496,7 +591,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7656003AF7C82CB3A943D463 /* Pods-SunCity.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SunCity/SunCity.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = B9639RHZFT;
@@ -557,6 +654,48 @@
 			};
 			name = Release;
 		};
+		8924AE29233FAECB004A039A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = B9639RHZFT;
+				INFOPLIST_FILE = note/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = surf.vk.hackathon.sun.city.note;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = VK_HACK_SIRI;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8924AE2A233FAECB004A039A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = B9639RHZFT;
+				INFOPLIST_FILE = note/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = surf.vk.hackathon.sun.city.note;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = VK_HACK_SIRI;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -583,6 +722,15 @@
 			buildConfigurations = (
 				0298DDC0233E3341008D2D27 /* Debug */,
 				0298DDC1233E3341008D2D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8924AE28233FAECB004A039A /* Build configuration list for PBXNativeTarget "note" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8924AE29233FAECB004A039A /* Debug */,
+				8924AE2A233FAECB004A039A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

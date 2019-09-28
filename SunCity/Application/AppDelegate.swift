@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,5 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return controller
     }
 
+    private func requestSiriAuth() {
+        INPreferences.requestSiriAuthorization { _ in }
+    }
 }
 
