@@ -156,6 +156,17 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
+		0270CC7D233ED8D3003B6741 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0270CC5C233EA5BE003B6741 /* Sending status */,
+				0270CC57233EA382003B6741 /* TimeSeparator */,
+				0270CC67233EB6F5003B6741 /* Message */,
+				0270CC7B233EC4AC003B6741 /* ChatInputView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		0298DD94233E3340008D2D27 = {
 			isa = PBXGroup;
 			children = (
@@ -252,13 +263,10 @@
 		77B0168A1596559F01736638 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0270CC5C233EA5BE003B6741 /* Sending status */,
-				0270CC57233EA382003B6741 /* TimeSeparator */,
-				0270CC67233EB6F5003B6741 /* Message */,
+				0270CC7D233ED8D3003B6741 /* Components */,
 				17A275BA8FA212991D4D94BD /* ChatViewController.swift */,
 				0270CC77233EBB1A003B6741 /* ChatItemsDecorator.swift */,
 				0270CC79233EBB3A003B6741 /* ChatDataSource.swift */,
-				0270CC7B233EC4AC003B6741 /* ChatInputView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

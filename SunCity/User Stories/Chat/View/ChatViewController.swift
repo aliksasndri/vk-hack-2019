@@ -29,11 +29,12 @@ final class ChatViewController: BaseChatViewController, ChatModuleOutput {
     override func createChatInputView() -> UIView {
         let chatInputView = ChatInputView()
         var appearance = ChatInputBarAppearance()
-        appearance.sendButtonAppearance.title = "Отправить"
         appearance.textInputAppearance.placeholderText = "Введите сообщение"
         appearance.textInputAppearance.font = UIFont.systemFont(ofSize: 15)
         appearance.textInputAppearance.placeholderFont = UIFont.systemFont(ofSize: 15)
+        appearance.textInputAppearance.textInsets = UIEdgeInsets(top: 16, left: 8, bottom: 16, right: 4)
         chatInputView.maxCharactersCount = 1000
+        chatInputView.setAppearance(appearance)
         return chatInputView
     }
 
