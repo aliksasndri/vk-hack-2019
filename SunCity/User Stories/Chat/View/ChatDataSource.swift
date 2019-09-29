@@ -10,6 +10,8 @@ import Chatto
 import ChattoAdditions
 import Starscream
 import NodeKit
+import Nuke
+import UIKit
 
 final class ChatDataSource: ChatDataSourceProtocol {
 
@@ -58,14 +60,14 @@ final class ChatDataSource: ChatDataSourceProtocol {
     func add(message: String) {
         var newMessage = MessageModel(
             text: message,
-            avatarImage: Observable(UIImage(named: "dr")),
+            avatarImage: Observable(UIImage(named: "avatar_placeholder")),
             senderId: "2",
             isIncoming: false,
             date: Date(),
             status: .success, uid: UUID().uuidString
         )
 
-        let model = ChatMessageModel(recipient: "5d8fa55f09773ae35d7d1d4b", text: message, sender: nil, time: "", isMe: true)
+        let model = ChatMessageModel(recipient: self.recivier, text: message, sender: nil, time: "", isMe: true)
 
         let data = try! JSONEncoder().encode(model)
 
@@ -99,15 +101,19 @@ final class ChatDataSource: ChatDataSourceProtocol {
 
         ChatService().loadHistory().onCompleted { data in
             self.recivier = data.partnerId
-            let msg = data.messages.map { item in
+            let msg = data.messages.map { item -> MessageModel in
+
+                let img = UIImage(named: "avatar_placeholder")
+
                 return MessageModel(text: item.text,
-                                    avatarImage: .init(nil),
+                                    avatarImage: .init(img),
                                     senderId: item.sender?.id ?? "f",
                                     isIncoming: !item.isMe,
                                     date: item.date,
                                     status: .success,
                                     uid: UUID().uuidString)
             }
+
 
             self.chatItems.append(contentsOf: msg)
             self.delegate?.chatDataSourceDidUpdate(self, updateType: .reload)

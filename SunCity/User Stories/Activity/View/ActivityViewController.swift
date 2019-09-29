@@ -7,10 +7,23 @@
 //
 
 import UIKit
+import Nuke
 
 final class ActivityViewController: UIViewController, ActivityModuleOutput {
 
     // MARK: - Subviews
+
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var titleContainerIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var workLabel: UILabel!
+    @IBOutlet weak var createEventButton: TouchableControl!
+
+    @IBOutlet var eventsStubs: [UIView]!
+
+    @IBOutlet var titleContainerViews: [UIView]!
+    @IBOutlet var subtitleContainerViews: [UIView]!
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -22,10 +35,12 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
 
     @IBOutlet weak var scrollViewLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollViewTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var subtitleContainerHeight: NSLayoutConstraint!
 
     // MARK: - Properties
 
     var isShowingEvents: Bool = true
+    var feedbacks: [Feedback] = []
 
     // MARK: - UIViewController
 
@@ -41,9 +56,9 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
         navigationController?.setNavigationBarHidden(true, animated: false)
         view.backgroundColor = UIColor(red: 0.95, green: 0.96, blue: 0.93, alpha: 1)
         titleContainer.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
-        titleContainer.cornerRadius = 24
+        titleContainer.layer.cornerRadius = 24
         subtitleContainer.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
-        subtitleContainer.cornerRadius = 24
+        subtitleContainer.layer.cornerRadius = 24
         updateButtons()
 
         tableView.register(
@@ -54,6 +69,15 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
         tableView.dataSource = self
         tableView.reloadData()
         tableView.tableFooterView = UIView()
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
+
+        titleContainerIndicator.hidesWhenStopped = true
+
+        diaryButton.applyDropShadow()
+        eventsButton.applyDropShadow()
+
+        loadFeedback()
     }
 
     // MARK: - Actions
@@ -77,8 +101,56 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
         }
         updateButtons()
     }
+    
+    @IBAction func feedbackButtonAction(_ sender: Any) {
+        let (controller, _) = FeedbackModuleConfigurator().configure()
+        present(controller, animated: true)
+    }
 
     // MARK: - Private methods
+
+    private func loadFeedback() {
+        titleContainerIndicator.startAnimating()
+        titleContainerViews.forEach { $0.isHidden = true }
+        subtitleContainerViews.forEach { $0.isHidden = true }
+        diaryButton.isHidden = true
+        let service = FeedbackService()
+        service.getAll(
+            onSuccess: { response in
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                    self.eventsStubs.forEach { $0.isHidden = true }
+                    self.titleContainerViews.forEach { $0.isHidden = false }
+                    self.subtitleContainerViews.forEach { $0.isHidden = false }
+                    self.titleContainerIndicator.stopAnimating()
+                    self.usernameLabel.text = response.user.name
+                    self.cityLabel.text = String(response.user.description.split(separator: "*").first ?? "")
+                    self.workLabel.text = String(response.user.description.split(separator: "*").last ?? "")
+                    self.avatarImageView.loadImage(
+                        with: "http://demo6.alpha.vkhackathon.com:8844" + response.user.image,
+                        placeholderImage: UIImage(named: "avatar_placeholder")
+                    )
+                    self.feedbacks = response.payload
+                    self.tableView.reloadData()
+                    switch response.user.userType {
+                    case .mentor:
+                        self.diaryButton.isHidden = false
+                        UIView.animate(withDuration: 0.3) {
+                            self.subtitleContainerHeight.constant = 191
+                            self.view.layoutSubviews()
+                        }
+                    case .psychologist:
+                        self.diaryButton.isHidden = true
+                        self.createEventButton.isHidden = false
+                        break
+                    }
+
+                }
+            },
+            onError: {
+                self.titleContainerIndicator.stopAnimating()
+            }
+        )
+    }
 
     private func updateButtons() {
         diaryButton.alpha = isShowingEvents ? 0.3 : 1.0
@@ -89,16 +161,32 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
 
 extension ActivityViewController: UITableViewDelegate {
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
 }
 
 extension ActivityViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.feedbacks.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: String(describing: DiaryRecordCell.self),
+            for: indexPath
+        ) as? DiaryRecordCell
+        let feedback = feedbacks[indexPath.row]
+        cell?.configure(
+            minutesAudio: feedback.audio == "" ? nil : "1",
+            commentsCount: String(feedback.comments.count),
+            photosCount: String(feedback.images.count),
+            text: feedback.text,
+            date: feedback.date.toWeekDayAndDateString()
+        )
+        return cell ?? UITableViewCell()
     }
 
 

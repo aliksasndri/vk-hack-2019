@@ -100,7 +100,7 @@ private extension ExpandableView {
     func configureAppearance() {
         backgroundColor =  UIColor.white.withAlphaComponent(0.0)
         containerView.backgroundColor = .white
-        percentView.cornerRadius = 8.0
+        percentView.layer.cornerRadius = 8.0
         percentView.clipsToBounds = true
         percentLabel.text = "0%"
     }

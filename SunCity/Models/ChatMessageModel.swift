@@ -16,7 +16,7 @@ struct User: Codable {
     let partner: String?
     let image: String
     let name: String?
-    let userType: Int
+    let userType: UserType
 
     enum CodingKeys: String, CodingKey {
         case apns = "Apns"

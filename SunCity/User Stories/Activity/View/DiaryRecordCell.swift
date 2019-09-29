@@ -8,17 +8,67 @@
 
 import UIKit
 
-class DiaryRecordCell: UITableViewCell {
+final class DiaryRecordCell: UITableViewCell {
+
+    @IBOutlet weak var contentContainerView: UIView!
+
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var textContentLabel: UILabel!
+
+    @IBOutlet weak var commentsCountLabel: UILabel!
+    @IBOutlet weak var commentsContainer: UIView!
+
+    @IBOutlet weak var photosCountLabel: UILabel!
+    @IBOutlet weak var photosContainer: UIView!
+
+    @IBOutlet weak var audioContainer: UIView!
+    @IBOutlet weak var minutesAudioLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        selectionStyle = .none
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    func configure(minutesAudio: String?, commentsCount: String?, photosCount: String?, text: String, date: String) {
+        minutesAudioLabel.text = minutesAudio
+        commentsCountLabel.text = commentsCount
+        photosCountLabel.text = photosCount
+        textContentLabel.text = text
+        dateLabel.text = date
+        photosContainer.isHidden = (photosCount == nil) || (photosCount == "0")
+        audioContainer.isHidden = minutesAudio == nil  || minutesAudio == "0"
+    }
 
-        // Configure the view for the selected state
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        set(highlighted: highlighted,
+            containerView: contentContainerView,
+            highlightedColor: UIColor.white.withAlphaComponent(0.3),
+            baseColor: .white)
     }
     
+}
+
+extension UITableViewCell {
+
+    func set(highlighted: Bool,
+             highlightedColor: UIColor,
+             baseColor: UIColor) {
+
+        set(highlighted: highlighted,
+            containerView: contentView,
+            highlightedColor: highlightedColor,
+            baseColor: baseColor)
+    }
+
+    func set(highlighted: Bool,
+             containerView: UIView,
+             highlightedColor: UIColor,
+             baseColor: UIColor) {
+
+        let color = highlighted ? highlightedColor : baseColor
+
+        UIView.animate(withDuration: 0.33) {
+            containerView.backgroundColor = color
+        }
+    }
 }
