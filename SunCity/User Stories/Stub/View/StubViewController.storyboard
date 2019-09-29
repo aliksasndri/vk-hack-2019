@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3k-bK-TNO">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stub View Controller-->
+        <scene sceneID="PlN-iW-H7B">
+            <objects>
+                <viewController id="h3k-bK-TNO" customClass="StubViewController" customModule="SunCity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cA6-JB-jfU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="immortal" translatesAutoresizingMaskIntoConstraints="NO" id="UzS-9g-YOf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWk-8n-ONz">
+                                <rect key="frame" x="17" y="122" width="341" height="72"/>
+                                <string key="text">Экран находится
+в активной разработке</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приносим свои извинения. В ближайшее время все функции приложения будут доступны." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JN0-qx-aWC">
+                                <rect key="frame" x="17" y="202" width="341" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UzS-9g-YOf" firstAttribute="top" secondItem="cA6-JB-jfU" secondAttribute="top" id="3zZ-FG-Nfu"/>
+                            <constraint firstItem="JN0-qx-aWC" firstAttribute="top" secondItem="cWk-8n-ONz" secondAttribute="bottom" constant="8" id="YyF-OD-t59"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="cWk-8n-ONz" secondAttribute="trailing" constant="17" id="fID-R7-3lo"/>
+                            <constraint firstAttribute="trailing" secondItem="UzS-9g-YOf" secondAttribute="trailing" id="g6p-1s-SCf"/>
+                            <constraint firstItem="cWk-8n-ONz" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="122" id="lSK-Ky-2go"/>
+                            <constraint firstItem="UzS-9g-YOf" firstAttribute="leading" secondItem="cA6-JB-jfU" secondAttribute="leading" id="mxO-aa-m8u"/>
+                            <constraint firstItem="cWk-8n-ONz" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="17" id="pVS-yn-QZN"/>
+                            <constraint firstAttribute="bottom" secondItem="UzS-9g-YOf" secondAttribute="bottom" id="z9F-EN-9Nm"/>
+                            <constraint firstItem="JN0-qx-aWC" firstAttribute="leading" secondItem="cA6-JB-jfU" secondAttribute="leading" constant="17" id="zWy-b5-c4O"/>
+                            <constraint firstItem="JN0-qx-aWC" firstAttribute="centerX" secondItem="cWk-8n-ONz" secondAttribute="centerX" id="zYV-82-fW1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="-231"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="immortal" width="375" height="811"/>
+    </resources>
+</document>

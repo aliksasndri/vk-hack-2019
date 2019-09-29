@@ -48,7 +48,7 @@ final class MainTabBarController: UITabBarController {
             case .activity:
                 return ActivityModuleConfigurator().configure().0
             case .school:
-                return UIViewController()
+                return StubModuleConfigurator().configure().0
             case .chats:
                 return ChatModuleConfigurator().configure().0
             }

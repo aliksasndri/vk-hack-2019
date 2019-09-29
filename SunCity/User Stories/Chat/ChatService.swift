@@ -13,18 +13,11 @@ class ChatService {
 
     func loadHistory() -> Observer<StartChat> {
         return UrlChainsBuilder()
-            .load(with: .init(method: .get, route: "http://demo6.alpha.vkhackathon.com:8844/chat", metadata: ["Authorization": UserDefaults.standard.token ?? ""], encoding: .json))
+            .default(with: .init(method: .get, route: "http://demo6.alpha.vkhackathon.com:8844/chat", metadata: ["Authorization": UserDefaults.standard.token ?? ""], encoding: .json))
             .process()
     }
-}
 
-extension UrlChainsBuilder {
-
-    open func load<Output>(with config: UrlChainConfigModel) -> Node<Void, Output>
-        where Output: DTODecodable, Output.DTO.Raw == Json {
-            let input: Node<Json, Output> = self.defaultInput(with: config)
-            let configNode = ChainConfiguratorNode<Json, Output>(next: input)
-            let voidNode =  VoidInputNode(next: configNode)
-            return LoggerNode(next: voidNode)
+    func loadData(relative: String) -> Observer<Data> {
+        return UrlChainsBuilder().loadData(with: .init(method: .get, route: "http://demo6.alpha.vkhackathon.com:8844" + relative)).process()
     }
 }
