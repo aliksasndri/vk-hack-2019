@@ -74,7 +74,27 @@ final class LoginViewController: UIViewController, LoginModuleOutput {
             email: emailTextField.text ?? "",
             password: passwordTextField.text ?? "",
             onSuccess: {
-                UIApplication.shared.delegate?.window??.rootViewController = MainTabBarConfigurator().configure()
+                guard
+                    let window = UIApplication.shared.keyWindow,
+                    let rootViewController = window.rootViewController
+                else {
+                    return
+                }
+
+                let viewController = MainTabBarConfigurator().configure()
+
+                viewController.view.frame = rootViewController.view.frame
+                viewController.view.layoutIfNeeded()
+
+                let animation: (() -> Void) = {
+                    window.rootViewController = viewController
+                }
+
+                UIView.transition(with: window,
+                                  duration: 0.3,
+                                  options: .transitionFlipFromRight,
+                                  animations: animation)
+//                UIApplication.shared.delegate?.window??.rootViewController = MainTabBarConfigurator().configure()
             },
             onError: {
                 let alert = UIAlertController(

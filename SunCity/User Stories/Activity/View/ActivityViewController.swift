@@ -87,7 +87,7 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = ""
+        navigationItem.title = ""
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
