@@ -12,11 +12,13 @@ import Starscream
 import NodeKit
 import Nuke
 import UIKit
+import SwiftMessages
 
 final class ChatDataSource: ChatDataSourceProtocol {
 
     private var socket: WebSocket?
     private var recivier: String = ""
+    private var myAvatar: UIImage? = nil
 
     // MARK: - Initialization and deinitialization
 
@@ -58,9 +60,13 @@ final class ChatDataSource: ChatDataSourceProtocol {
     // MARK: - Internal methods
 
     func add(message: String) {
+
+
+        let obs = Observable( self.myAvatar ?? UIImage(named: "avatar_placeholder"))
+
         var newMessage = MessageModel(
             text: message,
-            avatarImage: Observable(UIImage(named: "avatar_placeholder")),
+            avatarImage: obs,
             senderId: "2",
             isIncoming: false,
             date: Date(),
@@ -104,9 +110,23 @@ final class ChatDataSource: ChatDataSourceProtocol {
             let msg = data.messages.map { item -> MessageModel in
 
                 let img = UIImage(named: "avatar_placeholder")
+                let obs = Observable(img)
+
+                ChatService().loadData(relative: item.sender?.image ?? "").onCompleted { data in
+
+                    guard let im = UIImage(data: data) else {
+                        return
+                    }
+
+                    if item.isMe {
+                        self.myAvatar = im
+                    }
+
+                    obs.value = im
+                }
 
                 return MessageModel(text: item.text,
-                                    avatarImage: .init(img),
+                                    avatarImage: obs,
                                     senderId: item.sender?.id ?? "f",
                                     isIncoming: !item.isMe,
                                     date: item.date,
@@ -117,8 +137,10 @@ final class ChatDataSource: ChatDataSourceProtocol {
 
             self.chatItems.append(contentsOf: msg)
             self.delegate?.chatDataSourceDidUpdate(self, updateType: .reload)
-        }.onError {
-            dump($0)
+        }.onError { _ in
+            let view = MessageView.viewFromNib(layout: .cardView)
+            view.configureContent(body: "Кажется что-то сломалось.")
+            SwiftMessages.sharedInstance.show(view: view)
         }
     }
 }
@@ -132,7 +154,9 @@ extension ChatDataSource: WebSocketDelegate {
     }
 
     func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
-        print("RECIVE ERROR\(error)")
+        let view = MessageView()
+        view.configureContent(body: "Кажется что-то сломалось.")
+        SwiftMessages.sharedInstance.show(view: view)
     }
 
     func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
@@ -140,16 +164,27 @@ extension ChatDataSource: WebSocketDelegate {
 
         let data = Data(text.utf8)
 
+        let obs = Observable(UIImage(named: "avatar_placeholder"))
+
         let dt = try! JSONDecoder().decode(ChatMessageModel.self, from: data)
 
-        var newMessage = MessageModel(
+        let newMessage = MessageModel(
             text: dt.text,
-            avatarImage: Observable(UIImage(named: "dr")),
+            avatarImage: obs,
             senderId: dt.sender!.id,
             isIncoming: !dt.isMe,
-            date: Date(),
+            date: dt.date,
             status: .success, uid: UUID().uuidString
         )
+
+        ChatService().loadData(relative: dt.sender?.image ?? "").onCompleted { data in
+
+            guard let im = UIImage(data: data) else {
+                return
+            }
+
+            obs.value = im
+        }
 
         chatItems.append(newMessage)
         delegate?.chatDataSourceDidUpdate(self, updateType: .normal)
