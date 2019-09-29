@@ -13,6 +13,7 @@ target 'SunCity' do
     pod 'ImagePicker'
     pod 'YXWaveView'
     pod 'SwiftMessages'
+    pod 'iCarousel'
     pod 'SurfUtils/KeyboardPresentable', :git => "https://github.com/surfstudio/iOS-Utils.git", :tag => '9.0.0'
   end
 

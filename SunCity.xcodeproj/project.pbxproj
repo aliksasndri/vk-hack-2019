@@ -60,7 +60,7 @@
 		034FADFC9D5332BE90649329 /* RequestModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C8014EEAB74C06825ACE54 /* RequestModuleOutput.swift */; };
 		0E93F1B3628962A2E256911D /* ActivityModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07183D57568A1125EEAFF600 /* ActivityModuleOutput.swift */; };
 		12EF645EA894816DA494C109 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F502C825D690A14A358211F /* FeedbackViewController.swift */; };
-		13F259371A35F9513D7A12DC /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		13F259371A35F9513D7A12DC /* (null) in Sources */ = {isa = PBXBuildFile; };
 		21D2360A73F345F6343931D7 /* StubModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78D060E5319E10BDD3B5BC /* StubModuleOutput.swift */; };
 		2EAD7137AE8972AA34F6B591 /* SchoolModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1DCAF929AA767DF827D1A /* SchoolModuleConfiguratorTests.swift */; };
 		3412C5C92C8C401820800681 /* RequestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B820A189FB13E84C464FCF6F /* RequestViewController.storyboard */; };
@@ -95,6 +95,8 @@
 		B906C5A723402D2F00E180F0 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906C5A623402D2F00E180F0 /* ChatService.swift */; };
 		B9119D4F2340474300B1CCBA /* PostDetailsModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B344898957511DEE5DA5314D /* PostDetailsModuleConfigurator.swift */; };
 		B9119D512340476000B1CCBA /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9119D502340476000B1CCBA /* PostDetailsViewController.swift */; };
+		B9119D5B23408ADB00B1CCBA /* CommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9119D5A23408ADB00B1CCBA /* CommentView.xib */; };
+		B9119D5D23408B5F00B1CCBA /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9119D5C23408B5F00B1CCBA /* CommentView.swift */; };
 		C500007FEEAB0A6C65D570A8 /* FeedbackModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419FB87F3EA50297FA842E96 /* FeedbackModuleOutput.swift */; };
 		D0035F6FDF25F298AF9F5151 /* Pods_SunCityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A860470667BFCD87A4E012B8 /* Pods_SunCityTests.framework */; };
 		D23F5A392EA1F7EB6D6D4DD9 /* SchoolViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A954D4D2725272232B6133 /* SchoolViewController.storyboard */; };
@@ -240,6 +242,8 @@
 		B906C5A623402D2F00E180F0 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		B9095D8F233FB4A1006906EE /* SunCityDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SunCityDebug.entitlements; sourceTree = "<group>"; };
 		B9119D502340476000B1CCBA /* PostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
+		B9119D5A23408ADB00B1CCBA /* CommentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentView.xib; sourceTree = "<group>"; };
+		B9119D5C23408B5F00B1CCBA /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		B9D8C37707FFD20D817F7175 /* StartViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = StartViewController.storyboard; sourceTree = "<group>"; };
 		C3480F693F69D9C6C16F04DC /* ChatModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatModuleConfigurator.swift; sourceTree = "<group>"; };
 		C9B5EA1B874EEC730B444FB0 /* FeedbackModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackModuleConfiguratorTests.swift; sourceTree = "<group>"; };
@@ -598,7 +602,6 @@
 				D3EF28F98ED11151526F28F1 /* Module */,
 				99EA06CAEA758BFFB8E5922F /* View */,
 			);
-			name = School;
 			path = School;
 			sourceTree = "<group>";
 		};
@@ -626,7 +629,6 @@
 			children = (
 				E80EF9FFAB9F32C1A739CCAF /* StubModuleConfiguratorTests.swift */,
 			);
-			name = Stub;
 			path = Stub;
 			sourceTree = "<group>";
 		};
@@ -721,7 +723,6 @@
 			children = (
 				73A1DCAF929AA767DF827D1A /* SchoolModuleConfiguratorTests.swift */,
 			);
-			name = School;
 			path = School;
 			sourceTree = "<group>";
 		};
@@ -762,7 +763,6 @@
 				0F78D060E5319E10BDD3B5BC /* StubModuleOutput.swift */,
 				811CBA22B81AC72137D93BF6 /* StubModuleConfigurator.swift */,
 			);
-			name = Module;
 			path = Module;
 			sourceTree = "<group>";
 		};
@@ -772,7 +772,6 @@
 				4C73D86238C35053CF709454 /* SchoolViewController.swift */,
 				27A954D4D2725272232B6133 /* SchoolViewController.storyboard */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -846,7 +845,6 @@
 				95D64436AF6D184FDC172084 /* Module */,
 				EE3C6E1064643AC3E5ECFDC3 /* View */,
 			);
-			name = Stub;
 			path = Stub;
 			sourceTree = "<group>";
 		};
@@ -856,7 +854,6 @@
 				55A103DAE8864BF9A537EBEB /* SchoolModuleOutput.swift */,
 				A8136EE47985D7785AD7B618 /* SchoolModuleConfigurator.swift */,
 			);
-			name = Module;
 			path = Module;
 			sourceTree = "<group>";
 		};
@@ -875,7 +872,6 @@
 				562D05E45AAC48742E0D1B0C /* StubViewController.swift */,
 				DF1687EB559D703020229B2A /* StubViewController.storyboard */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -884,6 +880,8 @@
 			children = (
 				B9119D502340476000B1CCBA /* PostDetailsViewController.swift */,
 				5203448A210B872B2BF6E69E /* PostDetailsViewController.storyboard */,
+				B9119D5A23408ADB00B1CCBA /* CommentView.xib */,
+				B9119D5C23408B5F00B1CCBA /* CommentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -995,6 +993,7 @@
 				8924AE4323400728004A039A /* FeedbackAudioView.xib in Resources */,
 				7119C5FF21B57753A23E9E86 /* PostDetailsViewController.storyboard in Resources */,
 				F96C4C031EF2E2E687F2280A /* StubViewController.storyboard in Resources */,
+				B9119D5B23408ADB00B1CCBA /* CommentView.xib in Resources */,
 				D23F5A392EA1F7EB6D6D4DD9 /* SchoolViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1052,6 +1051,7 @@
 				"${BUILT_PRODUCTS_DIR}/SurfUtils/SurfUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/YXWaveView/YXWaveView.framework",
+				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -1069,6 +1069,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SurfUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YXWaveView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1140,6 +1141,7 @@
 				0260177C233FB11F007F6B15 /* UserDefaults.swift in Sources */,
 				0214F5F4233F746900A4B2B2 /* AudioRecorderDelegate.swift in Sources */,
 				021282B8233F9C3300160E1F /* LoginViewController.swift in Sources */,
+				B9119D5D23408B5F00B1CCBA /* CommentView.swift in Sources */,
 				028262C0233F7A6800B2B14E /* UIViewController.swift in Sources */,
 				B9119D512340476000B1CCBA /* PostDetailsViewController.swift in Sources */,
 				B9119D4F2340474300B1CCBA /* PostDetailsModuleConfigurator.swift in Sources */,
@@ -1167,7 +1169,7 @@
 				12EF645EA894816DA494C109 /* FeedbackViewController.swift in Sources */,
 				8924AE2D233FC80D004A039A /* FeedbackExpandableView.swift in Sources */,
 				FBCA3F0CB2B56AB463750F4E /* PostDetailsModuleOutput.swift in Sources */,
-				13F259371A35F9513D7A12DC /* BuildFile in Sources */,
+				13F259371A35F9513D7A12DC /* (null) in Sources */,
 				21D2360A73F345F6343931D7 /* StubModuleOutput.swift in Sources */,
 				585E44BA369F51566B7867A4 /* StubModuleConfigurator.swift in Sources */,
 				F01FC5098A9088EBE75920A0 /* StubViewController.swift in Sources */,
