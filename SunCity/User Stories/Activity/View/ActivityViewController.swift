@@ -137,7 +137,7 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
         let service = FeedbackService()
         service.getAll(
             onSuccess: { response in
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0) {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
                     self.eventsStubs.forEach { $0.isHidden = true }
                     self.titleContainerViews.forEach { $0.isHidden = false }
                     self.subtitleContainerViews.forEach { $0.isHidden = false }

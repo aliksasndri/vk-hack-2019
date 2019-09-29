@@ -31,10 +31,12 @@ final class FeedbackViewController: UIViewController, FeedbackModuleOutput {
     }
 
     @IBAction func createButtonAction(_ sender: Any) {
+        (sender as? UIButton)?.isUserInteractionEnabled = false
         let dataArray = images.compactMap { $0.pngData() }
         let audioURL = Bundle.main.url(forResource: Constants.filename, withExtension: "m4a")
         service.postForm(text: storyView.text, audio: audioURL, photos: dataArray)
             .onCompleted {
+                self.dismiss(animated: true, completion: nil)
                 print("success")
             }.onError { error in
                 print(error)
@@ -122,7 +124,7 @@ private extension FeedbackViewController {
                             image: UIImage(named: "cam"))
 
         createButton.setTitleColor(UIColor(red: 0.17, green: 0.22, blue: 0.13, alpha: 1), for: .normal)
-        createButton.backgroundColor = .white
+        createButton.backgroundColor = UIColor(red: 1, green: 0.8, blue: 0.22, alpha: 1)
         createButton.roundAllCorners(radius: 56.0)
 
         let textView = UITextView()
