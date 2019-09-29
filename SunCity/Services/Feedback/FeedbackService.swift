@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import NodeKit
 
 enum UserType: Int, Codable {
     case mentor
@@ -91,6 +92,57 @@ final class FeedbackService {
         }
 
         task.resume()
+    }
+
+    struct TestData: DTOConvertible, RawMappable {
+
+        typealias DTO = TestData
+
+        typealias Raw = [String: Data]
+
+        let data: [String: Data]
+
+        func toDTO() throws -> TestData {
+            return self
+        }
+
+        func toRaw() throws -> [String : Data] {
+            return self.data
+        }
+
+        static func from(dto: TestData) throws -> TestData {
+            return .init(data: dto.data)
+        }
+
+        static func from(raw: [String : Data]) throws -> TestData {
+            return .init(data: raw)
+        }
+    }
+
+    func postForm(text: String, audio: URL?, photos: [URL]) -> Observer<Void> {
+
+        let data = TestData(data: [
+
+            "text": Data(text.utf8)
+        ])
+
+        var files = [String: MultipartFileProvider]()
+
+        for (index, item) in photos.enumerated() {
+            files["photo\(index)"] = .url(url: item)
+        }
+
+        if let audio = audio {
+            files["audio"] = .url(url: audio)
+        }
+
+        return UrlChainsBuilder().default(with: .init(method: .post, route: "http://demo6.alpha.vkhackathon.com:8844/feedback/comment", metadata: ["Authorization": UserDefaults.standard.token ?? ""])).process(MultipartModel(payloadModel: data, files: files)).map { (json: Json) in
+            return ()
+        }
+    }
+
+    func sendMessage(text: String, formId: String) -> Observer<Void> {
+        return UrlChainsBuilder().default(with: .init(method: .post, route: "http://demo6.alpha.vkhackathon.com:8844/feedback/comment/\(formId)", metadata: ["Authorization": UserDefaults.standard.token ?? ""])).process(["text": text])
     }
 
 }

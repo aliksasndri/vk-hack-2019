@@ -8,6 +8,7 @@
 
 import UIKit
 import Nuke
+import SwiftMessages
 
 final class ActivityViewController: UIViewController, ActivityModuleOutput {
 
@@ -81,6 +82,14 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
 
         diaryButton.applyDropShadow()
         eventsButton.applyDropShadow()
+
+        self.subtitleContainer.clipsToBounds = true
+        self.subtitleContainer.layer.shadowColor = UIColor.black.cgColor
+        self.subtitleContainer.layer.shadowOpacity = 0.5
+        self.subtitleContainer.layer.shadowOffset = CGSize(width: -10, height: -10)
+        self.subtitleContainer.layer.shadowRadius = 1
+        self.subtitleContainer.layer.shadowRadius = 20
+        self.subtitleContainer.layer.masksToBounds = false
 
         loadFeedback()
     }
@@ -159,6 +168,9 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
             },
             onError: {
                 self.titleContainerIndicator.stopAnimating()
+                let view = MessageView()
+                view.configureContent(body: "Кажется что-то сломалось.")
+                SwiftMessages.sharedInstance.show(view: view)
             }
         )
     }
