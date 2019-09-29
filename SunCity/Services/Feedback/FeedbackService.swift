@@ -119,7 +119,7 @@ final class FeedbackService {
         }
     }
 
-    func postForm(text: String, audio: URL?, photos: [URL]) -> Observer<Void> {
+    func postForm(text: String, audio: URL?, photos: [Data]) -> Observer<Void> {
 
         let data = TestData(data: [
 
@@ -129,7 +129,7 @@ final class FeedbackService {
         var files = [String: MultipartFileProvider]()
 
         for (index, item) in photos.enumerated() {
-            files["photo\(index)"] = .url(url: item)
+            files["photo\(index)"] = .data(data: item, filename: "photo\(index).png", mimetype: " image/png")
         }
 
         if let audio = audio {

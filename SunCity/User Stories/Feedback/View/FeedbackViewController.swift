@@ -24,13 +24,21 @@ final class FeedbackViewController: UIViewController, FeedbackModuleOutput {
     @IBOutlet weak var audioDeleteView: UIView!
     @IBOutlet weak var attachDeleteView: UIView!
     
-    // MARK: - IBOutlets
+    // MARK: - IBActions
 
     @IBAction func closeButtonAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 
     @IBAction func createButtonAction(_ sender: Any) {
+        let dataArray = images.compactMap { $0.pngData() }
+        let audioURL = Bundle.main.url(forResource: Constants.filename, withExtension: "m4a")
+        service.postForm(text: storyView.text, audio: audioURL, photos: dataArray)
+            .onCompleted {
+                print("success")
+            }.onError { error in
+                print(error)
+            }
     }
     
     @IBAction func storyDeleteButtonAction(_ sender: Any) {
@@ -50,8 +58,15 @@ final class FeedbackViewController: UIViewController, FeedbackModuleOutput {
     
     // MARK: - FeedbackModuleOutput
 
+    // MARK: - Enums
+
+    private enum Constants {
+        static let filename = "voice_record"
+    }
+
     // MARK: - Constants
 
+    private let service = FeedbackService()
     private let audioRecorder = AudioRecorder()
 
     // MARK: - Properties
@@ -125,11 +140,11 @@ private extension FeedbackViewController {
         audioView.didTap = { [weak self] state in
             switch state {
             case .ready:
-                self?.audioRecorder.startRecording(filename: "record")
+                self?.audioRecorder.startRecording(filename: Constants.filename)
             case .recording:
                 self?.audioRecorder.finishRecording()
             case .ended:
-                self?.audioRecorder.play(filename: "record")
+                self?.audioRecorder.play(filename: Constants.filename)
             }
             self?.audioDeleteView.isHidden = false
         }
