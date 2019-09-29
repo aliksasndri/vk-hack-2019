@@ -8,64 +8,20 @@
 
 import Chatto
 import ChattoAdditions
+import Starscream
+import NodeKit
 
 final class ChatDataSource: ChatDataSourceProtocol {
+
+    private var socket: WebSocket?
+    private var recivier: String = ""
 
     // MARK: - Initialization and deinitialization
 
     init() {
-        let msg1 = MessageModel(
-            text: "Сообщение 1",
-            avatarImage: Observable(UIImage(named: "jj")),
-            senderId: "1",
-            isIncoming: true,
-            date: Date(timeIntervalSince1970: 10),
-            status: .success,
-            uid: "1"
-        )
-        let msg2 = MessageModel(
-            text: "Сообщение 2",
-            avatarImage: Observable(UIImage(named: "jj")),
-            senderId: "1",
-            isIncoming: true,
-            date: Date(),
-            status: .success,
-            uid: "2"
-        )
-        let msg3 = MessageModel(
-            text: "Сообщение 3",
-            avatarImage: Observable(UIImage(named: "jj")),
-            senderId: "1",
-            isIncoming: true,
-            date: Date(),
-            status: .success,
-            uid: "3"
-        )
-        let msg4 = MessageModel(
-            text: "Че?",
-            avatarImage: Observable(UIImage(named: "dr")),
-            senderId: "2",
-            isIncoming: false,
-            date: Date(),
-            status: .success,
-            uid: "4"
-        )
-        let msg5 = MessageModel(
-            text: "Че ты вообще несешь такое? Успокойся уже, а? Пожалуйста",
-            avatarImage: Observable(UIImage(named: "dr")),
-            senderId: "2",
-            isIncoming: false,
-            date: Date(),
-            status: .success,
-            uid: "5"
-        )
-        self.chatItems = [
-            msg1,
-            msg2,
-            msg3,
-            msg4,
-            msg5
-        ]
+        self.recivier = ""
+        self.socket = nil
+        self.chatItems = []
     }
 
     // MARK: - ChatDataSourceProtocol
@@ -100,16 +56,111 @@ final class ChatDataSource: ChatDataSourceProtocol {
     // MARK: - Internal methods
 
     func add(message: String) {
-        let newMessage = MessageModel(
+        var newMessage = MessageModel(
             text: message,
             avatarImage: Observable(UIImage(named: "dr")),
             senderId: "2",
             isIncoming: false,
             date: Date(),
-            status: .sending, uid: "todo"
+            status: .success, uid: UUID().uuidString
         )
+
+        let model = ChatMessageModel(recipient: "5d8fa55f09773ae35d7d1d4b", text: message, sender: nil, time: "", isMe: true)
+
+        let data = try! JSONEncoder().encode(model)
+
+        self.socket?.write(data: data) { [weak self] in
+
+            guard let self = self else { return }
+
+            self.delegate?.chatDataSourceDidUpdate(self, updateType: .normal)
+
+            newMessage.status = .success
+            self.delegate?.chatDataSourceDidUpdate(self, updateType: .normal)
+        }
+
+
         chatItems.append(newMessage)
         delegate?.chatDataSourceDidUpdate(self, updateType: .normal)
     }
 
+    func configureSocket() {
+        var request = URLRequest(url: URL(string: "ws://demo6.alpha.vkhackathon.com:8844/ws")!)
+        request.timeoutInterval = 5
+        request.setValue(UserDefaults.standard.token, forHTTPHeaderField: "Authorization")
+        self.socket = WebSocket(request: request)
+        socket?.delegate = self
+        socket?.connect()
+    }
+
+    func start() {
+
+        self.configureSocket()
+
+        ChatService().loadHistory().onCompleted { data in
+            self.recivier = data.partnerId
+            let msg = data.messages.map { item in
+                return MessageModel(text: item.text,
+                                    avatarImage: .init(nil),
+                                    senderId: item.sender?.id ?? "f",
+                                    isIncoming: !item.isMe,
+                                    date: item.date,
+                                    status: .success,
+                                    uid: UUID().uuidString)
+            }
+
+            self.chatItems.append(contentsOf: msg)
+            self.delegate?.chatDataSourceDidUpdate(self, updateType: .reload)
+        }.onError {
+            dump($0)
+        }
+    }
+}
+
+
+// MARK: - WebSocketDelegate
+
+extension ChatDataSource: WebSocketDelegate {
+    func websocketDidConnect(socket: WebSocketClient) {
+        print("DID CONNECT")
+    }
+
+    func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
+        print("RECIVE ERROR\(error)")
+    }
+
+    func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+
+
+        let data = Data(text.utf8)
+
+        let dt = try! JSONDecoder().decode(ChatMessageModel.self, from: data)
+
+        var newMessage = MessageModel(
+            text: dt.text,
+            avatarImage: Observable(UIImage(named: "dr")),
+            senderId: dt.sender!.id,
+            isIncoming: !dt.isMe,
+            date: Date(),
+            status: .success, uid: UUID().uuidString
+        )
+
+        chatItems.append(newMessage)
+        delegate?.chatDataSourceDidUpdate(self, updateType: .normal)
+    }
+
+    func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
+        print("RECIVE DATA")
+    }
+}
+
+extension String: UrlRouteProvider {
+    public func url() throws -> URL {
+
+        guard let url = URL(string: self) else {
+            throw URLError(URLError.Code(rawValue: 0))
+        }
+
+        return url
+    }
 }

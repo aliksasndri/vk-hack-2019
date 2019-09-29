@@ -41,8 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 
     private func makeRootViewController() -> UIViewController {
-        let controller = MainTabBarConfigurator().configure()
-//        let (controller, _) = RequestModuleConfigurator().configure()
+//        let controller = MainTabBarConfigurator().configure()
+        let (controller, _) = StartModuleConfigurator().configure()
         return controller
     }
 

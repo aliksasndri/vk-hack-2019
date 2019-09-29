@@ -5,8 +5,9 @@ inhibit_all_warnings!
 target 'SunCity' do
     use_frameworks!
     pod 'Chatto', '= 3.5.0'
-	pod 'ChattoAdditions', '= 3.5.0'
+	  pod 'ChattoAdditions', '= 3.5.0'
     pod 'SkyFloatingLabelTextField'
+    pod 'Starscream'
     pod 'NodeKit', :git => 'https://github.com/surfstudio/NodeKit', :commit => 'b5c30f2a30ab3d047f19e5049d858cdd5c524c55'
 end
 

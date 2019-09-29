@@ -26,6 +26,7 @@ final class ChatViewController: BaseChatViewController, ChatModuleOutput {
     override func viewDidLoad() {
         super.viewDidLoad()
         chatDataSource = ChatDataSource()
+        chatDataSource?.start()
         chatItemsDecorator = ChatItemsDecorator()
         view.backgroundColor = UIColor(red: 0.95, green: 0.96, blue: 0.93, alpha: 1)
     }
