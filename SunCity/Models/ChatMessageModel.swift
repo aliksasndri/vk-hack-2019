@@ -75,5 +75,11 @@ extension ISO8601DateFormatter {
 }
 
 extension Formatter {
-    static let iso8601 = ISO8601DateFormatter([.withInternetDateTime, .withFractionalSeconds])
+    static let iso8601: ISO8601DateFormatter = {
+        if #available(iOS 11.3, *) {
+            return ISO8601DateFormatter([.withInternetDateTime, .withFractionalSeconds])
+        } else {
+            return ISO8601DateFormatter([.withInternetDateTime])
+        }
+    }()
 }

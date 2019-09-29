@@ -14,6 +14,8 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
 
     // MARK: - Subviews
 
+    @IBOutlet var writes: [UIView]!
+
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var titleContainerIndicator: UIActivityIndicatorView!
     @IBOutlet weak var avatarImageView: UIImageView!
@@ -102,6 +104,11 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
 
     // MARK: - Actions
 
+    @IBAction func create(_ sender: Any) {
+        let vc = StubModuleConfigurator().configure().0
+        present(vc, animated: true, completion: nil)
+    }
+
     @IBAction func eventsAction(_ sender: Any) {
         isShowingEvents = true
         scrollViewTrailingConstraint.constant = 0
@@ -162,6 +169,10 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
                         self.diaryButton.isHidden = true
                         self.createEventButton.isHidden = false
                         break
+                    }
+
+                    if self.view.frame.width == 320 {
+                        self.writes.forEach { $0.isHidden = true }
                     }
 
                 }

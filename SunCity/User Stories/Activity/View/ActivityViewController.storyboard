@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3k-bK-TNO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -246,11 +247,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mc-ZY-I2V">
-                                                        <rect key="frame" x="16" y="300" width="182" height="36"/>
+                                                        <rect key="frame" x="16" y="300" width="176" height="36"/>
                                                         <color key="backgroundColor" red="0.3411764706" green="0.59215686270000001" blue="0.1843137255" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="g8j-Ld-Uzf"/>
-                                                            <constraint firstAttribute="width" constant="182" id="ipU-Hf-Cj6"/>
+                                                            <constraint firstAttribute="width" constant="176" id="ipU-Hf-Cj6"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                         <state key="normal" title="11 сентября (cб), 11:00">
@@ -263,11 +264,11 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXF-be-8HZ">
-                                                        <rect key="frame" x="284" y="300" width="82" height="36"/>
+                                                        <rect key="frame" x="290" y="300" width="76" height="36"/>
                                                         <color key="backgroundColor" red="0.2784313725" green="0.4941176471" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="b7Y-a9-bPL"/>
-                                                            <constraint firstAttribute="width" constant="82" id="xYo-0g-4rq"/>
+                                                            <constraint firstAttribute="width" constant="76" id="xYo-0g-4rq"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                         <state key="normal" title="Я пойду">
@@ -337,11 +338,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vs2-ud-moD">
-                                                        <rect key="frame" x="16" y="300" width="182" height="36"/>
+                                                        <rect key="frame" x="16" y="300" width="176" height="36"/>
                                                         <color key="backgroundColor" red="0.3411764706" green="0.59215686270000001" blue="0.1843137255" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="CR4-1h-KLn"/>
-                                                            <constraint firstAttribute="width" constant="182" id="E1d-Do-3dV"/>
+                                                            <constraint firstAttribute="width" constant="176" id="E1d-Do-3dV"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                         <state key="normal" title="11 сентября (cб), 11:00">
@@ -354,11 +355,11 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpJ-Oq-kcE">
-                                                        <rect key="frame" x="284" y="300" width="82" height="36"/>
+                                                        <rect key="frame" x="290" y="300" width="76" height="36"/>
                                                         <color key="backgroundColor" red="0.2784313725" green="0.4941176471" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="Kyg-1X-QL8"/>
-                                                            <constraint firstAttribute="width" constant="82" id="hcQ-tU-PJE"/>
+                                                            <constraint firstAttribute="width" constant="76" id="hcQ-tU-PJE"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                         <state key="normal" title="Я пойду">
@@ -438,6 +439,9 @@
                                         <integer key="value" value="18"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="create:" destination="h3k-bK-TNO" eventType="touchUpInside" id="b8S-LH-YV4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -496,6 +500,10 @@
                         <outletCollection property="subtitleContainerViews" destination="W3h-ZF-mIO" collectionClass="NSMutableArray" id="ZaO-2o-yG4"/>
                         <outletCollection property="eventsStubs" destination="dUT-H5-Lbr" collectionClass="NSMutableArray" id="sf1-mM-q3t"/>
                         <outletCollection property="eventsStubs" destination="g2x-8I-StD" collectionClass="NSMutableArray" id="FzS-tJ-IJX"/>
+                        <outletCollection property="writes" destination="7Hx-Od-dsg" collectionClass="NSMutableArray" id="8kc-eb-EkY"/>
+                        <outletCollection property="writes" destination="U1x-ju-BZg" collectionClass="NSMutableArray" id="BYe-T0-rUl"/>
+                        <outletCollection property="writes" destination="epU-es-WlC" collectionClass="NSMutableArray" id="oYn-eP-OTc"/>
+                        <outletCollection property="writes" destination="DP7-NA-K4l" collectionClass="NSMutableArray" id="OSI-St-WYi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,6 +12,7 @@ final class LoginViewController: UIViewController, LoginModuleOutput {
 
     // MARK: - Subviews
 
+    @IBOutlet weak var titleLabelTop: NSLayoutConstraint!
     @IBOutlet private weak var titleLabel: UILabel!
     private let emailTextField = TextField()
     private let passwordTextField = TextField()
@@ -61,7 +62,7 @@ final class LoginViewController: UIViewController, LoginModuleOutput {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tap))
         view.addGestureRecognizer(gestureRecognizer)
 
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
             self.emailTextField.becomeFirstResponder()
         }
     }
@@ -116,6 +117,7 @@ final class LoginViewController: UIViewController, LoginModuleOutput {
     }
 
     @IBAction private func close(_ sender: Any) {
+        view.endEditing(true)
         dismiss(animated: true, completion: nil)
     }
 
@@ -135,7 +137,10 @@ final class LoginViewController: UIViewController, LoginModuleOutput {
             delay: 0,
             options: [options, .beginFromCurrentState],
             animations: {
-                self.enterButtonBottomConstraint.constant = self.view.frame.size.height - frame.minY - 16
+                if self.view.frame.width == 320 {
+                    self.titleLabelTop.constant = 92 - (self.view.frame.size.height - frame.minY - 16)
+                }
+                self.enterButtonBottomConstraint.constant = (UIScreen.main.bounds.height - frame.minY) - self.view.safeAreaInsets.bottom + 16
                 self.view.layoutIfNeeded()
             },
             completion: nil
@@ -144,6 +149,9 @@ final class LoginViewController: UIViewController, LoginModuleOutput {
 
     @objc
     private func keyboardWillHide() {
+        if self.view.frame.width == 320 {
+            titleLabelTop.constant = 92
+        }
         enterButtonBottomConstraint.constant = 16
         view.layoutIfNeeded()
     }
