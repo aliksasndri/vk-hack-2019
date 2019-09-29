@@ -87,7 +87,11 @@ final class ChatInputView: UIView {
         bringSubviewToFront(sendButton)
 
         let topBorder = UIView()
-        topBorder.backgroundColor = .separator
+        if #available(iOS 13, *) {
+            topBorder.backgroundColor = .separator
+        } else {
+            topBorder.backgroundColor = .lightGray
+        }
         topBorder.translatesAutoresizingMaskIntoConstraints = false
         addSubview(topBorder)
         NSLayoutConstraint.activate([

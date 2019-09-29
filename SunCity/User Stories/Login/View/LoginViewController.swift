@@ -69,6 +69,8 @@ final class LoginViewController: UIViewController, LoginModuleOutput {
     // MARK: - Actions
 
     @IBAction private func login(_ sender: Any) {
+        view.endEditing(true)
+
         let service = LoginService()
         service.login(
             email: emailTextField.text ?? "",

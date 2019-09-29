@@ -20,7 +20,11 @@ final class StartViewController: UIViewController, StartModuleOutput {
     // MARK: - UIViewController
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .darkContent
+        if #available(iOS 13, *) {
+            return .darkContent
+        } else {
+            return .default
+        }
     }
 
     override func viewDidLoad() {

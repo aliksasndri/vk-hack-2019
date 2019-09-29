@@ -38,8 +38,8 @@ final class FeedbackViewController: UIViewController, FeedbackModuleOutput {
         let dataArray = images.compactMap { $0.pngData() }
         let audioURL = Bundle.main.url(forResource: Constants.filename, withExtension: "m4a")
         service.postForm(text: storyView.text, audio: audioURL, photos: dataArray)
-            .onCompleted {
-                self.dismiss(animated: true, completion: nil)
+            .onCompleted { [weak self] in
+                self?.dismiss(animated: true, completion: nil)
                 print("success")
             }.onError { error in
                 print(error)
