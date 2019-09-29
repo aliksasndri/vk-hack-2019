@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedbackExpandableView" customModule="SunCity" customModuleProvider="target">
+            <connections>
+                <outlet property="arrowImageView" destination="roB-Xz-JT6" id="odm-Zi-agn"/>
+                <outlet property="containerView" destination="iN0-l3-epB" id="qSF-vy-Alv"/>
+                <outlet property="nameLabel" destination="9KJ-RH-9g8" id="W9I-jo-5hf"/>
+                <outlet property="stackView" destination="dLJ-DE-WSc" id="llV-gU-DSJ"/>
+                <outlet property="topView" destination="JKZ-SK-PRg" id="4X7-mP-syT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dLJ-DE-WSc">
+                    <rect key="frame" x="14" y="58" width="386" height="790"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JKZ-SK-PRg">
+                            <rect key="frame" x="0.0" y="0.0" width="386" height="790"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KJ-RH-9g8">
+                                    <rect key="frame" x="14" y="0.0" width="337" height="790"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="251" image="arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="roB-Xz-JT6">
+                                    <rect key="frame" x="359" y="383.5" width="19" height="19"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSQ-zK-hoV">
+                                    <rect key="frame" x="0.0" y="0.0" width="386" height="790"/>
+                                    <connections>
+                                        <action selector="mainButtonAction:" destination="-1" eventType="touchUpInside" id="1tv-XC-kH8"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="CSQ-zK-hoV" firstAttribute="leading" secondItem="JKZ-SK-PRg" secondAttribute="leading" id="1nk-3Q-Xxy"/>
+                                <constraint firstItem="CSQ-zK-hoV" firstAttribute="top" secondItem="JKZ-SK-PRg" secondAttribute="top" id="7wQ-6j-FVO"/>
+                                <constraint firstAttribute="trailing" secondItem="roB-Xz-JT6" secondAttribute="trailing" constant="8" id="B0B-hK-ZTr"/>
+                                <constraint firstItem="roB-Xz-JT6" firstAttribute="centerY" secondItem="9KJ-RH-9g8" secondAttribute="centerY" constant="-2" id="Csk-5Y-sha"/>
+                                <constraint firstItem="roB-Xz-JT6" firstAttribute="leading" secondItem="9KJ-RH-9g8" secondAttribute="trailing" constant="8" id="E0f-m3-zbc"/>
+                                <constraint firstItem="9KJ-RH-9g8" firstAttribute="top" secondItem="JKZ-SK-PRg" secondAttribute="top" id="Jme-P4-IyK"/>
+                                <constraint firstAttribute="trailing" secondItem="CSQ-zK-hoV" secondAttribute="trailing" id="SnD-k9-iq4"/>
+                                <constraint firstAttribute="bottom" secondItem="CSQ-zK-hoV" secondAttribute="bottom" id="U73-tO-v2X"/>
+                                <constraint firstItem="9KJ-RH-9g8" firstAttribute="leading" secondItem="JKZ-SK-PRg" secondAttribute="leading" constant="14" id="avE-th-Mml"/>
+                                <constraint firstAttribute="bottom" secondItem="9KJ-RH-9g8" secondAttribute="bottom" id="fS9-Qv-GoW"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dLJ-DE-WSc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="14" id="7sY-BQ-lru"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dLJ-DE-WSc" secondAttribute="bottom" constant="14" id="ICG-wa-RT9"/>
+                <constraint firstItem="dLJ-DE-WSc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="14" id="LYG-2E-eqd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dLJ-DE-WSc" secondAttribute="trailing" constant="14" id="Ura-ng-QNq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="92"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowDown" width="19" height="19"/>
+    </resources>
+</document>

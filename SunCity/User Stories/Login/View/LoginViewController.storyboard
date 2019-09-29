@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3k-bK-TNO">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="PlN-iW-H7B">
+            <objects>
+                <viewController id="h3k-bK-TNO" customClass="LoginViewController" customModule="SunCity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cA6-JB-jfU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_gradient_green" translatesAutoresizingMaskIntoConstraints="NO" id="FKn-Hf-Xe1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yup-fv-jYc">
+                                <rect key="frame" x="16" y="101" width="348" height="107.66666666666669"/>
+                                <string key="text">Авторизуйтесь, если 
+вы наставник, психолог
+или куратор</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0AY-cV-5eg">
+                                <rect key="frame" x="16" y="708" width="343" height="54"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.80392156859999997" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="aG7-wi-V9j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Войти">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="27"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="login:" destination="h3k-bK-TNO" eventType="touchUpInside" id="Tin-vC-ne5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUw-Tm-ZQr">
+                                <rect key="frame" x="5" y="43" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3nA-RG-y6r"/>
+                                    <constraint firstAttribute="width" constant="44" id="s0O-KU-Kj0"/>
+                                </constraints>
+                                <state key="normal" image="ic_close"/>
+                                <connections>
+                                    <action selector="close:" destination="h3k-bK-TNO" eventType="touchUpInside" id="NAH-Qf-6fX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="top" secondItem="FKn-Hf-Xe1" secondAttribute="top" id="10U-xm-KfV"/>
+                            <constraint firstItem="xUw-Tm-ZQr" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="5" id="7Rr-Nu-zIh"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="0AY-cV-5eg" secondAttribute="trailing" constant="16" id="CbS-A2-cxi"/>
+                            <constraint firstItem="Yup-fv-jYc" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="16" id="S4K-9w-cbw"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="Yup-fv-jYc" secondAttribute="trailing" constant="11" id="S8Z-XH-G22"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="FKn-Hf-Xe1" secondAttribute="trailing" id="Snj-zr-t3v"/>
+                            <constraint firstAttribute="bottom" secondItem="FKn-Hf-Xe1" secondAttribute="bottom" id="W8B-RT-G79"/>
+                            <constraint firstItem="Yup-fv-jYc" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="57" id="Z2e-mg-YMD"/>
+                            <constraint firstItem="0AY-cV-5eg" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="16" id="krK-UR-UyY"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="top" secondItem="xUw-Tm-ZQr" secondAttribute="top" constant="1" id="t3G-7j-1Uf"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="bottom" secondItem="0AY-cV-5eg" secondAttribute="bottom" constant="16" id="v0B-DE-J1c"/>
+                            <constraint firstItem="FKn-Hf-Xe1" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" id="xow-Ac-1vp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
+                    </view>
+                    <connections>
+                        <outlet property="enterButtonBottomConstraint" destination="v0B-DE-J1c" id="F8W-R4-u2p"/>
+                        <outlet property="titleLabel" destination="Yup-fv-jYc" id="mhM-LT-M9N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573.60000000000002" y="-232.01970443349754"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_gradient_green" width="375" height="819"/>
+        <image name="ic_close" width="24" height="24.333333969116211"/>
+    </resources>
+</document>
