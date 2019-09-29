@@ -74,6 +74,19 @@ final class RequestViewController: UIViewController, RequestModuleOutput {
     let reportsField = TextField()
     let privacyField = TextField()
     let findField = TextField()
+    let datePicker = UIDatePicker()
+    let pickerView = UIPickerView()
+
+    // MARK: - Properties
+
+    private var currentField = TextField() {
+        didSet {
+            addToolbar(to: currentField)
+        }
+    }
+    private var pickerData: [String] {
+        return currentField.pickerData
+    }
 
     // MARK: - UIViewController
 
@@ -84,6 +97,8 @@ final class RequestViewController: UIViewController, RequestModuleOutput {
     override func viewDidLoad() {
         super.viewDidLoad()
         addDropdowns()
+        showDatePicker()
+        showPickerView()
     }
 
     override func viewDidLayoutSubviews() {
@@ -121,6 +136,8 @@ private extension RequestViewController {
         faithField.fill(placeholder: "Вероисповедание")
         birthField.fill(placeholder: "Дата рождения")
         nationalityField.fill(placeholder: "Гражданство РФ")
+        nationalityField.fill(pickerData: ["Да", "Нет"])
+        nationalityField.delegate = self
 
         let userInfoView = ExpandableView()
         userInfoView.fill(title: "Общие сведения", textFields: [lastNameField, firstNameField, middleNameField, registerAddressField, factAddressField, phoneField, emailField, faithField, birthField, nationalityField])
@@ -130,6 +147,8 @@ private extension RequestViewController {
 
     func addHealthDropdown() {
         rateField.fill(placeholder: "Оцените состояние здоровья")
+        rateField.fill(pickerData: ["Отлично", "Хорошо", "Средне", "Плохо"])
+        rateField.delegate = self
         illField.fill(placeholder: "Укажите серьезные заболевания")
 
         let healthView = ExpandableView()
@@ -230,5 +249,77 @@ private extension RequestViewController {
         lawView.fill(title: "Нарушения закона", textFields: [alcoholField, psyField, cigaretsField, drugsField, crimeField, parentalRightsField, reportsField, privacyField, findField])
 
         stackView.addArrangedSubview(lawView)
+    }
+
+    func showDatePicker() {
+        datePicker.datePickerMode = .date
+        datePicker.backgroundColor = .white
+
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+
+        let doneButton = UIBarButtonItem(title: "Готово", style: .done, target: self, action: #selector(datePickerDoneAction))
+        toolbar.setItems([doneButton], animated: true)
+
+        birthField.inputAccessoryView = toolbar
+        birthField.inputView = datePicker
+    }
+
+    @objc
+    func datePickerDoneAction() {
+         let formatter = DateFormatter()
+         formatter.dateFormat = "dd/MM/yyyy"
+         birthField.text = formatter.string(from: datePicker.date)
+         view.endEditing(true)
+    }
+
+    func showPickerView() {
+        pickerView.delegate = self
+        pickerView.dataSource = self
+
+        pickerView.backgroundColor = .white
+    }
+
+    func addToolbar(to field: TextField) {
+        let toolbar = UIToolbar()
+         toolbar.sizeToFit()
+
+         let doneButton = UIBarButtonItem(title: "Готово", style: .done, target: self, action: #selector(pickerDoneAction))
+         toolbar.setItems([doneButton], animated: true)
+
+         field.inputAccessoryView = toolbar
+         field.inputView = pickerView
+    }
+
+    @objc
+    func pickerDoneAction() {
+        view.endEditing(true)
+    }
+}
+
+extension RequestViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+}
+
+extension RequestViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        currentField.text = pickerData[row]
+    }
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+}
+
+extension RequestViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        guard let field = textField as? TextField else { return }
+        self.currentField = field
     }
 }

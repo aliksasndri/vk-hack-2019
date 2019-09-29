@@ -94,7 +94,6 @@ final class LoginViewController: UIViewController, LoginModuleOutput {
                                   duration: 0.3,
                                   options: .transitionFlipFromRight,
                                   animations: animation)
-//                UIApplication.shared.delegate?.window??.rootViewController = MainTabBarConfigurator().configure()
             },
             onError: {
                 let alert = UIAlertController(

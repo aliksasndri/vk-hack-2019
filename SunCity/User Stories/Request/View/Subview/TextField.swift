@@ -10,6 +10,10 @@ import SkyFloatingLabelTextField
 
 final class TextField: SkyFloatingLabelTextField {
 
+    // MARK: - Properties
+
+    var pickerData = [String]()
+
     // MARK: - Initialization and deinitialization
 
     override init(frame: CGRect) {
@@ -50,6 +54,9 @@ final class TextField: SkyFloatingLabelTextField {
         self.title = placeholder
     }
 
+    func fill(pickerData: [String]) {
+        self.pickerData = pickerData
+    }
 }
 
 // MARK: - Private helpers
