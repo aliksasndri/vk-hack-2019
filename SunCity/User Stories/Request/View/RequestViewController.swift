@@ -13,7 +13,13 @@ final class RequestViewController: UIViewController, RequestModuleOutput {
     // MARK: - IBOutlets
 
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var sendButton: UIButton!
 
+    // MARK: - IBOutlets
+
+    @IBAction func sendButtonAction(_ sender: Any) {
+    }
+    
     // MARK: - RequestModuleOutput
 
     // MARK: - Constants
@@ -78,6 +84,11 @@ final class RequestViewController: UIViewController, RequestModuleOutput {
     override func viewDidLoad() {
         super.viewDidLoad()
         addDropdowns()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        sendButton.roundAllCorners(radius: 56.0)
     }
 
     // MARK: - Internal helpers

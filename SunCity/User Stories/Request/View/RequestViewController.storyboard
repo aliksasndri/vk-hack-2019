@@ -25,7 +25,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Af-cl-sZg">
-                                                        <rect key="frame" x="2" y="0.0" width="339" height="31"/>
+                                                        <rect key="frame" x="2" y="0.0" width="339" height="0.0"/>
                                                         <string key="text">Заявка
 на наставничество</string>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -33,7 +33,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Заполните все поля. Мы рассмотрим заявку в течение двух дней и свяжемся с вами." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvy-24-eQ4">
-                                                        <rect key="frame" x="2" y="39" width="339" height="61"/>
+                                                        <rect key="frame" x="2" y="8" width="339" height="60"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -45,20 +45,34 @@
                                                     <constraint firstAttribute="trailing" secondItem="1Af-cl-sZg" secondAttribute="trailing" constant="2" id="Ar8-3c-xMW"/>
                                                     <constraint firstItem="1Af-cl-sZg" firstAttribute="leading" secondItem="QQl-Bh-MlZ" secondAttribute="leading" constant="2" id="EsR-eR-z9Y"/>
                                                     <constraint firstAttribute="trailing" secondItem="dvy-24-eQ4" secondAttribute="trailing" constant="2" id="QiY-8l-hhB"/>
-                                                    <constraint firstAttribute="bottom" secondItem="dvy-24-eQ4" secondAttribute="bottom" id="kTR-qc-pU2"/>
+                                                    <constraint firstAttribute="bottom" secondItem="dvy-24-eQ4" secondAttribute="bottom" constant="32" id="kTR-qc-pU2"/>
                                                     <constraint firstItem="1Af-cl-sZg" firstAttribute="top" secondItem="QQl-Bh-MlZ" secondAttribute="top" id="li8-tN-3kL"/>
                                                     <constraint firstItem="dvy-24-eQ4" firstAttribute="top" secondItem="1Af-cl-sZg" secondAttribute="bottom" constant="8" id="qEC-d9-m8k"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXQ-mE-IAL">
+                                        <rect key="frame" x="99.666666666666686" y="188" width="176" height="45"/>
+                                        <color key="backgroundColor" red="1" green="0.80784313725490198" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="25" minY="14" maxX="25" maxY="14"/>
+                                        <state key="normal" title="Отправить заявку">
+                                            <color key="titleColor" red="0.16862745098039217" green="0.22352941176470587" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendButtonAction:" destination="h3k-bK-TNO" eventType="touchUpInside" id="tRN-FE-06l"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="f6k-wA-6TP" firstAttribute="width" secondItem="ie7-SF-IS0" secondAttribute="width" constant="-32" id="D7h-ZX-RtC"/>
+                                    <constraint firstItem="aXQ-mE-IAL" firstAttribute="top" secondItem="f6k-wA-6TP" secondAttribute="bottom" constant="44" id="Kz8-T9-70n"/>
                                     <constraint firstAttribute="trailing" secondItem="f6k-wA-6TP" secondAttribute="trailing" constant="-16" id="MgB-2r-hOO"/>
-                                    <constraint firstAttribute="bottom" secondItem="f6k-wA-6TP" secondAttribute="bottom" constant="44" id="Wgm-y9-bOn"/>
+                                    <constraint firstAttribute="bottom" secondItem="aXQ-mE-IAL" secondAttribute="bottom" constant="27" id="ZrV-nO-KtK"/>
                                     <constraint firstItem="f6k-wA-6TP" firstAttribute="top" secondItem="ie7-SF-IS0" secondAttribute="top" constant="44" id="gkA-hn-eeT"/>
                                     <constraint firstItem="f6k-wA-6TP" firstAttribute="leading" secondItem="ie7-SF-IS0" secondAttribute="leading" constant="16" id="sTF-vL-zJ6"/>
+                                    <constraint firstItem="aXQ-mE-IAL" firstAttribute="centerX" secondItem="ie7-SF-IS0" secondAttribute="centerX" id="xwM-Nd-83t"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="dQ5-rb-zIa"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="h9a-dD-yGU"/>
@@ -74,6 +88,7 @@
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
                     </view>
                     <connections>
+                        <outlet property="sendButton" destination="aXQ-mE-IAL" id="e91-wo-eA7"/>
                         <outlet property="stackView" destination="f6k-wA-6TP" id="v4E-5b-wHj"/>
                     </connections>
                 </viewController>
