@@ -187,6 +187,7 @@ extension ActivityViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let viewController = PostDetailsModuleConfigurator().configure().0
+        viewController.feedback = feedbacks[indexPath.row]
         viewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(viewController, animated: true)
     }
@@ -207,7 +208,7 @@ extension ActivityViewController: UITableViewDataSource {
         let feedback = feedbacks[indexPath.row]
         cell?.configure(
             minutesAudio: feedback.audio == "" ? nil : "1",
-            commentsCount: String(feedback.comments.count),
+            commentsCount: String(feedback.comments?.count ?? 0),
             photosCount: String(feedback.images.count),
             text: feedback.text,
             date: feedback.date.toWeekDayAndDateString()

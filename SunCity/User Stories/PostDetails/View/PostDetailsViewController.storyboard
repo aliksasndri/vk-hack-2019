@@ -19,11 +19,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5A-4J-H7T">
-                                <rect key="frame" x="0.0" y="341" width="375" height="471"/>
+                                <rect key="frame" x="0.0" y="244" width="375" height="568"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Запись Анны" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkW-NV-kYx">
-                                <rect key="frame" x="16" y="44" width="191.66666666666666" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Запись" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkW-NV-kYx">
+                                <rect key="frame" x="15.999999999999993" y="44" width="105.33333333333331" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -75,21 +75,8 @@ Cras adipiscing enim eu turpis eg</string>
                                                                 </attributes>
                                                             </fragment>
                                                             <fragment>
-                                                                <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                                                <attributes>
-                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                    <font key="NSFont" size="15" name="SFProDisplay-Regular"/>
-                                                                    <real key="NSKern" value="0.0"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                        <tabStops/>
-                                                                    </paragraphStyle>
-                                                                    <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                            <fragment>
-                                                                <string key="content">Cras adipiscing enim eu turpis egLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id. 
+                                                                <string key="content">
+Cras adipiscing enim eu turpis egLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa tempor nec feugiat nisl pretium fusce id. 
 </string>
                                                                 <attributes>
                                                                     <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -214,12 +201,18 @@ Cras adipiscing enim eu turpis egLorem ipsum dolor sit amet, consectetur adipisc
                             <constraint firstItem="zU2-zN-ycb" firstAttribute="bottom" secondItem="YWU-9O-L7t" secondAttribute="bottom" id="kDy-va-gXA"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="zU2-zN-ycb" secondAttribute="trailing" id="kgU-eb-6KE"/>
                             <constraint firstAttribute="bottom" secondItem="PfN-j1-34H" secondAttribute="bottom" id="rYH-lu-wfZ"/>
-                            <constraint firstItem="g5A-4J-H7T" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="297" id="x0y-Xg-tnY"/>
+                            <constraint firstItem="g5A-4J-H7T" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="200" id="x0y-Xg-tnY"/>
                             <constraint firstItem="zU2-zN-ycb" firstAttribute="top" secondItem="HvK-Kq-dLe" secondAttribute="bottom" constant="20" id="ysV-WD-Nwm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
                     </view>
                     <connections>
+                        <outlet property="audioContainer" destination="Iah-z9-7zu" id="yD5-Zf-sUP"/>
+                        <outlet property="dateLabel" destination="HvK-Kq-dLe" id="lR2-xV-gat"/>
+                        <outlet property="picContainer" destination="ovG-pz-5d5" id="G2G-zK-Dfo"/>
+                        <outlet property="picture" destination="iJe-Wj-BP1" id="O7E-qb-o9q"/>
+                        <outlet property="textLabel" destination="VMY-0n-e9V" id="DEL-uO-k3M"/>
+                        <outlet property="titleLabel" destination="qkW-NV-kYx" id="pou-Ut-VN4"/>
                         <outlet property="toRoundView" destination="rpl-Jv-aLO" id="RnC-CS-iHA"/>
                     </connections>
                 </viewController>

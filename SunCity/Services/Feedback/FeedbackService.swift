@@ -38,7 +38,7 @@ struct Comment: Codable {
 
 struct Feedback: Codable {
     let audio: String
-    let comments: [Comment]
+    let comments: [Comment]?
     let id: String
     let images: [String]
     let text: String
@@ -78,11 +78,16 @@ final class FeedbackService {
                     let data = data,
                     let response = response as? HTTPURLResponse,
                     error == nil,
-                    (200 ... 299) ~= response.statusCode
+                    (200 ... 299) ~= response.statusCode,
+                    let responseData = try? JSONSerialization.jsonObject(
+                        with: data,
+                        options: .allowFragments
+                    ) as? [String: Any]
                 else {
                     onError()
                     return
                 }
+                print(responseData)
                 let rawResponse: GetAllFeedbackRawResponse = try! JSONDecoder().decode(
                     GetAllFeedbackRawResponse.self,
                     from: data
