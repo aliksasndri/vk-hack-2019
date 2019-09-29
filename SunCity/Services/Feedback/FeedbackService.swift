@@ -13,24 +13,6 @@ enum UserType: Int, Codable {
     case psychologist
 }
 
-struct User: Codable {
-    let apns: String
-    let description: String
-    let id: String
-    let image: String
-    let name: String?
-    let userType: UserType
-
-    enum CodingKeys: String, CodingKey {
-        case apns = "Apns"
-        case description = "Description"
-        case id = "ID"
-        case image = "Image"
-        case name = "Name"
-        case userType = "UserType"
-    }
-}
-
 struct Comment: Codable {
     let dateString: String
     let image: String
@@ -111,17 +93,4 @@ final class FeedbackService {
         task.resume()
     }
 
-}
-
-
-extension ISO8601DateFormatter {
-    convenience init(_ formatOptions: Options, timeZone: TimeZone = TimeZone(secondsFromGMT: 0)!) {
-        self.init()
-        self.formatOptions = formatOptions
-        self.timeZone = timeZone
-    }
-}
-
-extension Formatter {
-    static let iso8601 = ISO8601DateFormatter([.withInternetDateTime, .withFractionalSeconds])
 }

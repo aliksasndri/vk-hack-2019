@@ -54,11 +54,16 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         
         navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.navigationBar.applyTransparentStyle()
+
         view.backgroundColor = UIColor(red: 0.95, green: 0.96, blue: 0.93, alpha: 1)
+
         titleContainer.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         titleContainer.layer.cornerRadius = 24
+
         subtitleContainer.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         subtitleContainer.layer.cornerRadius = 24
+
         updateButtons()
 
         tableView.register(
@@ -78,6 +83,12 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
         eventsButton.applyDropShadow()
 
         loadFeedback()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.title = ""
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     // MARK: - Actions
@@ -117,7 +128,7 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
         let service = FeedbackService()
         service.getAll(
             onSuccess: { response in
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0) {
                     self.eventsStubs.forEach { $0.isHidden = true }
                     self.titleContainerViews.forEach { $0.isHidden = false }
                     self.subtitleContainerViews.forEach { $0.isHidden = false }
@@ -163,6 +174,9 @@ extension ActivityViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let viewController = PostDetailsModuleConfigurator().configure().0
+        viewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(viewController, animated: true)
     }
 
 }

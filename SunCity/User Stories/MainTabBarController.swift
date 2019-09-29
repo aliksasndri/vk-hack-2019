@@ -50,12 +50,17 @@ final class MainTabBarController: UITabBarController {
             case .school:
                 return UIViewController()
             case .chats:
-                return UIViewController()
+                return ChatModuleConfigurator().configure().0
             }
         }
     }
 
     // MARK: - UIViewController
+
+    override var childForStatusBarStyle: UIViewController? {
+        let selected = self.viewControllers?[self.selectedIndex]
+        return (selected as? UINavigationController)?.topViewController ?? selected
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
