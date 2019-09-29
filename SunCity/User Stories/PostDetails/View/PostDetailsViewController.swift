@@ -46,18 +46,18 @@ final class PostDetailsViewController: UIViewController, PostDetailsModuleOutput
             picContainer.isHidden = true
         }
         audioContainer.isHidden = feedback.audio == ""
+
+
+        for item in self.feedback.comments ?? [] {
+            let custom = CommentView()
+            custom.configure(comment: item)
+            self.mainStack.addArrangedSubview(custom)
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
-
-        for item in self.feedback.comments ?? [] {
-
-            let custom = CommentView()
-            custom.configure(comment: item)
-            self.mainStack.addArrangedSubview(custom)
-        }
     }
 
     // MARK: - Internal helpers

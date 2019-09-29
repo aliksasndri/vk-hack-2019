@@ -29,6 +29,7 @@ final class ChatViewController: BaseChatViewController, ChatModuleOutput {
         dataSource?.start()
         chatItemsDecorator = ChatItemsDecorator()
         view.backgroundColor = UIColor(red: 0.95, green: 0.96, blue: 0.93, alpha: 1)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
     override func createChatInputView() -> UIView {
