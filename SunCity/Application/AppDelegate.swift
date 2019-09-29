@@ -47,6 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         } else {
             controller = MainTabBarConfigurator().configure()
         }
+
         return controller
     }
 

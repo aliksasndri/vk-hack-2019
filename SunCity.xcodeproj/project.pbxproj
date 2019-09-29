@@ -58,19 +58,30 @@
 		02FD1406234019AD00B5C55C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FD1405234019AD00B5C55C /* UIImageView.swift */; };
 		034FADFC9D5332BE90649329 /* RequestModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C8014EEAB74C06825ACE54 /* RequestModuleOutput.swift */; };
 		0E93F1B3628962A2E256911D /* ActivityModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07183D57568A1125EEAFF600 /* ActivityModuleOutput.swift */; };
+		12EF645EA894816DA494C109 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F502C825D690A14A358211F /* FeedbackViewController.swift */; };
 		3412C5C92C8C401820800681 /* RequestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B820A189FB13E84C464FCF6F /* RequestViewController.storyboard */; };
+		3A04B2A5D2307E331835851B /* FeedbackModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B5EA1B874EEC730B444FB0 /* FeedbackModuleConfiguratorTests.swift */; };
 		54DCA634373D3BC4EF4C3677 /* StartModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F48AAC64868AC046EFDFB2E /* StartModuleConfiguratorTests.swift */; };
+		56FBDB7B2FD5F52016EB9998 /* FeedbackModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9134BC532F0AD6A3D1260A /* FeedbackModuleConfigurator.swift */; };
 		5BE031DA905025AEA6A07CEC /* RequestModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575F17A12A2D40637950613C /* RequestModuleConfigurator.swift */; };
 		5EBD46867A61D79780C024E7 /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E817C265D990C6C44ECCF89B /* RequestViewController.swift */; };
 		7276C6941FAEE5C2295E66FE /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FBD66A0DFBA4E91E4D87E3 /* ActivityViewController.swift */; };
 		78A544422B47C7938951F812 /* ChatModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B567C4758CC5259675DB251D /* ChatModuleConfiguratorTests.swift */; };
 		7BD4CEBB6DE2D39868BA5D1E /* LoginModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF2305AA51ECB707E0DA306 /* LoginModuleConfiguratorTests.swift */; };
+		7EACF0BED5983C6DDA41C75A /* FeedbackViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F3A873A593C522EEEE44335 /* FeedbackViewController.storyboard */; };
 		8907BBC3233E8B5A005CC565 /* ExpandableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BBC2233E8B5A005CC565 /* ExpandableView.swift */; };
 		8907BBC5233E8B66005CC565 /* ExpandableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8907BBC4233E8B66005CC565 /* ExpandableView.xib */; };
 		8907BBC8233E8BA0005CC565 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907BBC7233E8BA0005CC565 /* UIView.swift */; };
+		8924AE2D233FC80D004A039A /* FeedbackExpandableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924AE2C233FC80D004A039A /* FeedbackExpandableView.swift */; };
+		8924AE2F233FC818004A039A /* FeedbackExpandableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8924AE2E233FC818004A039A /* FeedbackExpandableView.xib */; };
+		8924AE3B233FDCB7004A039A /* FeedbackAttachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924AE3A233FDCB7004A039A /* FeedbackAttachView.swift */; };
+		8924AE3D233FDCC3004A039A /* FeedbackAttachView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8924AE3C233FDCC3004A039A /* FeedbackAttachView.xib */; };
+		8924AE4123400720004A039A /* FeedbackAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924AE4023400720004A039A /* FeedbackAudioView.swift */; };
+		8924AE4323400728004A039A /* FeedbackAudioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8924AE4223400728004A039A /* FeedbackAudioView.xib */; };
 		89B4B332233EB8EC0001F767 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B4B331233EB8EC0001F767 /* TextField.swift */; };
 		90203111521906CA5F77F5A9 /* ActivityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4996215418B21F8DE22A0E /* ActivityViewController.storyboard */; };
 		B17EBEA8D6552298451B2120 /* ActivityModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7652AD821C089E763E6E82 /* ActivityModuleConfiguratorTests.swift */; };
+		C500007FEEAB0A6C65D570A8 /* FeedbackModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419FB87F3EA50297FA842E96 /* FeedbackModuleOutput.swift */; };
 		CC4F69687C963F58D98D45CC /* Pods_SunCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5240B12F5C57343FF096AB89 /* Pods_SunCity.framework */; };
 		DFC5F3F9BEC9F34839B95D11 /* ActivityModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF51318DCCB6F8EBDF2670 /* ActivityModuleConfigurator.swift */; };
 		E32CFB8675C7E8FAB638C4DF /* RequestModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D6EDF760889DD312554C77 /* RequestModuleConfiguratorTests.swift */; };
@@ -165,7 +176,10 @@
 		0E4996215418B21F8DE22A0E /* ActivityViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = ActivityViewController.storyboard; sourceTree = "<group>"; };
 		17A275BA8FA212991D4D94BD /* ChatViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		1A77275BF6EEF4090D0B5AF9 /* Pods-SunCityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCityTests.debug.xcconfig"; path = "Target Support Files/Pods-SunCityTests/Pods-SunCityTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1F502C825D690A14A358211F /* FeedbackViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		2B9134BC532F0AD6A3D1260A /* FeedbackModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackModuleConfigurator.swift; sourceTree = "<group>"; };
 		30819672FFF66D37899EE0F2 /* Pods-SunCityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCityTests.release.xcconfig"; path = "Target Support Files/Pods-SunCityTests/Pods-SunCityTests.release.xcconfig"; sourceTree = "<group>"; };
+		419FB87F3EA50297FA842E96 /* FeedbackModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackModuleOutput.swift; sourceTree = "<group>"; };
 		47D6EDF760889DD312554C77 /* RequestModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RequestModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		5240B12F5C57343FF096AB89 /* Pods_SunCity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunCity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		526A585A9E5D66D51CF1989C /* LoginModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginModuleOutput.swift; sourceTree = "<group>"; };
@@ -179,8 +193,15 @@
 		8907BBC2233E8B5A005CC565 /* ExpandableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableView.swift; sourceTree = "<group>"; };
 		8907BBC4233E8B66005CC565 /* ExpandableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandableView.xib; sourceTree = "<group>"; };
 		8907BBC7233E8BA0005CC565 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8924AE2C233FC80D004A039A /* FeedbackExpandableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackExpandableView.swift; sourceTree = "<group>"; };
+		8924AE2E233FC818004A039A /* FeedbackExpandableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackExpandableView.xib; sourceTree = "<group>"; };
+		8924AE3A233FDCB7004A039A /* FeedbackAttachView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackAttachView.swift; sourceTree = "<group>"; };
+		8924AE3C233FDCC3004A039A /* FeedbackAttachView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackAttachView.xib; sourceTree = "<group>"; };
+		8924AE4023400720004A039A /* FeedbackAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackAudioView.swift; sourceTree = "<group>"; };
+		8924AE4223400728004A039A /* FeedbackAudioView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackAudioView.xib; sourceTree = "<group>"; };
 		89B4B331233EB8EC0001F767 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		ABCF51318DCCB6F8EBDF2670 /* ActivityModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActivityModuleConfigurator.swift; sourceTree = "<group>"; };
+		9F3A873A593C522EEEE44335 /* FeedbackViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = FeedbackViewController.storyboard; sourceTree = "<group>"; };
 		AF80147B65BBB89E4ABB3873 /* StartModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartModuleConfigurator.swift; sourceTree = "<group>"; };
 		B567C4758CC5259675DB251D /* ChatModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		B820A189FB13E84C464FCF6F /* RequestViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = RequestViewController.storyboard; sourceTree = "<group>"; };
@@ -188,6 +209,7 @@
 		B9D8C37707FFD20D817F7175 /* StartViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = StartViewController.storyboard; sourceTree = "<group>"; };
 		C3480F693F69D9C6C16F04DC /* ChatModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatModuleConfigurator.swift; sourceTree = "<group>"; };
 		CF7652AD821C089E763E6E82 /* ActivityModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActivityModuleConfiguratorTests.swift; sourceTree = "<group>"; };
+		C9B5EA1B874EEC730B444FB0 /* FeedbackModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		D16D84D4AC7D6CA1D55E6A0B /* ChatModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatModuleOutput.swift; sourceTree = "<group>"; };
 		D8FBD66A0DFBA4E91E4D87E3 /* ActivityViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		E3E2FEBF60B31D60922D4B22 /* StartModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartModuleOutput.swift; sourceTree = "<group>"; };
@@ -539,6 +561,14 @@
 				0E4996215418B21F8DE22A0E /* ActivityViewController.storyboard */,
 			);
 			path = View;
+            sourceTree = "<group>";
+        };
+		280D52DE3BDA3357EB474F8C /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				C9B5EA1B874EEC730B444FB0 /* FeedbackModuleConfiguratorTests.swift */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 		484EF7FE5A3832ED31B0723A /* Start */ = {
@@ -568,6 +598,7 @@
 				0212829A233F9C3300160E1F /* Start */,
 				EC9BA3C429947E5213DBCDE5 /* Request */,
 				54B1A5DBEF614BD303F92E29 /* Activity */,
+				A267ECA0B2EA51D76E2436F9 /* Feedback */,
 			);
 			path = "User Stories";
 			sourceTree = "<group>";
@@ -580,6 +611,7 @@
 				0BE3B086AEEA96664D14D371 /* Login */,
 				915B112D760C928F0731FF8D /* Request */,
 				CAF56F02D8F2067E25418379 /* Activity */,
+				280D52DE3BDA3357EB474F8C /* Feedback */,
 			);
 			path = "User Stories";
 			sourceTree = "<group>";
@@ -590,6 +622,19 @@
 				89B4B331233EB8EC0001F767 /* TextField.swift */,
 				8907BBC2233E8B5A005CC565 /* ExpandableView.swift */,
 				8907BBC4233E8B66005CC565 /* ExpandableView.xib */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
+		8924AE30233FC81D004A039A /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				8924AE2C233FC80D004A039A /* FeedbackExpandableView.swift */,
+				8924AE2E233FC818004A039A /* FeedbackExpandableView.xib */,
+				8924AE3A233FDCB7004A039A /* FeedbackAttachView.swift */,
+				8924AE3C233FDCC3004A039A /* FeedbackAttachView.xib */,
+				8924AE4023400720004A039A /* FeedbackAudioView.swift */,
+				8924AE4223400728004A039A /* FeedbackAudioView.xib */,
 			);
 			path = Subview;
 			sourceTree = "<group>";
@@ -618,6 +663,15 @@
 				ABCF51318DCCB6F8EBDF2670 /* ActivityModuleConfigurator.swift */,
 			);
 			path = Module;
+            sourceTree = "<group>";
+        };
+		A267ECA0B2EA51D76E2436F9 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				BF5E4A57785E557C82744473 /* Module */,
+				C48A8D306FB2A65B3BB2F2D6 /* View */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 		A62A8B63BC0BCD1515743573 /* Pods */ = {
@@ -637,6 +691,25 @@
 				CF7652AD821C089E763E6E82 /* ActivityModuleConfiguratorTests.swift */,
 			);
 			path = Activity;
+            sourceTree = "<group>";
+        };
+		BF5E4A57785E557C82744473 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				419FB87F3EA50297FA842E96 /* FeedbackModuleOutput.swift */,
+				2B9134BC532F0AD6A3D1260A /* FeedbackModuleConfigurator.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		C48A8D306FB2A65B3BB2F2D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8924AE30233FC81D004A039A /* Subview */,
+				1F502C825D690A14A358211F /* FeedbackViewController.swift */,
+				9F3A873A593C522EEEE44335 /* FeedbackViewController.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EC9BA3C429947E5213DBCDE5 /* Request */ = {
@@ -742,13 +815,17 @@
 			files = (
 				021282BD233F9C3300160E1F /* StartViewController.storyboard in Resources */,
 				02601786233FEF03007F6B15 /* DiaryRecordCell.xib in Resources */,
+				8924AE2F233FC818004A039A /* FeedbackExpandableView.xib in Resources */,
 				021282B9233F9C3300160E1F /* LoginViewController.storyboard in Resources */,
 				0298DDAD233E3341008D2D27 /* LaunchScreen.storyboard in Resources */,
+				8924AE3D233FDCC3004A039A /* FeedbackAttachView.xib in Resources */,
 				0298DDAA233E3341008D2D27 /* Assets.xcassets in Resources */,
 				8907BBC5233E8B66005CC565 /* ExpandableView.xib in Resources */,
 				3412C5C92C8C401820800681 /* RequestViewController.storyboard in Resources */,
 				021282A8233F9C3300160E1F /* SendingStatusCollectionViewCell.xib in Resources */,
 				90203111521906CA5F77F5A9 /* ActivityViewController.storyboard in Resources */,
+				7EACF0BED5983C6DDA41C75A /* FeedbackViewController.storyboard in Resources */,
+				8924AE4323400728004A039A /* FeedbackAudioView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,9 +874,12 @@
 				"${BUILT_PRODUCTS_DIR}/Chatto/Chatto.framework",
 				"${BUILT_PRODUCTS_DIR}/ChattoAdditions/ChattoAdditions.framework",
 				"${BUILT_PRODUCTS_DIR}/CoreEvents/CoreEvents.framework",
+				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/NodeKit/NodeKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SurfUtils/SurfUtils.framework",
+				"${BUILT_PRODUCTS_DIR}/YXWaveView/YXWaveView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -809,9 +889,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Chatto.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChattoAdditions.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreEvents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NodeKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SurfUtils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YXWaveView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -862,6 +945,7 @@
 				0298DDA1233E3340008D2D27 /* AppDelegate.swift in Sources */,
 				0270CC53233EA2CD003B6741 /* Date.swift in Sources */,
 				021282B2233F9C3300160E1F /* TimeSeparatorPresenter.swift in Sources */,
+				8924AE3B233FDCB7004A039A /* FeedbackAttachView.swift in Sources */,
 				021282A2233F9C3300160E1F /* ChatModuleOutput.swift in Sources */,
 				021282B7233F9C3300160E1F /* LoginModuleOutput.swift in Sources */,
 				02601779233FA98A007F6B15 /* LoginService.swift in Sources */,
@@ -871,6 +955,7 @@
 				021282B1233F9C3300160E1F /* TimeSeparatorModel.swift in Sources */,
 				021282A4233F9C3300160E1F /* ChatItemsDecorator.swift in Sources */,
 				0214F5EE233F5F0F00A4B2B2 /* AudioRecorderViewController.swift in Sources */,
+				8924AE4123400720004A039A /* FeedbackAudioView.swift in Sources */,
 				021282A5233F9C3300160E1F /* SendingStatusModel.swift in Sources */,
 				02601780233FB956007F6B15 /* MainTabBarConfigurator.swift in Sources */,
 				02601782233FD487007F6B15 /* TouchableControl.swift in Sources */,
@@ -898,6 +983,10 @@
 				DFC5F3F9BEC9F34839B95D11 /* ActivityModuleConfigurator.swift in Sources */,
 				02FD1406234019AD00B5C55C /* UIImageView.swift in Sources */,
 				7276C6941FAEE5C2295E66FE /* ActivityViewController.swift in Sources */,
+				C500007FEEAB0A6C65D570A8 /* FeedbackModuleOutput.swift in Sources */,
+				56FBDB7B2FD5F52016EB9998 /* FeedbackModuleConfigurator.swift in Sources */,
+				12EF645EA894816DA494C109 /* FeedbackViewController.swift in Sources */,
+				8924AE2D233FC80D004A039A /* FeedbackExpandableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -911,6 +1000,7 @@
 				7BD4CEBB6DE2D39868BA5D1E /* LoginModuleConfiguratorTests.swift in Sources */,
 				E32CFB8675C7E8FAB638C4DF /* RequestModuleConfiguratorTests.swift in Sources */,
 				B17EBEA8D6552298451B2120 /* ActivityModuleConfiguratorTests.swift in Sources */,
+				3A04B2A5D2307E331835851B /* FeedbackModuleConfiguratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

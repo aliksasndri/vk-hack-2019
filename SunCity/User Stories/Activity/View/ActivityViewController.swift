@@ -56,9 +56,9 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
         navigationController?.setNavigationBarHidden(true, animated: false)
         view.backgroundColor = UIColor(red: 0.95, green: 0.96, blue: 0.93, alpha: 1)
         titleContainer.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
-        titleContainer.cornerRadius = 24
+        titleContainer.layer.cornerRadius = 24
         subtitleContainer.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
-        subtitleContainer.cornerRadius = 24
+        subtitleContainer.layer.cornerRadius = 24
         updateButtons()
 
         tableView.register(
@@ -100,6 +100,11 @@ final class ActivityViewController: UIViewController, ActivityModuleOutput {
             self.view.layoutIfNeeded()
         }
         updateButtons()
+    }
+    
+    @IBAction func feedbackButtonAction(_ sender: Any) {
+        let (controller, _) = FeedbackModuleConfigurator().configure()
+        present(controller, animated: true)
     }
 
     // MARK: - Private methods
