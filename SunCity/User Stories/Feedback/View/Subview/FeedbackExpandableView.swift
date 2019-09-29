@@ -44,6 +44,9 @@ final class FeedbackExpandableView: UIView {
     // MARK: - Properties
 
     var didTap: (() -> Void)?
+    var text: String {
+        return textView.text
+    }
     private var state: State = .collapsed
     private var textView = UITextView()
     private var cornerRadius: CGFloat = 56.0
