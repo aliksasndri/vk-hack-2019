@@ -12,6 +12,7 @@ final class PostDetailsViewController: UIViewController, PostDetailsModuleOutput
 
     // MARK: - Properties
 
+    @IBOutlet weak var toRoundView: UIView!
     // MARK: - UIViewController
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -20,6 +21,8 @@ final class PostDetailsViewController: UIViewController, PostDetailsModuleOutput
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        toRoundView.layer.cornerRadius = 30
+        toRoundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
 
     override func viewWillAppear(_ animated: Bool) {
