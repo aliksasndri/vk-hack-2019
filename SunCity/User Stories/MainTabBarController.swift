@@ -50,7 +50,7 @@ final class MainTabBarController: UITabBarController {
             case .school:
                 return UIViewController()
             case .chats:
-                return UIViewController()
+                return ChatModuleConfigurator().configure().0
             }
         }
     }
