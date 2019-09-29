@@ -12,6 +12,9 @@ PODS:
   - SkyFloatingLabelTextField (3.7.0)
   - Starscream (3.1.0)
   - SurfUtils/KeyboardPresentable (9.0.0)
+  - SwiftMessages (7.0.1):
+    - SwiftMessages/App (= 7.0.1)
+  - SwiftMessages/App (7.0.1)
   - YXWaveView (0.5.0)
 
 DEPENDENCIES:
@@ -23,6 +26,7 @@ DEPENDENCIES:
   - SkyFloatingLabelTextField
   - Starscream
   - SurfUtils/KeyboardPresentable (from `https://github.com/surfstudio/iOS-Utils.git`, tag `9.0.0`)
+  - SwiftMessages
   - YXWaveView
 
 SPEC REPOS:
@@ -35,6 +39,7 @@ SPEC REPOS:
     - Nuke
     - SkyFloatingLabelTextField
     - Starscream
+    - SwiftMessages
     - YXWaveView
 
 EXTERNAL SOURCES:
@@ -64,8 +69,9 @@ SPEC CHECKSUMS:
   SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
   Starscream: 08172b481e145289c4930cb567230fb55897cfa4
   SurfUtils: f50b028478aefbe596d98fdf58d5266f7d9fa592
+  SwiftMessages: b577dc7043be8b299857ab35bb663dbff6483bd0
   YXWaveView: 3570d7244b08effd077a5c63b0693aa44b7cd369
 
-PODFILE CHECKSUM: 6e197352ad34a6f715d41ff6775a0515b438424c
+PODFILE CHECKSUM: e109e38e7337d9f503642049b52c05052e4a363b
 
 COCOAPODS: 1.6.1

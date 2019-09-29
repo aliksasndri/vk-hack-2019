@@ -12,6 +12,7 @@ target 'SunCity' do
     pod 'NodeKit', :git => 'https://github.com/surfstudio/NodeKit', :commit => 'b5c30f2a30ab3d047f19e5049d858cdd5c524c55'
     pod 'ImagePicker'
     pod 'YXWaveView'
+    pod 'SwiftMessages'
     pod 'SurfUtils/KeyboardPresentable', :git => "https://github.com/surfstudio/iOS-Utils.git", :tag => '9.0.0'
   end
 
