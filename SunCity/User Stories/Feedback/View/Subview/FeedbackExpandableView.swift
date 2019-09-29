@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ExpandableView: UIView {
+final class FeedbackExpandableView: UIView {
 
     // MARK: - IBOutlets
 
@@ -16,16 +16,15 @@ final class ExpandableView: UIView {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var percentView: UIView!
-    @IBOutlet weak var percentLabel: UILabel!
     @IBOutlet weak var arrowImageView: UIImageView!
 
     // MARK: - IBActions
-    
+
     @IBAction func mainButtonAction(_ sender: Any) {
         configure(for: state.toggle)
+        didTap?()
     }
-    
+
     // MARK: - Enums
 
     enum State {
@@ -44,8 +43,10 @@ final class ExpandableView: UIView {
 
     // MARK: - Properties
 
+    var didTap: (() -> Void)?
     private var state: State = .collapsed
-    private var fields: [TextField] = []
+    private var textView = UITextView()
+    private var cornerRadius: CGFloat = 56.0
 
     // MARK: - Initialization and deinitialization
 
@@ -66,7 +67,7 @@ final class ExpandableView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         addCardShadow()
-        containerView.roundAllCorners(radius: 18.0)
+        containerView.roundAllCorners(radius: cornerRadius)
     }
 
     // MARK: - Internal helpers
@@ -76,32 +77,41 @@ final class ExpandableView: UIView {
 
         switch state {
         case .collapsed:
-            arrowImageView.image = UIImage(named: "arrowDown")
-            fields.forEach { $0.isHidden = true }
+            textView.isHidden = true
+            topView.isHidden = false
+            containerView.backgroundColor = UIColor(red: 1, green: 0.8, blue: 0.22, alpha: 1)
+            textView.resignFirstResponder()
+            cornerRadius = 56.0
+            textView.text = ""
         case .expanded:
-            arrowImageView.image = UIImage(named: "arrowUp")
-            fields.forEach { $0.isHidden = false }
+            containerView.backgroundColor = .white
+            topView.isHidden = true
+            textView.isHidden = false
+            textView.becomeFirstResponder()
+            cornerRadius = 18.0
         }
+
+        layoutSubviews()
     }
 
-    func fill(title: String, textFields: [TextField]) {
-        self.nameLabel.text = title
-        self.fields = textFields
+    func set(color: UIColor, textColor: UIColor, title: String, image: UIImage?) {
+        topView.backgroundColor = UIColor.white.withAlphaComponent(0.0)
+        containerView.backgroundColor = color
+        nameLabel.text = title
+        nameLabel.textColor = textColor
+        arrowImageView.image = image
+    }
 
-        textFields.forEach { [weak self] textField in
-            self?.stackView.addArrangedSubview(textField)
-        }
-
-        configure(for: .collapsed)
+    func fill(textView: UITextView) {
+        self.textView = textView
+        textView.isHidden = true
+        stackView.addArrangedSubview(textView)
     }
 }
 
-private extension ExpandableView {
+private extension FeedbackExpandableView {
     func configureAppearance() {
         backgroundColor =  UIColor.white.withAlphaComponent(0.0)
         containerView.backgroundColor = .white
-        percentView.layer.cornerRadius = 8.0
-        percentView.clipsToBounds = true
-        percentLabel.text = "0%"
     }
 }
