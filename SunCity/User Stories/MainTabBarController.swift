@@ -57,6 +57,11 @@ final class MainTabBarController: UITabBarController {
 
     // MARK: - UIViewController
 
+    override var childForStatusBarStyle: UIViewController? {
+        let selected = self.viewControllers?[self.selectedIndex]
+        return (selected as? UINavigationController)?.topViewController ?? selected
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
