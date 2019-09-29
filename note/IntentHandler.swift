@@ -20,8 +20,8 @@ class IntentHandler: INExtension {
 
 class NoteHandler: NSObject, INCreateNoteIntentHandling {
     func handle(intent: INCreateNoteIntent, completion: @escaping (INCreateNoteIntentResponse) -> Void) {
-
-        completion(INCreateNoteIntentResponse(code: .success, userActivity: .none))
+        let userActivity = NSUserActivity(activityType: "create-note")
+        completion(INCreateNoteIntentResponse(code: .success, userActivity: userActivity))
     }
 
     func confirm(intent: INCreateNoteIntent, completion: @escaping (INCreateNoteIntentResponse) -> Swift.Void) {

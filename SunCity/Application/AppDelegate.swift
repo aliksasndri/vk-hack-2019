@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        requestSiriAuth()
         initializeRootView()
         UIApplication.shared.registerForRemoteNotifications()
         let center = UNUserNotificationCenter.current()
@@ -30,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
              UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
          application.registerUserNotificationSettings(settings)
         UNUserNotificationCenter.current().delegate = self
+
         return true
     }
 
@@ -53,7 +55,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
 
     private func requestSiriAuth() {
-        INPreferences.requestSiriAuthorization { _ in }
+        INPreferences.requestSiriAuthorization { status in
+            print(status.rawValue)
+        }
     }
 
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
