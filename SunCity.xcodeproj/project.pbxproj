@@ -62,6 +62,7 @@
 		12EF645EA894816DA494C109 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F502C825D690A14A358211F /* FeedbackViewController.swift */; };
 		13F259371A35F9513D7A12DC /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		21D2360A73F345F6343931D7 /* StubModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F78D060E5319E10BDD3B5BC /* StubModuleOutput.swift */; };
+		2EAD7137AE8972AA34F6B591 /* SchoolModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1DCAF929AA767DF827D1A /* SchoolModuleConfiguratorTests.swift */; };
 		3412C5C92C8C401820800681 /* RequestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B820A189FB13E84C464FCF6F /* RequestViewController.storyboard */; };
 		3A04B2A5D2307E331835851B /* FeedbackModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B5EA1B874EEC730B444FB0 /* FeedbackModuleConfiguratorTests.swift */; };
 		54DCA634373D3BC4EF4C3677 /* StartModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F48AAC64868AC046EFDFB2E /* StartModuleConfiguratorTests.swift */; };
@@ -87,6 +88,7 @@
 		89B4B332233EB8EC0001F767 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B4B331233EB8EC0001F767 /* TextField.swift */; };
 		90203111521906CA5F77F5A9 /* ActivityViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E4996215418B21F8DE22A0E /* ActivityViewController.storyboard */; };
 		93C687CCDF8E7E1192CE0A0A /* StubModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80EF9FFAB9F32C1A739CCAF /* StubModuleConfiguratorTests.swift */; };
+		A1A9442BED95F06EBF174A4C /* SchoolModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8136EE47985D7785AD7B618 /* SchoolModuleConfigurator.swift */; };
 		AB4F9415F530CE42B5B75C4D /* Pods_SunCity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB3E5B9983EC2298051D037 /* Pods_SunCity.framework */; };
 		B17EBEA8D6552298451B2120 /* ActivityModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7652AD821C089E763E6E82 /* ActivityModuleConfiguratorTests.swift */; };
 		B906C5A52340097C00E180F0 /* ChatMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B906C5A42340097C00E180F0 /* ChatMessageModel.swift */; };
@@ -95,9 +97,12 @@
 		B9119D512340476000B1CCBA /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9119D502340476000B1CCBA /* PostDetailsViewController.swift */; };
 		C500007FEEAB0A6C65D570A8 /* FeedbackModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419FB87F3EA50297FA842E96 /* FeedbackModuleOutput.swift */; };
 		D0035F6FDF25F298AF9F5151 /* Pods_SunCityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A860470667BFCD87A4E012B8 /* Pods_SunCityTests.framework */; };
+		D23F5A392EA1F7EB6D6D4DD9 /* SchoolViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A954D4D2725272232B6133 /* SchoolViewController.storyboard */; };
+		D5C1D268098BD10E98EB22B7 /* SchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C73D86238C35053CF709454 /* SchoolViewController.swift */; };
 		DFC5F3F9BEC9F34839B95D11 /* ActivityModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF51318DCCB6F8EBDF2670 /* ActivityModuleConfigurator.swift */; };
 		E32CFB8675C7E8FAB638C4DF /* RequestModuleConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D6EDF760889DD312554C77 /* RequestModuleConfiguratorTests.swift */; };
 		F01FC5098A9088EBE75920A0 /* StubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562D05E45AAC48742E0D1B0C /* StubViewController.swift */; };
+		F0F4F926F849F9B80500F9E1 /* SchoolModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A103DAE8864BF9A537EBEB /* SchoolModuleOutput.swift */; };
 		F96C4C031EF2E2E687F2280A /* StubViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF1687EB559D703020229B2A /* StubViewController.storyboard */; };
 		FBCA3F0CB2B56AB463750F4E /* PostDetailsModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6317E0579E78C80140E5B8F9 /* PostDetailsModuleOutput.swift */; };
 /* End PBXBuildFile section */
@@ -192,13 +197,16 @@
 		0F78D060E5319E10BDD3B5BC /* StubModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StubModuleOutput.swift; sourceTree = "<group>"; };
 		17A275BA8FA212991D4D94BD /* ChatViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		1F502C825D690A14A358211F /* FeedbackViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		27A954D4D2725272232B6133 /* SchoolViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = SchoolViewController.storyboard; sourceTree = "<group>"; };
 		2B7F0EF058CDCF34B689C58B /* Pods-SunCityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCityTests.release.xcconfig"; path = "Target Support Files/Pods-SunCityTests/Pods-SunCityTests.release.xcconfig"; sourceTree = "<group>"; };
 		2B9134BC532F0AD6A3D1260A /* FeedbackModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackModuleConfigurator.swift; sourceTree = "<group>"; };
 		3EB3E5B9983EC2298051D037 /* Pods_SunCity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunCity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		419FB87F3EA50297FA842E96 /* FeedbackModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedbackModuleOutput.swift; sourceTree = "<group>"; };
 		47D6EDF760889DD312554C77 /* RequestModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RequestModuleConfiguratorTests.swift; sourceTree = "<group>"; };
+		4C73D86238C35053CF709454 /* SchoolViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SchoolViewController.swift; sourceTree = "<group>"; };
 		5203448A210B872B2BF6E69E /* PostDetailsViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = PostDetailsViewController.storyboard; sourceTree = "<group>"; };
 		526A585A9E5D66D51CF1989C /* LoginModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginModuleOutput.swift; sourceTree = "<group>"; };
+		55A103DAE8864BF9A537EBEB /* SchoolModuleOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SchoolModuleOutput.swift; sourceTree = "<group>"; };
 		562D05E45AAC48742E0D1B0C /* StubViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StubViewController.swift; sourceTree = "<group>"; };
 		575F17A12A2D40637950613C /* RequestModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RequestModuleConfigurator.swift; sourceTree = "<group>"; };
 		58542BB26FC41CD07CE3A1F0 /* LoginViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
@@ -207,6 +215,7 @@
 		6E2834A5AD09840D875D12C9 /* LoginViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6F48AAC64868AC046EFDFB2E /* StartModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		7356DD9B88845912093EA565 /* Pods-SunCityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCityTests.debug.xcconfig"; path = "Target Support Files/Pods-SunCityTests/Pods-SunCityTests.debug.xcconfig"; sourceTree = "<group>"; };
+		73A1DCAF929AA767DF827D1A /* SchoolModuleConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SchoolModuleConfiguratorTests.swift; sourceTree = "<group>"; };
 		811CBA22B81AC72137D93BF6 /* StubModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StubModuleConfigurator.swift; sourceTree = "<group>"; };
 		8516F58F27B7009093F2A46F /* Pods-SunCity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunCity.release.xcconfig"; path = "Target Support Files/Pods-SunCity/Pods-SunCity.release.xcconfig"; sourceTree = "<group>"; };
 		8907BBC2233E8B5A005CC565 /* ExpandableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableView.swift; sourceTree = "<group>"; };
@@ -220,6 +229,7 @@
 		8924AE4223400728004A039A /* FeedbackAudioView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackAudioView.xib; sourceTree = "<group>"; };
 		89B4B331233EB8EC0001F767 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		9F3A873A593C522EEEE44335 /* FeedbackViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = FeedbackViewController.storyboard; sourceTree = "<group>"; };
+		A8136EE47985D7785AD7B618 /* SchoolModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SchoolModuleConfigurator.swift; sourceTree = "<group>"; };
 		A860470667BFCD87A4E012B8 /* Pods_SunCityTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunCityTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABCF51318DCCB6F8EBDF2670 /* ActivityModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActivityModuleConfigurator.swift; sourceTree = "<group>"; };
 		AF80147B65BBB89E4ABB3873 /* StartModuleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartModuleConfigurator.swift; sourceTree = "<group>"; };
@@ -582,6 +592,16 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		1D4BEDB4AE19BF216585DF95 /* School */ = {
+			isa = PBXGroup;
+			children = (
+				D3EF28F98ED11151526F28F1 /* Module */,
+				99EA06CAEA758BFFB8E5922F /* View */,
+			);
+			name = School;
+			path = School;
+			sourceTree = "<group>";
+		};
 		223613C70544242B1ADEE7D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,6 +677,7 @@
 				A267ECA0B2EA51D76E2436F9 /* Feedback */,
 				5F721E42F7DA95C556881C73 /* PostDetails */,
 				D0F65B06B53324B12A8E495A /* Stub */,
+				1D4BEDB4AE19BF216585DF95 /* School */,
 			);
 			path = "User Stories";
 			sourceTree = "<group>";
@@ -690,8 +711,18 @@
 				280D52DE3BDA3357EB474F8C /* Feedback */,
 				3F326A76331C5C33EA944B5F /* PostDetails */,
 				3C1D721578ED836DA743BABE /* Stub */,
+				84D363D18F94883762D2D281 /* School */,
 			);
 			path = "User Stories";
+			sourceTree = "<group>";
+		};
+		84D363D18F94883762D2D281 /* School */ = {
+			isa = PBXGroup;
+			children = (
+				73A1DCAF929AA767DF827D1A /* SchoolModuleConfiguratorTests.swift */,
+			);
+			name = School;
+			path = School;
 			sourceTree = "<group>";
 		};
 		8907BBC6233E8B6C005CC565 /* Subview */ = {
@@ -733,6 +764,16 @@
 			);
 			name = Module;
 			path = Module;
+			sourceTree = "<group>";
+		};
+		99EA06CAEA758BFFB8E5922F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C73D86238C35053CF709454 /* SchoolViewController.swift */,
+				27A954D4D2725272232B6133 /* SchoolViewController.storyboard */,
+			);
+			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		9B570C5F0CBB5426C3E972A9 /* Module */ = {
@@ -807,6 +848,16 @@
 			);
 			name = Stub;
 			path = Stub;
+			sourceTree = "<group>";
+		};
+		D3EF28F98ED11151526F28F1 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				55A103DAE8864BF9A537EBEB /* SchoolModuleOutput.swift */,
+				A8136EE47985D7785AD7B618 /* SchoolModuleConfigurator.swift */,
+			);
+			name = Module;
+			path = Module;
 			sourceTree = "<group>";
 		};
 		EC9BA3C429947E5213DBCDE5 /* Request */ = {
@@ -944,6 +995,7 @@
 				8924AE4323400728004A039A /* FeedbackAudioView.xib in Resources */,
 				7119C5FF21B57753A23E9E86 /* PostDetailsViewController.storyboard in Resources */,
 				F96C4C031EF2E2E687F2280A /* StubViewController.storyboard in Resources */,
+				D23F5A392EA1F7EB6D6D4DD9 /* SchoolViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1119,6 +1171,9 @@
 				21D2360A73F345F6343931D7 /* StubModuleOutput.swift in Sources */,
 				585E44BA369F51566B7867A4 /* StubModuleConfigurator.swift in Sources */,
 				F01FC5098A9088EBE75920A0 /* StubViewController.swift in Sources */,
+				F0F4F926F849F9B80500F9E1 /* SchoolModuleOutput.swift in Sources */,
+				A1A9442BED95F06EBF174A4C /* SchoolModuleConfigurator.swift in Sources */,
+				D5C1D268098BD10E98EB22B7 /* SchoolViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1135,6 +1190,7 @@
 				3A04B2A5D2307E331835851B /* FeedbackModuleConfiguratorTests.swift in Sources */,
 				6A2959AD7327FEB507D8AFAE /* PostDetailsModuleConfiguratorTests.swift in Sources */,
 				93C687CCDF8E7E1192CE0A0A /* StubModuleConfiguratorTests.swift in Sources */,
+				2EAD7137AE8972AA34F6B591 /* SchoolModuleConfiguratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

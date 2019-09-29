@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3k-bK-TNO">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--School View Controller-->
+        <scene sceneID="PlN-iW-H7B">
+            <objects>
+                <viewController id="h3k-bK-TNO" customClass="SchoolViewController" customModule="SunCity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cA6-JB-jfU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="school_card_bulb" translatesAutoresizingMaskIntoConstraints="NO" id="Nwq-Jj-EPJ">
+                                <rect key="frame" x="84" y="0.0" width="291" height="465.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Школа наставников" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cW-06-ZdG">
+                                <rect key="frame" x="16" y="132" width="292" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgX-5l-QA9">
+                                <rect key="frame" x="16" y="174" width="269" height="72"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Здесь вы можете узнать 
+о распространенных проблемах взаимодействия с ребенком 
+</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="15"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="и получить ответы">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="15"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кейсы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjo-VB-NHU">
+                                <rect key="frame" x="16" y="281" width="64" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hop-rr-bFK">
+                                <rect key="frame" x="16" y="331" width="343" height="134"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEY-TR-vzz">
+                                        <rect key="frame" x="16" y="17" width="194" height="33.5"/>
+                                        <string key="text">Подарки без согласования 
+с учреждением</string>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79r-Yg-6DJ" customClass="TouchableControl" customModule="SunCity" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="80" width="114" height="36"/>
+                                        <color key="backgroundColor" red="0.99607843139999996" green="0.80392156859999997" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="114" id="6Tq-so-HKB"/>
+                                            <constraint firstAttribute="height" constant="36" id="abu-bk-mR7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <state key="normal" title="Пройти тест">
+                                            <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="18"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pass:" destination="h3k-bK-TNO" eventType="touchUpInside" id="Gyl-GY-khY"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="school_card_2" translatesAutoresizingMaskIntoConstraints="NO" id="5L8-hq-NBu">
+                                        <rect key="frame" x="241" y="23" width="88" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="08s-Eb-wta"/>
+                                            <constraint firstAttribute="width" constant="88" id="Smh-Rv-4Tu"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="LEY-TR-vzz" firstAttribute="leading" secondItem="hop-rr-bFK" secondAttribute="leading" constant="16" id="DeE-0v-mSS"/>
+                                    <constraint firstAttribute="height" constant="134" id="Q2E-2J-8dE"/>
+                                    <constraint firstItem="79r-Yg-6DJ" firstAttribute="leading" secondItem="hop-rr-bFK" secondAttribute="leading" constant="14" id="RaN-eI-wKk"/>
+                                    <constraint firstItem="5L8-hq-NBu" firstAttribute="centerY" secondItem="hop-rr-bFK" secondAttribute="centerY" id="X3L-j4-EqB"/>
+                                    <constraint firstAttribute="trailing" secondItem="5L8-hq-NBu" secondAttribute="trailing" constant="14" id="ajc-gT-vy8"/>
+                                    <constraint firstAttribute="bottom" secondItem="79r-Yg-6DJ" secondAttribute="bottom" constant="18" id="b1g-z1-etb"/>
+                                    <constraint firstItem="LEY-TR-vzz" firstAttribute="top" secondItem="hop-rr-bFK" secondAttribute="top" constant="17" id="wkc-G4-270"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="27"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEW-w7-jkt">
+                                <rect key="frame" x="16" y="481" width="343" height="134"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxf-Pt-Sf1">
+                                        <rect key="frame" x="16" y="17" width="204" height="33.5"/>
+                                        <string key="text">Про борьбу с системой 
+и конфликты с учреждением</string>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGO-UF-sdD" customClass="TouchableControl" customModule="SunCity" customModuleProvider="target">
+                                        <rect key="frame" x="14" y="80" width="114" height="36"/>
+                                        <color key="backgroundColor" red="0.99607843139999996" green="0.80392156859999997" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="Bdp-Xo-Sr5"/>
+                                            <constraint firstAttribute="width" constant="114" id="ruV-5f-Abg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                                        <state key="normal" title="Пройти тест">
+                                            <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="18"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pass:" destination="h3k-bK-TNO" eventType="touchUpInside" id="bfS-Jd-s35"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="school_card_2.2" translatesAutoresizingMaskIntoConstraints="NO" id="Usa-1J-O4z">
+                                        <rect key="frame" x="241" y="23" width="88" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="V0k-Da-j0H"/>
+                                            <constraint firstAttribute="width" constant="88" id="VMj-wH-HR7"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="zGO-UF-sdD" firstAttribute="leading" secondItem="fEW-w7-jkt" secondAttribute="leading" constant="14" id="3OA-3f-x5h"/>
+                                    <constraint firstItem="Nxf-Pt-Sf1" firstAttribute="top" secondItem="fEW-w7-jkt" secondAttribute="top" constant="17" id="6gQ-L7-KOo"/>
+                                    <constraint firstAttribute="trailing" secondItem="Usa-1J-O4z" secondAttribute="trailing" constant="14" id="7rr-P6-gpJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="zGO-UF-sdD" secondAttribute="bottom" constant="18" id="EHg-wZ-ZVM"/>
+                                    <constraint firstItem="Usa-1J-O4z" firstAttribute="centerY" secondItem="fEW-w7-jkt" secondAttribute="centerY" id="F5G-s2-VKl"/>
+                                    <constraint firstAttribute="height" constant="134" id="c07-o6-t7Y"/>
+                                    <constraint firstItem="Nxf-Pt-Sf1" firstAttribute="leading" secondItem="fEW-w7-jkt" secondAttribute="leading" constant="16" id="vmz-ms-SaM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="27"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3411764705882353" green="0.59215686274509804" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="LgX-5l-QA9" secondAttribute="trailing" constant="90" id="1gO-yU-LR9"/>
+                            <constraint firstItem="4cW-06-ZdG" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="132" id="5kd-oG-pm0"/>
+                            <constraint firstItem="fEW-w7-jkt" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="16" id="7yZ-rD-2CD"/>
+                            <constraint firstItem="LgX-5l-QA9" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="16" id="8iU-9J-yxF"/>
+                            <constraint firstItem="Jjo-VB-NHU" firstAttribute="top" secondItem="LgX-5l-QA9" secondAttribute="bottom" constant="35" id="JTm-SB-dfh"/>
+                            <constraint firstItem="hop-rr-bFK" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="16" id="REQ-Te-zFV"/>
+                            <constraint firstItem="4cW-06-ZdG" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="16" id="TnT-Tu-GH2"/>
+                            <constraint firstItem="Nwq-Jj-EPJ" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" id="ViO-Gp-25U"/>
+                            <constraint firstItem="fEW-w7-jkt" firstAttribute="top" secondItem="hop-rr-bFK" secondAttribute="bottom" constant="16" id="YA2-sx-e2g"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="fEW-w7-jkt" secondAttribute="trailing" constant="16" id="buL-k9-Drn"/>
+                            <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="hop-rr-bFK" secondAttribute="trailing" constant="16" id="dVi-bi-vUO"/>
+                            <constraint firstItem="LgX-5l-QA9" firstAttribute="top" secondItem="4cW-06-ZdG" secondAttribute="bottom" constant="6" id="f6e-MX-jxi"/>
+                            <constraint firstItem="hop-rr-bFK" firstAttribute="top" secondItem="Jjo-VB-NHU" secondAttribute="bottom" constant="26" id="mJB-Jc-Sr7"/>
+                            <constraint firstItem="Jjo-VB-NHU" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" constant="16" id="wg4-Zp-BMJ"/>
+                            <constraint firstItem="Nwq-Jj-EPJ" firstAttribute="trailing" secondItem="YWU-9O-L7t" secondAttribute="trailing" id="xM5-zj-fdJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="573.60000000000002" y="-231.63418290854574"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="school_card_2" width="88" height="88.5"/>
+        <image name="school_card_2.2" width="88" height="88.5"/>
+        <image name="school_card_bulb" width="291" height="465.5"/>
+    </resources>
+</document>
