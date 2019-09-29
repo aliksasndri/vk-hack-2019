@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5A-4J-H7T">
-                                <rect key="frame" x="0.0" y="244" width="375" height="568"/>
+                                <rect key="frame" x="0.0" y="789.33333333333337" width="375" height="22.666666666666629"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Запись" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkW-NV-kYx">
@@ -195,13 +195,13 @@ Cras adipiscing enim eu turpis egLorem ipsum dolor sit amet, consectetur adipisc
                             <constraint firstItem="g5A-4J-H7T" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" id="Lsc-Fn-Hnc"/>
                             <constraint firstItem="PfN-j1-34H" firstAttribute="leading" secondItem="cA6-JB-jfU" secondAttribute="leading" id="RP1-hm-JbK"/>
                             <constraint firstItem="HvK-Kq-dLe" firstAttribute="leading" secondItem="qkW-NV-kYx" secondAttribute="leading" id="Rwu-Sh-R4P"/>
+                            <constraint firstItem="g5A-4J-H7T" firstAttribute="top" secondItem="rpl-Jv-aLO" secondAttribute="bottom" id="TIy-06-SWv"/>
                             <constraint firstAttribute="trailing" secondItem="PfN-j1-34H" secondAttribute="trailing" id="XUJ-ZL-B0M"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="g5A-4J-H7T" secondAttribute="trailing" id="bqB-o5-XSe"/>
                             <constraint firstItem="g5A-4J-H7T" firstAttribute="bottom" secondItem="cA6-JB-jfU" secondAttribute="bottom" id="cS8-pC-Pmm"/>
                             <constraint firstItem="zU2-zN-ycb" firstAttribute="bottom" secondItem="YWU-9O-L7t" secondAttribute="bottom" id="kDy-va-gXA"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="zU2-zN-ycb" secondAttribute="trailing" id="kgU-eb-6KE"/>
                             <constraint firstAttribute="bottom" secondItem="PfN-j1-34H" secondAttribute="bottom" id="rYH-lu-wfZ"/>
-                            <constraint firstItem="g5A-4J-H7T" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="200" id="x0y-Xg-tnY"/>
                             <constraint firstItem="zU2-zN-ycb" firstAttribute="top" secondItem="HvK-Kq-dLe" secondAttribute="bottom" constant="20" id="ysV-WD-Nwm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YWU-9O-L7t"/>

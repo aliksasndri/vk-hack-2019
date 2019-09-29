@@ -31,6 +31,9 @@ final class FeedbackViewController: UIViewController, FeedbackModuleOutput {
     }
 
     @IBAction func createButtonAction(_ sender: Any) {
+        guard storyView.text != "" else {
+            return
+        }
         (sender as? UIButton)?.isUserInteractionEnabled = false
         let dataArray = images.compactMap { $0.pngData() }
         let audioURL = Bundle.main.url(forResource: Constants.filename, withExtension: "m4a")
