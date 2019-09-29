@@ -24,6 +24,7 @@ final class AudioRecorder: NSObject {
         do {
             try session.setCategory(.playAndRecord, mode: .default)
             try session.setActive(true)
+            try session.overrideOutputAudioPort(.speaker)
             session.requestRecordPermission() { [weak self] allowed in
                 guard let self = self else { return }
                 self.delegate?.audioRecorder(self, userDidGrantPermissionOnRecord: allowed)

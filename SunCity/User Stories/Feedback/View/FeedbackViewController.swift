@@ -50,6 +50,10 @@ final class FeedbackViewController: UIViewController, FeedbackModuleOutput {
     
     // MARK: - FeedbackModuleOutput
 
+    // MARK: - Constants
+
+    private let audioRecorder = AudioRecorder()
+
     // MARK: - Properties
 
     private var images = [UIImage]()
@@ -63,6 +67,7 @@ final class FeedbackViewController: UIViewController, FeedbackModuleOutput {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAppearance()
+        audioRecorder.setup()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -73,6 +78,11 @@ final class FeedbackViewController: UIViewController, FeedbackModuleOutput {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        createButton.roundAllCorners(radius: 56.0)
     }
 
     // MARK: - Internal helpers
@@ -112,7 +122,15 @@ private extension FeedbackViewController {
             self?.storyDeleteView.isHidden = false
         }
 
-        audioView.didTap = { [weak self] in
+        audioView.didTap = { [weak self] state in
+            switch state {
+            case .ready:
+                self?.audioRecorder.startRecording(filename: "record")
+            case .recording:
+                self?.audioRecorder.finishRecording()
+            case .ended:
+                self?.audioRecorder.play(filename: "record")
+            }
             self?.audioDeleteView.isHidden = false
         }
 

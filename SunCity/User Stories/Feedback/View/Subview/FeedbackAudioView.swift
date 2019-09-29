@@ -21,8 +21,8 @@ final class FeedbackAudioView: UIView {
     // MARK: - IBActions
 
     @IBAction func mainButtonAction(_ sender: Any) {
+        didTap?(state)
         configure(for: state.toggle)
-        didTap?()
     }
 
     // MARK: - Enums
@@ -50,7 +50,7 @@ final class FeedbackAudioView: UIView {
 
     // MARK: - Properties
 
-    var didTap: (() -> Void)?
+    var didTap: ((State) -> Void)?
     private var state: State = .ready
     private var counter = 0.0
     private var timer = Timer()
