@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3k-bK-TNO">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -64,6 +65,17 @@
                                             <action selector="sendButtonAction:" destination="h3k-bK-TNO" eventType="touchUpInside" id="tRN-FE-06l"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIJ-HZ-Vfd">
+                                        <rect key="frame" x="0.0" y="8" width="51" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="E1N-hZ-laz"/>
+                                            <constraint firstAttribute="width" constant="51" id="PsP-Qc-mU4"/>
+                                        </constraints>
+                                        <state key="normal" image="ic_close"/>
+                                        <connections>
+                                            <action selector="close:" destination="h3k-bK-TNO" eventType="touchUpInside" id="zKs-E3-3Jn"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="f6k-wA-6TP" firstAttribute="width" secondItem="ie7-SF-IS0" secondAttribute="width" constant="-32" id="D7h-ZX-RtC"/>
@@ -82,6 +94,8 @@
                         <constraints>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="bottom" secondItem="ie7-SF-IS0" secondAttribute="bottom" id="61R-ml-e61"/>
                             <constraint firstItem="ie7-SF-IS0" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" id="6Pe-AY-CkY"/>
+                            <constraint firstItem="nIJ-HZ-Vfd" firstAttribute="leading" secondItem="YWU-9O-L7t" secondAttribute="leading" id="A4p-Ob-WSq"/>
+                            <constraint firstItem="nIJ-HZ-Vfd" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" constant="8" id="evp-Bb-Rp2"/>
                             <constraint firstItem="YWU-9O-L7t" firstAttribute="trailing" secondItem="ie7-SF-IS0" secondAttribute="trailing" id="ubG-iB-qLV"/>
                             <constraint firstItem="ie7-SF-IS0" firstAttribute="top" secondItem="YWU-9O-L7t" secondAttribute="top" id="yYe-rl-OVZ"/>
                         </constraints>
@@ -94,7 +108,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psv-Wb-mBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="575" y="-231"/>
+            <point key="canvasLocation" x="573.60000000000002" y="-231.2807881773399"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_close" width="24" height="24.333333969116211"/>
+    </resources>
 </document>

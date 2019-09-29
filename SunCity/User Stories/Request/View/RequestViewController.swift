@@ -20,6 +20,10 @@ final class RequestViewController: UIViewController, RequestModuleOutput {
     @IBAction func sendButtonAction(_ sender: Any) {
     }
     
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+
     // MARK: - RequestModuleOutput
 
     // MARK: - Constants
