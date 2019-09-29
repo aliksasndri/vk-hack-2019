@@ -32,6 +32,10 @@ final class StartViewController: UIViewController, StartModuleOutput {
     // MARK: - Actions
 
     @IBAction private func fill(_ sender: Any) {
+        let (controller, _) = RequestModuleConfigurator().configure()
+        controller.modalTransitionStyle = .crossDissolve
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true, completion: nil)
     }
 
     @IBAction private func login(_ sender: Any) {
